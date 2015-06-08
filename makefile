@@ -105,14 +105,11 @@ menuconfig:
 	cd $(SRC_DIR)/$(NUTTX_DIR)/; . ./setenv.sh; make menuconfig
 
 
-boot_firmware:
-	sudo lpc21isp -control -verify -hex $(SRC_DIR)/$(NUTTX_DIR)/nuttx.hex \
-	$(CONFIG_BOOT_FIRMWARE_PORT) \
-	$(CONFIG_BOOT_FIRMWARE_BAUDRATE_BPS) \
-	$(CONFIG_BOARD_OSCILLATOR_FREQ_KHZ)
-
 rrr:
 	rm -rf $(SRC_DIR)/$(NUTTX_DIR)/
 	cp -rf $(TMP_DIR)/$(NUTTX_DIR)/ $(SRC_DIR)/
 	cd $(SRC_DIR)/$(NUTTX_DIR)/; patch -p2 < ../../$(PATCH_DIR)/$(NUTTX_PATCH)
 	cd $(SRC_DIR)/$(APPS_DIR)/; patch -p2 < ../../$(PATCH_DIR)/$(APPS_PATCH)	
+
+
+include make.boot
