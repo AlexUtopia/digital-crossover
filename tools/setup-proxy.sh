@@ -1,13 +1,51 @@
 #!/bin/sh
 #${1} - Proxy user name
 #${2} - Proxy user password
+#${3} - Proxy address
+#${4} - Proxy port
+
+
+# Input parameters check
+helper()
+{
+    echo "use: ${0} <proxy_username> <proxy_userpasswd> <proxy_address> <proxy_port>"
+}
+
+if [ -z ${1} ]
+then
+    echo "proxy user name is empty"
+    helper
+    exit
+fi
+
+if [ -z ${2} ]
+then
+    echo "proxy user password is empty"
+    helper
+    exit
+fi
+
+if [ -z ${3} ]
+then
+    echo "proxy address is empty"
+    helper
+    exit
+fi
+
+if [ -z ${4} ]
+then
+    echo "proxy port is empty"
+    helper
+    exit
+fi
 
 
 # Configuration variables
-PROXY_ADDR=192.168.0.252
-PROXY_PORT=3128
 PROXY_USER_NAME=${1}
 PROXY_USER_PASSWD=${2}
+PROXY_ADDR=${3}
+PROXY_PORT=${4}
+
 
 # Local variables
 LOCAL_SOCAT_GIT_PROXY_CONFIG_FILE=~/.git-proxy
