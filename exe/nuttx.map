@@ -3,7 +3,7 @@ nuttx:     file format elf32-littlearm
 
 SYMBOL TABLE:
 08000000 l    d  .text	00000000 .text
-0802739c l    d  .ARM.exidx	00000000 .ARM.exidx
+08029f7c l    d  .ARM.exidx	00000000 .ARM.exidx
 20000000 l    d  .data	00000000 .data
 200002f0 l    d  .bss	00000000 .bss
 00000000 l    d  .comment	00000000 .comment
@@ -90,197 +90,245 @@ SYMBOL TABLE:
 08000130 l     F .text	0000027c handlers
 00000000 l    df *ABS*	00000000 stm32_start.c
 00000000 l    df *ABS*	00000000 stm32_rcc.c
-0800042c l     F .text	00000100 rcc_reset
-0800052c l     F .text	00000030 rcc_enableahb
-0800055c l     F .text	00000068 rcc_enableapb1
-080005c4 l     F .text	00000030 rcc_enableapb2
-080005f4 l     F .text	00000194 stm32_stdclockconfig
-08000788 l     F .text	00000012 rcc_enableperipherals
+08000454 l     F .text	00000100 rcc_reset
+08000554 l     F .text	00000030 rcc_enableahb
+08000584 l     F .text	00000068 rcc_enableapb1
+080005ec l     F .text	00000030 rcc_enableapb2
+0800061c l     F .text	00000194 stm32_stdclockconfig
+080007b0 l     F .text	00000012 rcc_enableperipherals
 00000000 l    df *ABS*	00000000 stm32_gpio.c
-080007b0 l     F .text	0000001e stm32_gpioremap
+080007d8 l     F .text	0000001e stm32_gpioremap
 00000000 l    df *ABS*	00000000 stm32_lowputc.c
 00000000 l    df *ABS*	00000000 stm32_serial.c
-08024ae4 l     O .text	00000030 g_uart_ops
-08000dfc l     F .text	000000ca up_setup
-08000ec8 l     F .text	00000058 up_shutdown
-08000f20 l     F .text	00000040 up_attach
-08000f60 l     F .text	0000002e up_detach
-08001030 l     F .text	00000026 up_ioctl
-08001058 l     F .text	0000003c up_receive
-08001094 l     F .text	0000005e up_rxint
-080010f4 l     F .text	0000002e up_rxavailable
-08001124 l     F .text	00000022 up_send
-08001148 l     F .text	00000066 up_txint
-080011b0 l     F .text	0000002e up_txready
+08026ac0 l     O .text	00000030 g_uart_ops
+08000e24 l     F .text	000000ca up_setup
+08000ef0 l     F .text	00000058 up_shutdown
+08000f48 l     F .text	00000040 up_attach
+08000f88 l     F .text	0000002e up_detach
+08001058 l     F .text	00000026 up_ioctl
+08001080 l     F .text	0000003c up_receive
+080010bc l     F .text	0000005e up_rxint
+0800111c l     F .text	0000002e up_rxavailable
+0800114c l     F .text	00000022 up_send
+08001170 l     F .text	00000066 up_txint
+080011d8 l     F .text	0000002e up_txready
 20000390 l       .bss	00000000 g_usart2rxbuffer
 200003b0 l       .bss	00000000 g_usart2txbuffer
 200003d0 l       .bss	00000000 g_usart3rxbuffer
 200004d0 l       .bss	00000000 g_usart3txbuffer
 20000000 l     O .data	00000050 g_usart2priv
-080011e0 l     F .text	00000020 up_interrupt_usart2
+08001208 l     F .text	00000020 up_interrupt_usart2
 20000050 l     O .data	00000050 g_usart3priv
-08001200 l     F .text	00000020 up_interrupt_usart3
-08024b14 l     O .text	00000014 uart_devs
-08000b84 l     F .text	00000020 up_serialin
-08000ba4 l     F .text	00000022 up_serialout
-08000bc8 l     F .text	00000068 up_restoreusartint
-08000c30 l     F .text	0000004e up_disableusartint
-08000c80 l     F .text	00000102 up_set_format
-08000d84 l     F .text	00000076 up_set_apb_clock
-08000f90 l     F .text	000000a0 up_interrupt_common
-08024b28 l       .text	00000000 .LC0
-08024b38 l       .text	00000000 .LC1
-08024b44 l       .text	00000000 .LC2
+08001228 l     F .text	00000020 up_interrupt_usart3
+08026af0 l     O .text	00000014 uart_devs
+08000bac l     F .text	00000020 up_serialin
+08000bcc l     F .text	00000022 up_serialout
+08000bf0 l     F .text	00000068 up_restoreusartint
+08000c58 l     F .text	0000004e up_disableusartint
+08000ca8 l     F .text	00000102 up_set_format
+08000dac l     F .text	00000076 up_set_apb_clock
+08000fb8 l     F .text	000000a0 up_interrupt_common
+08026b04 l       .text	00000000 .LC0
+08026b14 l       .text	00000000 .LC1
+08026b20 l       .text	00000000 .LC2
 00000000 l    df *ABS*	00000000 up_modifyreg32.c
 00000000 l    df *ABS*	00000000 up_doirq.c
 00000000 l    df *ABS*	00000000 stm32_irq.c
-08001420 l     F .text	000000fa stm32_irqinfo
-00000000 l    df *ABS*	00000000 up_hardfault.c
-08024b50 l       .text	00000000 .LC0
-00000000 l    df *ABS*	00000000 up_svcall.c
+08026b2c l       .text	00000000 .LC0
+08026b48 l       .text	00000000 .LC1
+08001448 l     F .text	00000036 stm32_nmi
+08026c1c l     O .text	0000000a __FUNCTION__.5854
+08026b5c l       .text	00000000 .LC2
+08001480 l     F .text	00000040 stm32_busfault
+08026c28 l     O .text	0000000f __FUNCTION__.5859
+08026b84 l       .text	00000000 .LC3
+080014c0 l     F .text	00000040 stm32_usagefault
+08026c38 l     O .text	00000011 __FUNCTION__.5864
+08026bb0 l       .text	00000000 .LC4
+08001500 l     F .text	00000036 stm32_pendsv
+08026c4c l     O .text	0000000d __FUNCTION__.5869
+08026bd0 l       .text	00000000 .LC5
+08001538 l     F .text	00000036 stm32_dbgmonitor
+08026c5c l     O .text	00000011 __FUNCTION__.5874
+08026bf8 l       .text	00000000 .LC6
+08001570 l     F .text	00000036 stm32_reserved
+08026c70 l     O .text	0000000f __FUNCTION__.5879
+080015a8 l     F .text	00000110 stm32_irqinfo
 00000000 l    df *ABS*	00000000 up_assert.c
-08001764 l     F .text	00000018 up_getsp
-08024b68 l       .text	00000000 .LC0
-0800177c l     F .text	00000086 up_stackdump
-08024cc4 l     O .text	0000000d __FUNCTION__.6130
-08024b9c l       .text	00000000 .LC1
-08024bd0 l       .text	00000000 .LC2
-08024c04 l       .text	00000000 .LC3
-08001804 l     F .text	0000018e up_registerdump
-08024ce4 l     O .text	00000010 __FUNCTION__.6137
-08024c30 l       .text	00000000 .LC4
-08024c44 l       .text	00000000 .LC5
-08024c54 l       .text	00000000 .LC6
-08024c68 l       .text	00000000 .LC7
-08024c7c l       .text	00000000 .LC8
-08001994 l     F .text	0000016a up_dumpstate
-08024cd4 l     O .text	0000000d __FUNCTION__.6147
-08001b00 l     F .text	0000004e _up_assert
-08024c90 l       .text	00000000 .LC9
-08024cf4 l     O .text	0000000a __FUNCTION__.6159
+0800187c l     F .text	00000018 up_getsp
+08026c80 l       .text	00000000 .LC0
+08001894 l     F .text	00000086 up_stackdump
+08026ddc l     O .text	0000000d __FUNCTION__.6130
+08026cb4 l       .text	00000000 .LC1
+08026ce8 l       .text	00000000 .LC2
+08026d1c l       .text	00000000 .LC3
+0800191c l     F .text	0000018e up_registerdump
+08026dfc l     O .text	00000010 __FUNCTION__.6137
+08026d48 l       .text	00000000 .LC4
+08026d5c l       .text	00000000 .LC5
+08026d6c l       .text	00000000 .LC6
+08026d80 l       .text	00000000 .LC7
+08026d94 l       .text	00000000 .LC8
+08001aac l     F .text	0000016a up_dumpstate
+08026dec l     O .text	0000000d __FUNCTION__.6147
+08001c18 l     F .text	0000004e _up_assert
+08026da8 l       .text	00000000 .LC9
+08026e0c l     O .text	0000000a __FUNCTION__.6159
 00000000 l    df *ABS*	00000000 up_mdelay.c
+00000000 l    df *ABS*	00000000 up_memfault.c
+08026e18 l       .text	00000000 .LC0
+08026e40 l       .text	00000000 .LC1
+08026e64 l       .text	00000000 .LC2
+08026e7c l     O .text	0000000c __FUNCTION__.3960
+00000000 l    df *ABS*	00000000 up_hardfault.c
+08026e88 l       .text	00000000 .LC0
+08026ea8 l       .text	00000000 .LC1
+08026ec0 l     O .text	0000000d __FUNCTION__.5076
+00000000 l    df *ABS*	00000000 up_svcall.c
+08026ed0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 serial.c
-08024d00 l     O .text	00000018 g_serialops
-080022ac l     F .text	00000108 uart_open
-08002194 l     F .text	00000116 uart_close
-08001edc l     F .text	0000018a uart_read
-08001d70 l     F .text	0000016a uart_write
-08002068 l     F .text	0000012a uart_ioctl
-08001bd4 l     F .text	00000026 sem_reinit
-08024d18 l       .text	00000000 .LC0
-08001bfc l     F .text	0000004a uart_takesem
-08001c48 l     F .text	000000e2 uart_putxmitchar
-08001d2c l     F .text	00000044 uart_irqwrite
+08026ee4 l     O .text	00000018 g_serialops
+080025a4 l     F .text	00000108 uart_open
+0800248c l     F .text	00000116 uart_close
+080021d4 l     F .text	0000018a uart_read
+08002068 l     F .text	0000016a uart_write
+08002360 l     F .text	0000012a uart_ioctl
+08001ecc l     F .text	00000026 sem_reinit
+08026efc l       .text	00000000 .LC0
+08001ef4 l     F .text	0000004a uart_takesem
+08001f40 l     F .text	000000e2 uart_putxmitchar
+08002024 l     F .text	00000044 uart_irqwrite
+08026f0c l       .text	00000000 .LC1
+08026f20 l     O .text	0000000e __FUNCTION__.5181
 00000000 l    df *ABS*	00000000 serialirq.c
 00000000 l    df *ABS*	00000000 stm32_boot.c
-00000000 l    df *ABS*	00000000 stm32_spi.c
 00000000 l    df *ABS*	00000000 stm32_autoleds.c
-08024d28 l     O .text	00000010 g_ledbits
-08002708 l     F .text	0000005e phy_led_on
-08002768 l     F .text	0000005e phy_led_off
-080027c8 l     F .text	00000028 led_setonoff
-00000000 l    df *ABS*	00000000 stm32_buttons.c
-00000000 l    df *ABS*	00000000 stm32_usbdev.c
+08026f30 l     O .text	00000010 g_ledbits
+0800297c l     F .text	0000005e phy_led_on
+080029dc l     F .text	0000005e phy_led_off
+08002a3c l     F .text	00000028 led_setonoff
 00000000 l    df *ABS*	00000000 os_start.c
 200005d0 l       .bss	00000000 g_idletcb
-08024d80 l     O .text	0000000a g_idlename
+08026f88 l     O .text	0000000a g_idlename
 200006a0 l       .bss	00000000 g_idleargv
+08026f94 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 os_bringup.c
-08024d8c l       .text	00000000 .LC0
-08024d94 l       .text	00000000 .LC1
-08002be4 l     F .text	00000046 os_do_appstart
-08002c2c l     F .text	0000000a os_start_application
+08026fa4 l       .text	00000000 .LC0
+08026fac l       .text	00000000 .LC1
+08002dec l     F .text	00000046 os_do_appstart
+08002e34 l     F .text	0000000a os_start_application
 00000000 l    df *ABS*	00000000 irq_attach.c
 00000000 l    df *ABS*	00000000 irq_dispatch.c
 00000000 l    df *ABS*	00000000 irq_unexpectedisr.c
-08024da8 l       .text	00000000 .LC0
+08026fc0 l       .text	00000000 .LC0
+08026fd0 l       .text	00000000 .LC1
+08026fe8 l     O .text	00000013 __FUNCTION__.4879
 00000000 l    df *ABS*	00000000 group_create.c
+08026ffc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 group_setupidlefiles.c
-08024dc0 l       .text	00000000 .LC0
+08027014 l       .text	00000000 .LC0
+08027034 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 sched_garbage.c
-08002df8 l     F .text	00000050 sched_kucleanup
+08003060 l     F .text	00000050 sched_kucleanup
 00000000 l    df *ABS*	00000000 task_create.c
-08002e54 l     F .text	0000010c thread_create
+080030bc l     F .text	0000010c thread_create
 00000000 l    df *ABS*	00000000 task_setup.c
-08024dd0 l     O .text	00000009 g_noname
-08002fb8 l     F .text	000000b2 task_assignpid
-0800306c l     F .text	0000009c thread_schedsetup
-08003108 l     F .text	00000036 task_namesetup
-08003140 l     F .text	00000136 task_stackargsetup
+08027044 l     O .text	00000009 g_noname
+08003220 l     F .text	000000b2 task_assignpid
+080032d4 l     F .text	0000009c thread_schedsetup
+08003370 l     F .text	00000036 task_namesetup
+08027050 l       .text	00000000 .LC0
+080033a8 l     F .text	0000014c task_stackargsetup
 00000000 l    df *ABS*	00000000 task_activate.c
 00000000 l    df *ABS*	00000000 task_start.c
+08027064 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 task_getpid.c
 00000000 l    df *ABS*	00000000 exit.c
 00000000 l    df *ABS*	00000000 errno_getptr.c
 200006a8 l       .bss	00000000 g_irqerrno
 00000000 l    df *ABS*	00000000 sem_destroy.c
 00000000 l    df *ABS*	00000000 sem_wait.c
-08024ddc l       .text	00000000 .LC0
+08027078 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sem_post.c
-08024df4 l       .text	00000000 .LC0
+08027090 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_procmask.c
 00000000 l    df *ABS*	00000000 sig_unmaskpendingsignal.c
 00000000 l    df *ABS*	00000000 sig_removependingsignal.c
+080270a8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_releasependingsignal.c
 00000000 l    df *ABS*	00000000 sig_lowest.c
 00000000 l    df *ABS*	00000000 sig_dispatch.c
-08003834 l     F .text	00000094 sig_queueaction
-080038c8 l     F .text	00000086 sig_allocatependingsignal
-08003950 l     F .text	00000056 sig_findpendingsignal
-080039a8 l     F .text	0000007e sig_addpendingsignal
-08024e0c l       .text	00000000 .LC0
+08003af4 l     F .text	00000094 sig_queueaction
+08003b88 l     F .text	00000086 sig_allocatependingsignal
+080270cc l       .text	00000000 .LC0
+08003c10 l     F .text	00000066 sig_findpendingsignal
+08003c78 l     F .text	00000092 sig_addpendingsignal
 00000000 l    df *ABS*	00000000 sig_deliver.c
 00000000 l    df *ABS*	00000000 mq_waitirq.c
+080270e4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 env_dup.c
+080270f8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 irq_initialize.c
 00000000 l    df *ABS*	00000000 group_setupstreams.c
+0802710c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 group_setuptaskfiles.c
-08003dd0 l     F .text	00000062 sched_dupfiles
+08027128 l       .text	00000000 .LC0
+08004150 l     F .text	00000086 sched_dupfiles
 00000000 l    df *ABS*	00000000 sched_free.c
 00000000 l    df *ABS*	00000000 sched_gettcb.c
 00000000 l    df *ABS*	00000000 sched_releasetcb.c
-08003f14 l     F .text	00000040 sched_releasepid
+080042e4 l     F .text	00000040 sched_releasepid
 00000000 l    df *ABS*	00000000 sched_lock.c
-08024e24 l       .text	00000000 .LC0
+08027148 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_unlock.c
 00000000 l    df *ABS*	00000000 task_exithook.c
-080040bc l     F .text	0000002e task_flushstreams
+0800448c l     F .text	0000002e task_flushstreams
 00000000 l    df *ABS*	00000000 task_recover.c
 00000000 l    df *ABS*	00000000 wd_recover.c
 00000000 l    df *ABS*	00000000 sem_recover.c
+0802715c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sem_waitirq.c
+08027174 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_initialize.c
 200006ac l       .bss	00000000 g_sigactionalloc
 200006b0 l       .bss	00000000 g_sigpendingactionalloc
 200006b4 l       .bss	00000000 g_sigpendingirqactionalloc
 200006b8 l       .bss	00000000 g_sigpendingsignalalloc
 200006bc l       .bss	00000000 g_sigpendingirqsignalalloc
-08004250 l     F .text	0000005a sig_allocateblock
-080042ac l     F .text	00000054 sig_allocatependingsignalblock
+08004658 l     F .text	0000005a sig_allocateblock
+080046b4 l     F .text	00000054 sig_allocatependingsignalblock
 00000000 l    df *ABS*	00000000 sig_pending.c
+0802718c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_findaction.c
 00000000 l    df *ABS*	00000000 sig_allocatependingsigaction.c
 00000000 l    df *ABS*	00000000 sig_releasependingsigaction.c
 00000000 l    df *ABS*	00000000 sig_cleanup.c
 00000000 l    df *ABS*	00000000 mq_recover.c
+080271a4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 group_leave.c
-08004704 l     F .text	0000003c group_release
+08004b60 l     F .text	0000003c group_release
+080271b8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 wd_cancel.c
-08024e38 l       .text	00000000 .LC0
+080271cc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 wd_delete.c
+080271e0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_action.c
-08024e4c l       .text	00000000 .LC0
-080048e8 l     F .text	0000004a sig_allocateaction
+080271f4 l       .text	00000000 .LC0
+08004d8c l     F .text	0000004a sig_allocateaction
 00000000 l    df *ABS*	00000000 pthread_release.c
+08027208 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_release.c
 00000000 l    df *ABS*	00000000 env_release.c
+08027224 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 wd_initialize.c
 200006c0 l       .bss	00000000 g_wdpool
 00000000 l    df *ABS*	00000000 lib_libflushall.c
 00000000 l    df *ABS*	00000000 lib_libfflush.c
 00000000 l    df *ABS*	00000000 lib_usleep.c
+00000000 l    df *ABS*	00000000 lib_syslog.c
+08005118 l     F .text	0000002e vsyslog_internal
 00000000 l    df *ABS*	00000000 lib_lowsyslog.c
-08004c4c l     F .text	0000002c lowvsyslog_internal
+080051b4 l     F .text	0000002c lowvsyslog_internal
 00000000 l    df *ABS*	00000000 lib_setlogmask.c
 00000000 l    df *ABS*	00000000 lib_memset.c
 00000000 l    df *ABS*	00000000 lib_strcpy.c
@@ -298,25 +346,31 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 dq_addfirst.c
 00000000 l    df *ABS*	00000000 dq_rem.c
 00000000 l    df *ABS*	00000000 lib_stream.c
+0802723c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_streamsem.c
-08024e60 l       .text	00000000 .LC0
+08027250 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_libvsprintf.c
-08024e78 l     O .text	00000007 g_nullstring
-0800520c l     F .text	0000005a utodec
-08005268 l     F .text	00000084 utohex
-080052ec l     F .text	0000003a utooct
-08005328 l     F .text	0000003a utobin
-08005364 l     F .text	00000128 utoascii
-0800548c l     F .text	000000ee fixup
-0800557c l     F .text	00000038 getusize
-080055b4 l     F .text	000000fe prejustify
-080056b4 l     F .text	00000052 postjustify
-08024e80 l       .text	00000000 .LC0
-08024e94 l       .text	00000000 .LC1
+08027268 l     O .text	00000007 g_nullstring
+0800579c l     F .text	0000005a utodec
+080057f8 l     F .text	00000084 utohex
+0800587c l     F .text	0000003a utooct
+080058b8 l     F .text	0000003a utobin
+080058f4 l     F .text	00000128 utoascii
+08005a1c l     F .text	000000ee fixup
+08005b0c l     F .text	00000038 getusize
+08005b44 l     F .text	000000fe prejustify
+08005c44 l     F .text	00000052 postjustify
+08027270 l       .text	00000000 .LC0
+08027284 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 lib_lowoutstream.c
-080059e4 l     F .text	00000028 lowoutstream_putc
+08027290 l       .text	00000000 .LC0
+08005f74 l     F .text	0000003c lowoutstream_putc
 00000000 l    df *ABS*	00000000 lib_nulloutstream.c
-08005a30 l     F .text	0000001e nulloutstream_putc
+080272ac l       .text	00000000 .LC0
+08005fd4 l     F .text	0000002e nulloutstream_putc
+00000000 l    df *ABS*	00000000 lib_rawsostream.c
+080272c8 l       .text	00000000 .LC0
+08006028 l     F .text	00000080 rawoutstream_putc
 00000000 l    df *ABS*	00000000 lib_strchr.c
 00000000 l    df *ABS*	00000000 umm_initialize.c
 00000000 l    df *ABS*	00000000 umm_sem.c
@@ -324,27 +378,20 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 umm_malloc.c
 00000000 l    df *ABS*	00000000 umm_zalloc.c
 00000000 l    df *ABS*	00000000 mm_initialize.c
+080272e0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_sem.c
-08024ea0 l       .text	00000000 .LC0
+080272f8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_addfreechunk.c
 00000000 l    df *ABS*	00000000 mm_size2ndx.c
 00000000 l    df *ABS*	00000000 mm_free.c
+0802730c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_malloc.c
+08027320 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_zalloc.c
 00000000 l    df *ABS*	00000000 stm32_allocateheap.c
-00000000 l    df *ABS*	00000000 stm32_exti_gpio.c
-200006f0 l       .bss	00000000 stm32_exti_callbacks
-08006120 l     F .text	00000044 stm32_exti0_isr
-08006164 l     F .text	00000044 stm32_exti1_isr
-080061a8 l     F .text	00000044 stm32_exti2_isr
-080061ec l     F .text	00000044 stm32_exti3_isr
-08006230 l     F .text	00000044 stm32_exti4_isr
-08006274 l     F .text	0000008e stm32_exti_multiisr
-08006304 l     F .text	00000020 stm32_exti95_isr
-08006324 l     F .text	00000020 stm32_exti1510_isr
 00000000 l    df *ABS*	00000000 stm32_idle.c
 00000000 l    df *ABS*	00000000 up_blocktask.c
-08024eb4 l       .text	00000000 .LC0
+08027334 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 up_copyfullstate.c
 00000000 l    df *ABS*	00000000 up_createstack.c
 00000000 l    df *ABS*	00000000 up_exit.c
@@ -355,501 +402,516 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 up_releasestack.c
 00000000 l    df *ABS*	00000000 up_schedulesigaction.c
 00000000 l    df *ABS*	00000000 up_sigdeliver.c
-08024ecc l       .text	00000000 .LC0
+0802734c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 up_stackframe.c
 00000000 l    df *ABS*	00000000 up_unblocktask.c
-08024ee4 l       .text	00000000 .LC0
+08027364 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 up_fullcontextrestore.S
 00000000 l    df *ABS*	00000000 up_switchcontext.S
 00000000 l    df *ABS*	00000000 stm32_timerisr.c
 00000000 l    df *ABS*	00000000 stm32_usbdev.c
-08006bdc l     F .text	0000001c getreg16
-08006bf8 l     F .text	0000001c putreg16
-20000730 l       .bss	00000000 g_usbdev
-08024f00 l     O .text	0000001c g_epops
-08008690 l     F .text	00000126 stm32_epconfigure
-080087b8 l     F .text	0000006c stm32_epdisable
-08008824 l     F .text	0000004c stm32_epallocreq
-08008870 l     F .text	0000002e stm32_epfreereq
-080088a0 l     F .text	00000156 stm32_epsubmit
-080089f8 l     F .text	0000004c stm32_epcancel
-08008a44 l     F .text	000001a8 stm32_epstall
-08024f1c l     O .text	0000001c g_devops
-08008bec l     F .text	000000b4 stm32_allocep
-08008ca0 l     F .text	00000048 stm32_freeep
-08008ce8 l     F .text	00000032 stm32_getframe
-08008d1c l     F .text	00000064 stm32_wakeup
-08008d80 l     F .text	0000003a stm32_selfpowered
-08006c14 l     F .text	0000003e stm32_seteptxcount
-08006c54 l     F .text	0000003c stm32_seteptxaddr
-08006c90 l     F .text	0000003a stm32_geteptxaddr
-08006ccc l     F .text	00000072 stm32_seteprxcount
-08006d40 l     F .text	00000042 stm32_geteprxcount
-08006d84 l     F .text	0000003e stm32_seteprxaddr
-08006dc4 l     F .text	0000003c stm32_geteprxaddr
-08006e00 l     F .text	00000052 stm32_setepaddress
-08006e54 l     F .text	00000052 stm32_seteptype
-08006ea8 l     F .text	00000046 stm32_clrstatusout
-08006ef0 l     F .text	00000050 stm32_clrrxdtog
-08006f40 l     F .text	00000050 stm32_clrtxdtog
-08006f90 l     F .text	00000046 stm32_clrepctrrx
-08006fd8 l     F .text	00000046 stm32_clrepctrtx
-08007020 l     F .text	0000002c stm32_geteptxstatus
-0800704c l     F .text	0000002c stm32_geteprxstatus
-08007078 l     F .text	0000004a stm32_seteptxstatus
-080070c4 l     F .text	0000004a stm32_seteprxstatus
-08007110 l     F .text	00000026 stm32_eptxstalled
-08007138 l     F .text	00000028 stm32_eprxstalled
-08007160 l     F .text	0000006e stm32_copytopma
-080071d0 l     F .text	00000056 stm32_copyfrompma
-08007228 l     F .text	0000003e stm32_rqdequeue
-08007268 l     F .text	0000003e stm32_rqenqueue
-080072a8 l     F .text	0000003c stm32_abortrequest
-080072e4 l     F .text	00000098 stm32_reqcomplete
-0800737c l     F .text	00000072 stm32_epwrite
-080073f0 l     F .text	0000002e stm32_wrrequest_ep0
-08007420 l     F .text	00000114 stm32_wrrequest
-08007534 l     F .text	00000082 stm32_ep0_rdrequest
-080078ac l     F .text	00000548 stm32_ep0setup
-080075b8 l     F .text	00000106 stm32_rdrequest
-080076c0 l     F .text	00000042 stm32_cancelrequests
-08007704 l     F .text	00000060 stm32_dispatchrequest
-08007764 l     F .text	000000f0 stm32_epdone
-08007854 l     F .text	00000058 stm32_setdevaddr
-08008598 l     F .text	00000030 stm32_epreserved
-08007df4 l     F .text	00000074 stm32_ep0in
-08007e68 l     F .text	00000058 stm32_ep0out
-08007ec0 l     F .text	0000013e stm32_ep0done
-08008000 l     F .text	0000005e stm32_lptransfer
-08008060 l     F .text	00000082 stm32_hpinterrupt
-080080e4 l     F .text	00000164 stm32_lpinterrupt
-08008dbc l     F .text	000000a4 stm32_reset
-08008370 l     F .text	00000076 stm32_initresume
-08008248 l     F .text	0000006a stm32_setimask
-080082b4 l     F .text	000000ba stm32_suspend
-080083e8 l     F .text	000000be stm32_esofpoll
-080084a8 l     F .text	0000009e stm32_epreserve
-08008548 l     F .text	0000004e stm32_epunreserve
-080085c8 l     F .text	0000007c stm32_epallocpma
-08008644 l     F .text	0000004a stm32_epfreepma
-08008e60 l     F .text	000000a0 stm32_hwreset
-08008f00 l     F .text	000000d6 stm32_hwsetup
-08008fd8 l     F .text	00000048 stm32_hwshutdown
+08006e8c l     F .text	0000001c getreg16
+08006ea8 l     F .text	0000001c putreg16
+200006f0 l       .bss	00000000 g_usbdev
+08027380 l     O .text	0000001c g_epops
+08008970 l     F .text	00000178 stm32_epconfigure
+08008ae8 l     F .text	00000082 stm32_epdisable
+08008b6c l     F .text	00000060 stm32_epallocreq
+08008bcc l     F .text	00000046 stm32_epfreereq
+08008c14 l     F .text	0000019e stm32_epsubmit
+08008db4 l     F .text	00000068 stm32_epcancel
+08008e1c l     F .text	000001be stm32_epstall
+0802739c l     O .text	0000001c g_devops
+08008fdc l     F .text	000000c8 stm32_allocep
+080090a4 l     F .text	00000060 stm32_freeep
+08009104 l     F .text	00000048 stm32_getframe
+0800914c l     F .text	0000007a stm32_wakeup
+080091c8 l     F .text	00000050 stm32_selfpowered
+08006ec4 l     F .text	0000003e stm32_seteptxcount
+08006f04 l     F .text	0000003c stm32_seteptxaddr
+08006f40 l     F .text	0000003a stm32_geteptxaddr
+080273b8 l       .text	00000000 .LC0
+08006f7c l     F .text	000000a4 stm32_seteprxcount
+08007020 l     F .text	00000042 stm32_geteprxcount
+08007064 l     F .text	0000003e stm32_seteprxaddr
+080070a4 l     F .text	0000003c stm32_geteprxaddr
+080070e0 l     F .text	00000052 stm32_setepaddress
+08007134 l     F .text	00000052 stm32_seteptype
+08007188 l     F .text	00000046 stm32_clrstatusout
+080071d0 l     F .text	00000050 stm32_clrrxdtog
+08007220 l     F .text	00000050 stm32_clrtxdtog
+08007270 l     F .text	00000046 stm32_clrepctrrx
+080072b8 l     F .text	00000046 stm32_clrepctrtx
+08007300 l     F .text	0000002c stm32_geteptxstatus
+0800732c l     F .text	0000002c stm32_geteprxstatus
+08007358 l     F .text	0000004a stm32_seteptxstatus
+080073a4 l     F .text	0000004a stm32_seteprxstatus
+080073f0 l     F .text	00000026 stm32_eptxstalled
+08007418 l     F .text	00000028 stm32_eprxstalled
+08007440 l     F .text	0000006e stm32_copytopma
+080074b0 l     F .text	00000056 stm32_copyfrompma
+08007508 l     F .text	0000003e stm32_rqdequeue
+08007548 l     F .text	0000003e stm32_rqenqueue
+08007588 l     F .text	0000003c stm32_abortrequest
+080075c4 l     F .text	00000098 stm32_reqcomplete
+0800765c l     F .text	00000072 stm32_epwrite
+080076d0 l     F .text	0000002e stm32_wrrequest_ep0
+08007700 l     F .text	00000114 stm32_wrrequest
+08007814 l     F .text	00000082 stm32_ep0_rdrequest
+08007b8c l     F .text	00000548 stm32_ep0setup
+08007898 l     F .text	00000106 stm32_rdrequest
+080079a0 l     F .text	00000042 stm32_cancelrequests
+080079e4 l     F .text	00000060 stm32_dispatchrequest
+08007a44 l     F .text	000000f0 stm32_epdone
+08007b34 l     F .text	00000058 stm32_setdevaddr
+08008878 l     F .text	00000030 stm32_epreserved
+080080d4 l     F .text	00000074 stm32_ep0in
+08008148 l     F .text	00000058 stm32_ep0out
+080081a0 l     F .text	0000013e stm32_ep0done
+080082e0 l     F .text	0000005e stm32_lptransfer
+08008340 l     F .text	00000082 stm32_hpinterrupt
+080083c4 l     F .text	00000164 stm32_lpinterrupt
+08009218 l     F .text	000000a4 stm32_reset
+08008650 l     F .text	00000076 stm32_initresume
+08008528 l     F .text	0000006a stm32_setimask
+08008594 l     F .text	000000ba stm32_suspend
+080086c8 l     F .text	000000be stm32_esofpoll
+08008788 l     F .text	0000009e stm32_epreserve
+08008828 l     F .text	0000004e stm32_epunreserve
+080088a8 l     F .text	0000007c stm32_epallocpma
+08008924 l     F .text	0000004a stm32_epfreepma
+080092bc l     F .text	000000a0 stm32_hwreset
+0800935c l     F .text	000000d6 stm32_hwsetup
+08009434 l     F .text	00000048 stm32_hwshutdown
 00000000 l    df *ABS*	00000000 nsh_main.c
-08024f38 l       .text	00000000 .LC0
+080273cc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 nsh_init.c
 00000000 l    df *ABS*	00000000 nsh_consolemain.c
+080273f4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 nsh_console.c
-08024f60 l       .text	00000000 .LC0
-08009264 l     F .text	00000040 nsh_openifnotopen
-080092a4 l     F .text	0000007a nsh_closeifnotclosed
-08009320 l     F .text	0000003e nsh_consolewrite
-08009360 l     F .text	00000046 nsh_consoleoutput
-080093a8 l     F .text	0000001c nsh_consolelinebuffer
-080093c4 l     F .text	00000018 nsh_consoleclone
-080093dc l     F .text	0000001e nsh_consolerelease
-080093fc l     F .text	0000004e nsh_consoleredirect
-0800944c l     F .text	0000002e nsh_consoleundirect
-0800947c l     F .text	00000016 nsh_consoleexit
+08027408 l       .text	00000000 .LC0
+08009744 l     F .text	00000040 nsh_openifnotopen
+08009784 l     F .text	0000007a nsh_closeifnotclosed
+0802740c l       .text	00000000 .LC1
+08009800 l     F .text	0000006a nsh_consolewrite
+08027430 l     O .text	00000011 __FUNCTION__.5414
+0800986c l     F .text	00000046 nsh_consoleoutput
+080098b4 l     F .text	0000001c nsh_consolelinebuffer
+080098d0 l     F .text	00000018 nsh_consoleclone
+080098e8 l     F .text	0000001e nsh_consolerelease
+08009908 l     F .text	0000004e nsh_consoleredirect
+08009958 l     F .text	0000002e nsh_consoleundirect
+08009988 l     F .text	00000016 nsh_consoleexit
 00000000 l    df *ABS*	00000000 nsh_session.c
-08024f64 l       .text	00000000 .LC0
-08024f70 l       .text	00000000 .LC1
+08027444 l       .text	00000000 .LC0
+08027454 l       .text	00000000 .LC1
+08027460 l       .text	00000000 .LC2
 00000000 l    df *ABS*	00000000 readline.c
-080095e8 l     F .text	00000058 readline_getc
-08009640 l     F .text	00000048 readline_putc
-08009688 l     F .text	00000024 readline_write
+0802746c l       .text	00000000 .LC0
+08009b08 l     F .text	0000006c readline_getc
+08009b74 l     F .text	0000005c readline_putc
+08009bd0 l     F .text	00000044 readline_write
 00000000 l    df *ABS*	00000000 nsh_parse.c
-08024f7c l     O .text	00000004 g_token_separator
-08024f80 l     O .text	00000005 g_line_separator
-08024f88 l     O .text	00000002 g_redirect1
-08024f8c l     O .text	00000003 g_redirect2
-08024f90 l     O .text	00000002 g_exitstatus
-08024f94 l     O .text	00000002 g_success
-08024f98 l     O .text	00000002 g_failure
-08024f9c l     O .text	00000001 g_nullstring
-080096fc l     F .text	0000005e nsh_releaseargs
-0800975c l     F .text	00000034 nsh_child
-08009790 l     F .text	0000006a nsh_cloneargs
-080097fc l     F .text	00000032 nsh_saveresult
-08025158 l       .text	00000000 .LC0
-08025160 l       .text	00000000 .LC1
-08025170 l       .text	00000000 .LC2
-08025180 l       .text	00000000 .LC3
-08009830 l     F .text	0000028e nsh_execute
-08009ac0 l     F .text	0000005e nsh_envexpand
-08009b20 l     F .text	0000003c nsh_argexpand
-0802518c l       .text	00000000 .LC4
-08009b5c l     F .text	0000011e nsh_argument
-08009c7c l     F .text	00000016 nsh_cmdenabled
-08025190 l       .text	00000000 .LC5
-08025198 l       .text	00000000 .LC6
-08009c94 l     F .text	000000e2 nsh_nice
-0802519c l       .text	00000000 .LC7
-08009d78 l     F .text	0000021c nsh_parse_command
+08027478 l     O .text	00000004 g_token_separator
+0802747c l     O .text	00000005 g_line_separator
+08027484 l     O .text	00000002 g_redirect1
+08027488 l     O .text	00000003 g_redirect2
+0802748c l     O .text	00000002 g_exitstatus
+08027490 l     O .text	00000002 g_success
+08027494 l     O .text	00000002 g_failure
+08027498 l     O .text	00000001 g_nullstring
+08009c80 l     F .text	0000005e nsh_releaseargs
+08027654 l       .text	00000000 .LC0
+08027660 l       .text	00000000 .LC1
+08009ce0 l     F .text	00000068 nsh_child
+080276bc l     O .text	0000000a __FUNCTION__.5463
+08009d48 l     F .text	0000006a nsh_cloneargs
+08009db4 l     F .text	00000032 nsh_saveresult
+08027674 l       .text	00000000 .LC2
+0802767c l       .text	00000000 .LC3
+0802768c l       .text	00000000 .LC4
+0802769c l       .text	00000000 .LC5
+08009de8 l     F .text	0000028e nsh_execute
+0800a078 l     F .text	0000005e nsh_envexpand
+0800a0d8 l     F .text	0000003c nsh_argexpand
+080276a8 l       .text	00000000 .LC6
+0800a114 l     F .text	0000011e nsh_argument
+0800a234 l     F .text	00000016 nsh_cmdenabled
+080276ac l       .text	00000000 .LC7
+080276b4 l       .text	00000000 .LC8
+0800a24c l     F .text	000000e2 nsh_nice
+080276b8 l       .text	00000000 .LC9
+0800a330 l     F .text	0000021c nsh_parse_command
 00000000 l    df *ABS*	00000000 nsh_command.c
-080252d8 l       .text	00000000 .LC20
-08025554 l     O .text	00000280 g_cmdmap
-0800a24c l     F .text	000000ca cmd_help
-0800a37c l     F .text	00000016 cmd_exit
-0800a360 l     F .text	0000001c cmd_false
-0800a344 l     F .text	0000001a cmd_true
-080257d4 l       .text	00000000 .LC67
-080257d8 l       .text	00000000 .LC68
-080257e0 l       .text	00000000 .LC69
-0800a060 l     F .text	00000084 help_cmdlist
-080257e4 l       .text	00000000 .LC70
-080257f8 l       .text	00000000 .LC71
-0800a0e4 l     F .text	0000002e help_usage
-08025834 l       .text	00000000 .LC72
-08025840 l       .text	00000000 .LC73
-0800a114 l     F .text	00000046 help_showcmd
-08025848 l       .text	00000000 .LC74
-0800a15c l     F .text	00000072 help_cmd
-0800a1d0 l     F .text	00000030 help_allcmds
-08025854 l       .text	00000000 .LC75
-0800a200 l     F .text	0000004a help_builtins
-08025864 l       .text	00000000 .LC76
-08025868 l       .text	00000000 .LC77
-0800a318 l     F .text	0000002c cmd_unrecognized
+08027800 l       .text	00000000 .LC20
+08027a7c l     O .text	00000280 g_cmdmap
+0800a804 l     F .text	000000ca cmd_help
+0800a934 l     F .text	00000016 cmd_exit
+0800a918 l     F .text	0000001c cmd_false
+0800a8fc l     F .text	0000001a cmd_true
+08027cfc l       .text	00000000 .LC67
+08027d00 l       .text	00000000 .LC68
+08027d08 l       .text	00000000 .LC69
+0800a618 l     F .text	00000084 help_cmdlist
+08027d0c l       .text	00000000 .LC70
+08027d20 l       .text	00000000 .LC71
+0800a69c l     F .text	0000002e help_usage
+08027d5c l       .text	00000000 .LC72
+08027d68 l       .text	00000000 .LC73
+0800a6cc l     F .text	00000046 help_showcmd
+08027d70 l       .text	00000000 .LC74
+0800a714 l     F .text	00000072 help_cmd
+0800a788 l     F .text	00000030 help_allcmds
+08027d7c l       .text	00000000 .LC75
+0800a7b8 l     F .text	0000004a help_builtins
+08027d8c l       .text	00000000 .LC76
+08027d90 l       .text	00000000 .LC77
+0800a8d0 l     F .text	0000002c cmd_unrecognized
 00000000 l    df *ABS*	00000000 nsh_fscmds.c
-20000878 l       .bss	00000000 g_iobuffer
-0800a444 l     F .text	0000003e trim_dir
-08025880 l       .text	00000000 .LC1
-08025884 l       .text	00000000 .LC2
-08025888 l       .text	00000000 .LC3
-0800a484 l     F .text	00000072 nsh_getdirpath
-08025890 l       .text	00000000 .LC4
-0800a4f8 l     F .text	00000080 foreach_direntry
-0802589c l       .text	00000000 .LC5
-080258a0 l       .text	00000000 .LC6
-0800a578 l     F .text	0000003e ls_specialdir
-080258a4 l       .text	00000000 .LC7
-080258a8 l       .text	00000000 .LC8
-080258b0 l       .text	00000000 .LC10
-080258b4 l       .text	00000000 .LC11
-080258b8 l       .text	00000000 .LC12
-080258bc l       .text	00000000 .LC13
-080258c0 l       .text	00000000 .LC14
-080258c8 l       .text	00000000 .LC9
-0800a5b8 l     F .text	00000218 ls_handler
-080258d4 l       .text	00000000 .LC15
-0800a7d0 l     F .text	000000a0 ls_recursive
-080258dc l       .text	00000000 .LC16
-080258e4 l       .text	00000000 .LC17
-080258ec l       .text	00000000 .LC18
-080258f4 l       .text	00000000 .LC19
-0800a870 l     F .text	00000188 cat_common
-080258fc l       .text	00000000 .LC20
-08025904 l       .text	00000000 .LC21
-08025910 l       .text	00000000 .LC22
-08025918 l       .text	00000000 .LC23
-0802591c l       .text	00000000 .LC24
-08025924 l       .text	00000000 .LC25
-08025928 l       .text	00000000 .LC26
-08025938 l       .text	00000000 .LC27
-08025940 l       .text	00000000 .LC0
-08025960 l       .text	00000000 .LC28
-08025968 l       .text	00000000 .LC29
-08025970 l       .text	00000000 .LC30
-08025984 l       .text	00000000 .LC31
-0802598c l       .text	00000000 .LC32
-08025994 l       .text	00000000 .LC33
-0802599c l       .text	00000000 .LC34
+20000838 l       .bss	00000000 g_iobuffer
+0800a9fc l     F .text	0000003e trim_dir
+08027da8 l       .text	00000000 .LC1
+08027dac l       .text	00000000 .LC2
+08027db0 l       .text	00000000 .LC3
+0800aa3c l     F .text	00000072 nsh_getdirpath
+08027db8 l       .text	00000000 .LC4
+0800aab0 l     F .text	00000080 foreach_direntry
+08027dc4 l       .text	00000000 .LC5
+08027dc8 l       .text	00000000 .LC6
+0800ab30 l     F .text	0000003e ls_specialdir
+08027dcc l       .text	00000000 .LC7
+08027dd0 l       .text	00000000 .LC8
+08027dd8 l       .text	00000000 .LC10
+08027ddc l       .text	00000000 .LC11
+08027de0 l       .text	00000000 .LC12
+08027de4 l       .text	00000000 .LC13
+08027de8 l       .text	00000000 .LC14
+08027df0 l       .text	00000000 .LC9
+0800ab70 l     F .text	00000218 ls_handler
+08027dfc l       .text	00000000 .LC15
+0800ad88 l     F .text	000000a0 ls_recursive
+08027e04 l       .text	00000000 .LC16
+08027e0c l       .text	00000000 .LC17
+08027e14 l       .text	00000000 .LC18
+08027e1c l       .text	00000000 .LC19
+0800ae28 l     F .text	00000188 cat_common
+08027e24 l       .text	00000000 .LC20
+08027e2c l       .text	00000000 .LC21
+08027e38 l       .text	00000000 .LC22
+08027e40 l       .text	00000000 .LC23
+08027e44 l       .text	00000000 .LC24
+08027e4c l       .text	00000000 .LC25
+08027e50 l       .text	00000000 .LC26
+08027e60 l       .text	00000000 .LC27
+08027e68 l       .text	00000000 .LC0
+08027e88 l       .text	00000000 .LC28
+08027e90 l       .text	00000000 .LC29
+08027e98 l       .text	00000000 .LC30
+08027eac l       .text	00000000 .LC31
+08027ef0 l     O .text	00000009 __FUNCTION__.5650
+08027ec0 l       .text	00000000 .LC32
+08027ec8 l       .text	00000000 .LC33
+08027ed0 l       .text	00000000 .LC34
+08027ed8 l       .text	00000000 .LC35
 00000000 l    df *ABS*	00000000 nsh_ddcmd.c
-080259b4 l     O .text	00000003 g_dd
-0800b9b0 l     F .text	00000018 dd_outfcloseblk
-0800b9c8 l     F .text	00000018 dd_outfclosech
-0800b9e0 l     F .text	00000018 dd_infcloseblk
-0800b9f8 l     F .text	00000018 dd_infclosech
-080259b8 l       .text	00000000 .LC0
-0800ba10 l     F .text	00000082 dd_writeblk
-080259c8 l       .text	00000000 .LC1
-0800ba94 l     F .text	0000008a dd_writech
-080259d0 l       .text	00000000 .LC2
-0800bb20 l     F .text	00000086 dd_readblk
-080259dc l       .text	00000000 .LC3
-0800bba8 l     F .text	000000bc dd_readch
-0800bc64 l     F .text	0000003c dd_filetype
-080259e4 l       .text	00000000 .LC4
-080259ec l       .text	00000000 .LC5
-0800bca0 l     F .text	000000ec dd_infopen
-0800bd8c l     F .text	000000c4 dd_outfopen
-080259f4 l       .text	00000000 .LC6
-080259f8 l       .text	00000000 .LC7
-080259fc l       .text	00000000 .LC8
-08025a00 l       .text	00000000 .LC9
-08025a08 l       .text	00000000 .LC10
+08027efc l     O .text	00000003 g_dd
+0800bf80 l     F .text	00000018 dd_outfcloseblk
+0800bf98 l     F .text	00000018 dd_outfclosech
+0800bfb0 l     F .text	00000018 dd_infcloseblk
+0800bfc8 l     F .text	00000018 dd_infclosech
+08027f00 l       .text	00000000 .LC0
+0800bfe0 l     F .text	00000082 dd_writeblk
+08027f10 l       .text	00000000 .LC1
+0800c064 l     F .text	0000008a dd_writech
+08027f18 l       .text	00000000 .LC2
+0800c0f0 l     F .text	00000086 dd_readblk
+08027f24 l       .text	00000000 .LC3
+0800c178 l     F .text	000000bc dd_readch
+0800c234 l     F .text	0000003c dd_filetype
+08027f2c l       .text	00000000 .LC4
+08027f34 l       .text	00000000 .LC5
+0800c270 l     F .text	000000ec dd_infopen
+0800c35c l     F .text	000000c4 dd_outfopen
+08027f3c l       .text	00000000 .LC6
+08027f40 l       .text	00000000 .LC7
+08027f44 l       .text	00000000 .LC8
+08027f48 l       .text	00000000 .LC9
+08027f50 l       .text	00000000 .LC10
 00000000 l    df *ABS*	00000000 nsh_proccmds.c
 200000a4 l     O .data	00000024 g_statenames
 200000c8 l     O .data	00000010 g_ttypenames
-08025a9c l       .text	00000000 .LC13
-08025aa4 l       .text	00000000 .LC14
-08025aac l       .text	00000000 .LC15
-08025ac8 l       .text	00000000 .LC16
-08025acc l       .text	00000000 .LC17
-08025ad0 l       .text	00000000 .LC18
-08025ad8 l       .text	00000000 .LC19
-0800c0fc l     F .text	0000015c ps_task
-08025adc l       .text	00000000 .LC20
-08025ae8 l       .text	00000000 .LC21
-08025b10 l       .text	00000000 .LC22
-08025b18 l       .text	00000000 .LC23
+08027fe4 l       .text	00000000 .LC13
+08027fec l       .text	00000000 .LC14
+08027ff4 l       .text	00000000 .LC15
+08028010 l       .text	00000000 .LC16
+08028014 l       .text	00000000 .LC17
+08028018 l       .text	00000000 .LC18
+08028020 l       .text	00000000 .LC19
+0800c6cc l     F .text	0000015c ps_task
+08028024 l       .text	00000000 .LC20
+08028030 l       .text	00000000 .LC21
+08028058 l       .text	00000000 .LC22
+08028060 l       .text	00000000 .LC23
 00000000 l    df *ABS*	00000000 nsh_mmcmds.c
-08025b20 l       .text	00000000 .LC0
-08025b58 l       .text	00000000 .LC1
+08028068 l       .text	00000000 .LC0
+080280a0 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 nsh_envcmds.c
-08025b74 l     O .text	00000004 g_pwd
-08025b78 l     O .text	00000007 g_oldpwd
-08025b80 l     O .text	00000002 g_home
-0800c530 l     F .text	0000002a nsh_getwd
-08025b84 l       .text	00000000 .LC0
-08025b88 l       .text	00000000 .LC1
-08025b8c l       .text	00000000 .LC2
-08025b94 l       .text	00000000 .LC3
-0800c55c l     F .text	000000ae nsh_getdirpath
-08025ba4 l       .text	00000000 .LC4
-08025ba8 l       .text	00000000 .LC5
-08025bac l       .text	00000000 .LC6
-08025bb0 l       .text	00000000 .LC7
-08025bb4 l       .text	00000000 .LC8
-08025bbc l       .text	00000000 .LC9
-08025bc0 l       .text	00000000 .LC10
-08025bc4 l       .text	00000000 .LC11
-08025bc8 l       .text	00000000 .LC12
-08025bd0 l       .text	00000000 .LC13
+080280bc l     O .text	00000004 g_pwd
+080280c0 l     O .text	00000007 g_oldpwd
+080280c8 l     O .text	00000002 g_home
+0800cb00 l     F .text	0000002a nsh_getwd
+080280cc l       .text	00000000 .LC0
+080280d0 l       .text	00000000 .LC1
+080280d4 l       .text	00000000 .LC2
+080280dc l       .text	00000000 .LC3
+0800cb2c l     F .text	000000ae nsh_getdirpath
+080280ec l       .text	00000000 .LC4
+080280f0 l       .text	00000000 .LC5
+080280f4 l       .text	00000000 .LC6
+080280f8 l       .text	00000000 .LC7
+080280fc l       .text	00000000 .LC8
+08028104 l       .text	00000000 .LC9
+08028108 l       .text	00000000 .LC10
+0802810c l       .text	00000000 .LC11
+08028110 l       .text	00000000 .LC12
+08028118 l       .text	00000000 .LC13
 00000000 l    df *ABS*	00000000 nsh_dbgcmds.c
-0800c8f4 l     F .text	000000a4 mem_parse
-08025bdc l       .text	00000000 .LC0
-08025bec l       .text	00000000 .LC1
-08025bf8 l       .text	00000000 .LC2
-08025bfc l       .text	00000000 .LC3
-08025c0c l       .text	00000000 .LC4
-08025c18 l       .text	00000000 .LC5
-08025c28 l       .text	00000000 .LC6
-08025c34 l       .text	00000000 .LC7
-08025c3c l       .text	00000000 .LC8
-08025c44 l       .text	00000000 .LC9
-08025c4c l       .text	00000000 .LC10
-08025c50 l       .text	00000000 .LC11
-08025c54 l       .text	00000000 .LC12
-08025c58 l       .text	00000000 .LC13
-08025c64 l       .text	00000000 .LC14
-08025c6c l       .text	00000000 .LC15
-08025c74 l       .text	00000000 .LC16
-08025c7c l       .text	00000000 .LC17
-08025c84 l       .text	00000000 .LC18
+0800cec4 l     F .text	000000a4 mem_parse
+08028124 l       .text	00000000 .LC0
+08028134 l       .text	00000000 .LC1
+08028140 l       .text	00000000 .LC2
+08028144 l       .text	00000000 .LC3
+08028154 l       .text	00000000 .LC4
+08028160 l       .text	00000000 .LC5
+08028170 l       .text	00000000 .LC6
+0802817c l       .text	00000000 .LC7
+08028184 l       .text	00000000 .LC8
+0802818c l       .text	00000000 .LC9
+08028194 l       .text	00000000 .LC10
+08028198 l       .text	00000000 .LC11
+0802819c l       .text	00000000 .LC12
+080281a0 l       .text	00000000 .LC13
+080281ac l       .text	00000000 .LC14
+080281b4 l       .text	00000000 .LC15
+080281bc l       .text	00000000 .LC16
+080281c4 l       .text	00000000 .LC17
+080281cc l       .text	00000000 .LC18
 00000000 l    df *ABS*	00000000 nsh_builtin.c
-08025c90 l       .text	00000000 .LC0
+080281d8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 nsh_mntcmds.c
-08025c9c l       .text	00000000 .LC0
-08025ca4 l       .text	00000000 .LC1
-0800cf44 l     F .text	0000003a get_fstype
-08025cb4 l       .text	00000000 .LC2
-0800cf80 l     F .text	00000036 mount_handler
-0800cfb8 l     F .text	00000022 mount_show
-08025cc4 l       .text	00000000 .LC3
-08025cc8 l       .text	00000000 .LC4
-08025cd0 l       .text	00000000 .LC5
+080281e4 l       .text	00000000 .LC0
+080281ec l       .text	00000000 .LC1
+0800d514 l     F .text	0000003a get_fstype
+080281fc l       .text	00000000 .LC2
+0802820c l       .text	00000000 .LC3
+0800d550 l     F .text	00000058 mount_handler
+0800d5a8 l     F .text	00000022 mount_show
+0802821c l       .text	00000000 .LC4
+08028220 l       .text	00000000 .LC5
+08028228 l       .text	00000000 .LC6
 00000000 l    df *ABS*	00000000 nsh_test.c
-08025cd8 l       .text	00000000 .LC0
-08025cdc l       .text	00000000 .LC1
-08025ce0 l       .text	00000000 .LC2
-08025ce4 l       .text	00000000 .LC3
-08025ce8 l       .text	00000000 .LC4
-08025cec l       .text	00000000 .LC5
-08025cf0 l       .text	00000000 .LC6
-08025cf4 l       .text	00000000 .LC7
-08025cf8 l       .text	00000000 .LC8
-0800d268 l     F .text	00000206 binaryexpression
-08025cfc l       .text	00000000 .LC9
-08025d00 l       .text	00000000 .LC10
-08025d04 l       .text	00000000 .LC11
-08025d08 l       .text	00000000 .LC12
-08025d0c l       .text	00000000 .LC13
-08025d10 l       .text	00000000 .LC14
-08025d14 l       .text	00000000 .LC15
-08025d18 l       .text	00000000 .LC16
-08025d1c l       .text	00000000 .LC17
-08025d20 l       .text	00000000 .LC18
-0800d470 l     F .text	0000020c unaryexpression
-08025d24 l       .text	00000000 .LC19
-08025d28 l       .text	00000000 .LC20
-08025d2c l       .text	00000000 .LC21
-08025d30 l       .text	00000000 .LC22
-0800d67c l     F .text	0000015e expression
-08025d38 l       .text	00000000 .LC23
+08028230 l       .text	00000000 .LC0
+08028234 l       .text	00000000 .LC1
+08028238 l       .text	00000000 .LC2
+0802823c l       .text	00000000 .LC3
+08028240 l       .text	00000000 .LC4
+08028244 l       .text	00000000 .LC5
+08028248 l       .text	00000000 .LC6
+0802824c l       .text	00000000 .LC7
+08028250 l       .text	00000000 .LC8
+0800d858 l     F .text	00000206 binaryexpression
+08028254 l       .text	00000000 .LC9
+08028258 l       .text	00000000 .LC10
+0802825c l       .text	00000000 .LC11
+08028260 l       .text	00000000 .LC12
+08028264 l       .text	00000000 .LC13
+08028268 l       .text	00000000 .LC14
+0802826c l       .text	00000000 .LC15
+08028270 l       .text	00000000 .LC16
+08028274 l       .text	00000000 .LC17
+08028278 l       .text	00000000 .LC18
+0800da60 l     F .text	0000020c unaryexpression
+0802827c l       .text	00000000 .LC19
+08028280 l       .text	00000000 .LC20
+08028284 l       .text	00000000 .LC21
+08028288 l       .text	00000000 .LC22
+0800dc6c l     F .text	0000015e expression
+08028290 l       .text	00000000 .LC23
 00000000 l    df *ABS*	00000000 readline_common.c
-08025d3c l     O .text	00000003 g_erasetoeol
+08028294 l     O .text	00000003 g_erasetoeol
+08028298 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 exec_builtin.c
 00000000 l    df *ABS*	00000000 nsh_script.c
-08025d40 l       .text	00000000 .LC0
-08025d44 l       .text	00000000 .LC1
+080282ac l       .text	00000000 .LC0
+080282b0 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 builtin.c
 00000000 l    df *ABS*	00000000 builtin_list.c
 00000000 l    df *ABS*	00000000 cc3000basic.c
-200008f8 l       .bss	00000000 isInitialized
-0800dc28 l     F .text	00000078 wait
-08025da4 l       .text	00000000 .LC0
-08025da8 l       .text	00000000 .LC1
-08025dbc l       .text	00000000 .LC2
-0800dca0 l     F .text	00000076 wait_on
-08025dc8 l       .text	00000000 .LC3
-08025dcc l       .text	00000000 .LC4
-08025df8 l       .text	00000000 .LC5
-08025e24 l       .text	00000000 .LC6
-08025e54 l       .text	00000000 .LC7
-08025e58 l       .text	00000000 .LC8
-08025e5c l       .text	00000000 .LC9
-08025e60 l       .text	00000000 .LC10
-08025e88 l       .text	00000000 .LC11
-08025ea8 l       .text	00000000 .LC12
-08025edc l       .text	00000000 .LC13
-08025f0c l       .text	00000000 .LC14
-08025f3c l       .text	00000000 .LC15
-08025f6c l       .text	00000000 .LC16
-08025f8c l       .text	00000000 .LC17
-08025fbc l       .text	00000000 .LC18
-08025fd8 l       .text	00000000 .LC19
-08025ff8 l       .text	00000000 .LC20
-08026020 l       .text	00000000 .LC21
-0802603c l       .text	00000000 .LC22
-0802605c l       .text	00000000 .LC23
-0802606c l       .text	00000000 .LC24
-08026094 l       .text	00000000 .LC25
-080260b0 l       .text	00000000 .LC26
-080260f0 l       .text	00000000 .LC27
-08026108 l       .text	00000000 .LC28
-08026124 l       .text	00000000 .LC29
-0802613c l       .text	00000000 .LC30
-08026170 l       .text	00000000 .LC31
-0802618c l       .text	00000000 .LC32
-080261a8 l       .text	00000000 .LC33
-080261dc l       .text	00000000 .LC34
-080261f4 l       .text	00000000 .LC35
-08026218 l       .text	00000000 .LC36
-08026258 l       .text	00000000 .LC37
-0802627c l       .text	00000000 .LC38
-080262b4 l       .text	00000000 .LC39
-080262d4 l       .text	00000000 .LC40
-080262f8 l       .text	00000000 .LC41
-08026334 l       .text	00000000 .LC42
-08026350 l       .text	00000000 .LC43
-08026388 l       .text	00000000 .LC44
-080263b0 l       .text	00000000 .LC45
-080263fc l       .text	00000000 .LC46
-08026404 l       .text	00000000 .LC47
-08026410 l       .text	00000000 .LC48
-0802642c l       .text	00000000 .LC49
-08026450 l       .text	00000000 .LC50
-08026468 l       .text	00000000 .LC51
-08026484 l       .text	00000000 .LC52
-080264a0 l       .text	00000000 .LC53
-080264c0 l       .text	00000000 .LC54
-080264ec l       .text	00000000 .LC55
-08026510 l       .text	00000000 .LC56
-08026540 l       .text	00000000 .LC57
-08026584 l       .text	00000000 .LC58
-080265ac l       .text	00000000 .LC61
-080265e0 l       .text	00000000 .LC62
-080265fc l       .text	00000000 .LC63
-08026620 l       .text	00000000 .LC64
-08026648 l       .text	00000000 .LC65
-08026668 l       .text	00000000 .LC66
-08026684 l       .text	00000000 .LC67
-080266a0 l       .text	00000000 .LC68
-080266bc l       .text	00000000 .LC59
-080266c4 l       .text	00000000 .LC60
-080266d0 l       .text	00000000 .LC69
-08026708 l       .text	00000000 .LC70
-08026728 l       .text	00000000 .LC71
-08026748 l       .text	00000000 .LC72
-08026760 l       .text	00000000 .LC73
-08026798 l       .text	00000000 .LC74
-080267b8 l       .text	00000000 .LC75
-080267d8 l       .text	00000000 .LC76
-080267f0 l       .text	00000000 .LC77
-0802680c l       .text	00000000 .LC78
-08026840 l       .text	00000000 .LC79
-08026874 l       .text	00000000 .LC80
-08026890 l       .text	00000000 .LC81
-080268b0 l       .text	00000000 .LC82
-08026900 l       .text	00000000 .LC83
-08026918 l       .text	00000000 .LC84
-08026968 l       .text	00000000 .LC85
-08026984 l       .text	00000000 .LC86
-0802698c l       .text	00000000 .LC87
-08026994 l       .text	00000000 .LC88
-0802699c l       .text	00000000 .LC89
-080269a4 l       .text	00000000 .LC90
-080269ac l       .text	00000000 .LC91
-080269b4 l       .text	00000000 .LC92
-080269b8 l       .text	00000000 .LC93
-080269bc l       .text	00000000 .LC94
-08026a04 l       .text	00000000 .LC95
-08026a24 l       .text	00000000 .LC96
-08026a34 l       .text	00000000 .LC97
-08026a64 l       .text	00000000 .LC98
-08026a7c l       .text	00000000 .LC99
-08026a8c l       .text	00000000 .LC100
-08026a9c l       .text	00000000 .LC101
-08026aa8 l       .text	00000000 .LC102
-08026ab8 l       .text	00000000 .LC103
-08026ac8 l       .text	00000000 .LC104
-08026ad8 l       .text	00000000 .LC105
-08026adc l       .text	00000000 .LC106
-08026ae0 l       .text	00000000 .LC107
+200008b8 l       .bss	00000000 isInitialized
+0800e230 l     F .text	00000078 wait
+08028310 l       .text	00000000 .LC0
+08028314 l       .text	00000000 .LC1
+08028328 l       .text	00000000 .LC2
+0800e2a8 l     F .text	00000076 wait_on
+08028334 l       .text	00000000 .LC3
+08028338 l       .text	00000000 .LC4
+08028364 l       .text	00000000 .LC5
+08028390 l       .text	00000000 .LC6
+080283c0 l       .text	00000000 .LC7
+080283c4 l       .text	00000000 .LC8
+080283c8 l       .text	00000000 .LC9
+080283cc l       .text	00000000 .LC10
+080283f4 l       .text	00000000 .LC11
+08028414 l       .text	00000000 .LC12
+08028448 l       .text	00000000 .LC13
+08028478 l       .text	00000000 .LC14
+080284a8 l       .text	00000000 .LC15
+080284d8 l       .text	00000000 .LC16
+080284f8 l       .text	00000000 .LC17
+08028528 l       .text	00000000 .LC18
+08028544 l       .text	00000000 .LC19
+08028564 l       .text	00000000 .LC20
+0802858c l       .text	00000000 .LC21
+080285a8 l       .text	00000000 .LC22
+080285c8 l       .text	00000000 .LC23
+080285d8 l       .text	00000000 .LC24
+08028600 l       .text	00000000 .LC25
+0802861c l       .text	00000000 .LC26
+0802865c l       .text	00000000 .LC27
+08028674 l       .text	00000000 .LC28
+08028690 l       .text	00000000 .LC29
+080286a8 l       .text	00000000 .LC30
+080286dc l       .text	00000000 .LC31
+080286f8 l       .text	00000000 .LC32
+08028714 l       .text	00000000 .LC33
+08028748 l       .text	00000000 .LC34
+08028760 l       .text	00000000 .LC35
+08028784 l       .text	00000000 .LC36
+080287c4 l       .text	00000000 .LC37
+080287e8 l       .text	00000000 .LC38
+08028820 l       .text	00000000 .LC39
+08028840 l       .text	00000000 .LC40
+08028864 l       .text	00000000 .LC41
+080288a0 l       .text	00000000 .LC42
+080288bc l       .text	00000000 .LC43
+080288f4 l       .text	00000000 .LC44
+0802891c l       .text	00000000 .LC45
+08028968 l       .text	00000000 .LC46
+08028970 l       .text	00000000 .LC47
+0802897c l       .text	00000000 .LC48
+08028998 l       .text	00000000 .LC49
+080289bc l       .text	00000000 .LC50
+080289d4 l       .text	00000000 .LC51
+080289f0 l       .text	00000000 .LC52
+08028a0c l       .text	00000000 .LC53
+08028a2c l       .text	00000000 .LC54
+08028a58 l       .text	00000000 .LC55
+08028a7c l       .text	00000000 .LC56
+08028aac l       .text	00000000 .LC57
+08028af0 l       .text	00000000 .LC58
+08028b18 l       .text	00000000 .LC61
+08028b4c l       .text	00000000 .LC62
+08028b68 l       .text	00000000 .LC63
+08028b8c l       .text	00000000 .LC64
+08028bb4 l       .text	00000000 .LC65
+08028bd4 l       .text	00000000 .LC66
+08028bf0 l       .text	00000000 .LC67
+08028c0c l       .text	00000000 .LC68
+08028c28 l       .text	00000000 .LC59
+08028c30 l       .text	00000000 .LC60
+08028c3c l       .text	00000000 .LC69
+08028c74 l       .text	00000000 .LC70
+08028c94 l       .text	00000000 .LC71
+08028cb4 l       .text	00000000 .LC72
+08028ccc l       .text	00000000 .LC73
+08028d04 l       .text	00000000 .LC74
+08028d24 l       .text	00000000 .LC75
+08028d44 l       .text	00000000 .LC76
+08028d5c l       .text	00000000 .LC77
+08028d78 l       .text	00000000 .LC78
+08028dac l       .text	00000000 .LC79
+08028de0 l       .text	00000000 .LC80
+08028dfc l       .text	00000000 .LC81
+08028e1c l       .text	00000000 .LC82
+08028e6c l       .text	00000000 .LC83
+08028e84 l       .text	00000000 .LC84
+08028ed4 l       .text	00000000 .LC85
+08028ef0 l       .text	00000000 .LC86
+08028ef8 l       .text	00000000 .LC87
+08028f00 l       .text	00000000 .LC88
+08028f08 l       .text	00000000 .LC89
+08028f10 l       .text	00000000 .LC90
+08028f18 l       .text	00000000 .LC91
+08028f20 l       .text	00000000 .LC92
+08028f24 l       .text	00000000 .LC93
+08028f28 l       .text	00000000 .LC94
+08028f70 l       .text	00000000 .LC95
+08028f90 l       .text	00000000 .LC96
+08028fa0 l       .text	00000000 .LC97
+08028fd0 l       .text	00000000 .LC98
+08028fe8 l       .text	00000000 .LC99
+08028ff8 l       .text	00000000 .LC100
+08029008 l       .text	00000000 .LC101
+08029014 l       .text	00000000 .LC102
+08029024 l       .text	00000000 .LC103
+08029034 l       .text	00000000 .LC104
+08029044 l       .text	00000000 .LC105
+08029048 l       .text	00000000 .LC106
+0802904c l       .text	00000000 .LC107
 00000000 l    df *ABS*	00000000 shell.c
 200000e4 l     O .data	00000020 g_parsetab
-0800ea9c l     F .text	00000034 shell_help
-0800eafc l     F .text	0000001c shell_quit
-0800ead0 l     F .text	0000002a shell_unknown
-08026b10 l       .text	00000000 .LC3
-08026b28 l       .text	00000000 .LC4
-08026b40 l       .text	00000000 .LC5
-08026b58 l       .text	00000000 .LC6
-08026b70 l       .text	00000000 .LC7
-08026b78 l       .text	00000000 .LC8
-0800eb18 l     F .text	0000007a shell_parse
-08026b80 l       .text	00000000 .LC9
-08026ba8 l       .text	00000000 .LC10
-08026bc8 l       .text	00000000 .LC11
-0800ec08 l     F .text	0000000c shell_netinit
-08026bd8 l       .text	00000000 .LC12
-08026c00 l       .text	00000000 .LC13
-08026c28 l       .text	00000000 .LC14
-08026c4c l       .text	00000000 .LC15
+0800f0a4 l     F .text	00000034 shell_help
+0800f104 l     F .text	0000001c shell_quit
+0800f0d8 l     F .text	0000002a shell_unknown
+0802907c l       .text	00000000 .LC3
+08029094 l       .text	00000000 .LC4
+080290ac l       .text	00000000 .LC5
+080290c4 l       .text	00000000 .LC6
+080290dc l       .text	00000000 .LC7
+080290e4 l       .text	00000000 .LC8
+0800f120 l     F .text	0000007a shell_parse
+080290ec l       .text	00000000 .LC9
+08029114 l       .text	00000000 .LC10
+08029134 l       .text	00000000 .LC11
+0800f210 l     F .text	0000000c shell_netinit
+08029144 l       .text	00000000 .LC12
+0802916c l       .text	00000000 .LC13
+08029194 l       .text	00000000 .LC14
+080291b8 l       .text	00000000 .LC15
 00000000 l    df *ABS*	00000000 sysinfo.c
-08026c64 l       .text	00000000 .LC0
-08026c7c l       .text	00000000 .LC1
-08026c9c l       .text	00000000 .LC2
-08026ca0 l       .text	00000000 .LC3
+080291d0 l       .text	00000000 .LC0
+080291e8 l       .text	00000000 .LC1
+08029208 l       .text	00000000 .LC2
+0802920c l       .text	00000000 .LC3
 00000000 l    df *ABS*	00000000 board.c
-200008fa l       .bss	00000000 once.4142
+200008ba l       .bss	00000000 once.4142
 00000000 l    df *ABS*	00000000 telnetd_daemon.c
-08026cbc l       .text	00000000 .LC0
-0800ef20 l     F .text	00000160 telnetd_daemon
-08026ccc l       .text	00000000 .LC1
+08029228 l       .text	00000000 .LC0
+0802923c l       .text	00000000 .LC1
+0800f528 l     F .text	00000160 telnetd_daemon
+0802924c l       .text	00000000 .LC2
 00000000 l    df *ABS*	00000000 telnetd_driver.c
-08026cdc l     O .text	00000018 g_telnetdfops
-0800f398 l     F .text	0000007a telnetd_open
-0800f414 l     F .text	000000b0 telnetd_close
-0800f4c4 l     F .text	00000090 telnetd_read
-0800f554 l     F .text	000000ba telnetd_write
-0800f610 l     F .text	0000001c telnetd_ioctl
-0800f160 l     F .text	00000032 telnetd_getchar
-0800f194 l     F .text	00000166 telnetd_receive
-0800f35c l     F .text	0000003a telnetd_sendopt
-0800f2fc l     F .text	00000060 telnetd_putchar
-08026cf4 l       .text	00000000 .LC0
+0802925c l     O .text	00000018 g_telnetdfops
+0800f9c4 l     F .text	0000007a telnetd_open
+0800fa40 l     F .text	000000c8 telnetd_close
+0800fb08 l     F .text	00000090 telnetd_read
+0800fb98 l     F .text	000000ba telnetd_write
+0800fc54 l     F .text	0000001c telnetd_ioctl
+0800f78c l     F .text	00000032 telnetd_getchar
+0800f7c0 l     F .text	00000166 telnetd_receive
+0800f988 l     F .text	0000003a telnetd_sendopt
+0800f928 l     F .text	00000060 telnetd_putchar
+08029274 l       .text	00000000 .LC0
+08029284 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 fs_initialize.c
 00000000 l    df *ABS*	00000000 fs_files.c
-08026d04 l       .text	00000000 .LC0
-0800f738 l     F .text	00000038 _files_semtake
-0800f770 l     F .text	00000058 _files_close
+08029298 l       .text	00000000 .LC0
+0800fd7c l     F .text	00000038 _files_semtake
+0800fdb4 l     F .text	00000058 _files_close
 00000000 l    df *ABS*	00000000 fs_inode.c
-200008fc l       .bss	00000000 g_inode_sem
-0800fa64 l     F .text	00000098 _inode_compare
-08026d18 l       .text	00000000 .LC0
+200008bc l       .bss	00000000 g_inode_sem
+08010128 l     F .text	00000098 _inode_compare
+080292ac l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_inodeaddref.c
 00000000 l    df *ABS*	00000000 fs_inoderelease.c
 00000000 l    df *ABS*	00000000 fs_close.c
@@ -858,193 +920,222 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 fs_mkdir.c
 00000000 l    df *ABS*	00000000 fs_open.c
 00000000 l    df *ABS*	00000000 fs_read.c
+080292c0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_rename.c
 00000000 l    df *ABS*	00000000 fs_rmdir.c
 00000000 l    df *ABS*	00000000 fs_stat.c
-08010314 l     F .text	000000d8 statpseudo
-080103ec l     F .text	00000024 statroot
-08026d2c l       .text	00000000 .LC0
+08010a2c l     F .text	000000d8 statpseudo
+08010b04 l     F .text	00000024 statroot
+080292d0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_unlink.c
 00000000 l    df *ABS*	00000000 fs_write.c
 00000000 l    df *ABS*	00000000 fs_fdopen.c
-0801064c l     F .text	00000050 fs_checkfd
+080292d4 l       .text	00000000 .LC0
+08010d64 l     F .text	0000006c fs_checkfd
 00000000 l    df *ABS*	00000000 fs_registerdriver.c
 00000000 l    df *ABS*	00000000 fs_unregisterdriver.c
 00000000 l    df *ABS*	00000000 fs_closedir.c
 00000000 l    df *ABS*	00000000 fs_opendir.c
-080108a0 l     F .text	00000064 open_mountpoint
-08010904 l     F .text	0000003c open_pseudodir
-08010940 l     F .text	0000001e open_emptydir
-08026d30 l       .text	00000000 .LC0
+080292e4 l       .text	00000000 .LC0
+08010ff0 l     F .text	0000007c open_mountpoint
+0801106c l     F .text	0000003c open_pseudodir
+080110a8 l     F .text	0000001e open_emptydir
+080292f8 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 fs_readdir.c
-08010a80 l     F .text	000000e8 readpseudodir
+080111e8 l     F .text	000000e8 readpseudodir
 00000000 l    df *ABS*	00000000 mq_close.c
+080292fc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_mount.c
-08026d3c l     O .text	00000010 g_bdfsmap
-08010cc0 l     F .text	00000040 mount_findfs
+08029318 l     O .text	00000010 g_bdfsmap
+08011470 l     F .text	00000040 mount_findfs
+08029328 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 fs_umount2.c
 00000000 l    df *ABS*	00000000 fs_foreachmountpoint.c
-08026d4c l       .text	00000000 .LC0
-08010f34 l     F .text	000000b4 mountpoint_filter
+0802933c l       .text	00000000 .LC0
+0802935c l       .text	00000000 .LC1
+08011714 l     F .text	000000d6 mountpoint_filter
 00000000 l    df *ABS*	00000000 fs_fat32.c
-08011018 l     F .text	00000236 fat_open
-08011250 l     F .text	0000009c fat_close
-080112ec l     F .text	00000236 fat_read
-08011524 l     F .text	000002da fat_write
-08011800 l     F .text	000001fc fat_seek
-080119fc l     F .text	00000060 fat_ioctl
-08011a5c l     F .text	00000110 fat_sync
-08011b6c l     F .text	000000f8 fat_dup
-08011c64 l     F .text	000000d4 fat_opendir
-08011d38 l     F .text	0000012e fat_readdir
-08011e68 l     F .text	000000c2 fat_rewinddir
-08011f2c l     F .text	000000a2 fat_bind
-08011fd0 l     F .text	000000d8 fat_unbind
-080120a8 l     F .text	00000088 fat_statfs
-08012130 l     F .text	00000040 fat_unlink
-08012170 l     F .text	0000028a fat_mkdir
-080123fc l     F .text	00000040 fat_rmdir
-0801243c l     F .text	00000186 fat_rename
-080125c4 l     F .text	000001a0 fat_stat
+0801181c l     F .text	00000268 fat_open
+08011a84 l     F .text	000000d2 fat_close
+08011b58 l     F .text	0000026c fat_read
+08011dc4 l     F .text	00000310 fat_write
+080120d4 l     F .text	00000232 fat_seek
+08012308 l     F .text	00000096 fat_ioctl
+080123a0 l     F .text	00000146 fat_sync
+080124e8 l     F .text	00000136 fat_dup
+08012620 l     F .text	000000f2 fat_opendir
+08012714 l     F .text	0000014c fat_readdir
+08012860 l     F .text	000000e0 fat_rewinddir
+08012940 l     F .text	000000a2 fat_bind
+080129e4 l     F .text	000000d8 fat_unbind
+08012abc l     F .text	000000a6 fat_statfs
+08012b64 l     F .text	0000005e fat_unlink
+08012bc4 l     F .text	000002a8 fat_mkdir
+08012e6c l     F .text	0000005e fat_rmdir
+08012ecc l     F .text	000001a4 fat_rename
+08013070 l     F .text	000001be fat_stat
+080293b0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_fat32dirent.c
-08012764 l     F .text	00000048 fat_lfnchecksum
-080127ac l     F .text	00000194 fat_parsesfname
-08012940 l     F .text	000000ba fat_parselfname
-080129fc l     F .text	000001ac fat_createalias
-08012ba8 l     F .text	0000003a fat_findalias
-08012d00 l     F .text	000000dc fat_findsfnentry
-08012be4 l     F .text	000000e0 fat_uniquealias
-08012cc4 l     F .text	0000003a fat_path2dirname
-08012ddc l     F .text	0000006a fat_cmplfnchunk
-08012e48 l     F .text	0000007c fat_cmplfname
-08012ec4 l     F .text	00000230 fat_findlfnentry
-080130f4 l     F .text	000000b4 fat_allocatesfnentry
-080131a8 l     F .text	00000148 fat_allocatelfnentry
-080132f0 l     F .text	0000012c fat_getsfname
-0801341c l     F .text	00000042 fat_getlfnchunk
-08013460 l     F .text	000001e6 fat_getlfname
-08013648 l     F .text	00000042 fat_putsfname
-0801368c l     F .text	00000034 fat_initlfname
-080136c0 l     F .text	00000040 fat_putlfnchunk
-08013700 l     F .text	000002fc fat_putlfname
-080139fc l     F .text	00000074 fat_putsfdirentry
+08013230 l     F .text	00000048 fat_lfnchecksum
+08013278 l     F .text	00000194 fat_parsesfname
+0801340c l     F .text	000000ba fat_parselfname
+080293c0 l       .text	00000000 .LC0
+080134c8 l     F .text	000001c8 fat_createalias
+08013690 l     F .text	0000003a fat_findalias
+08013808 l     F .text	000000dc fat_findsfnentry
+080136cc l     F .text	000000fe fat_uniquealias
+080137cc l     F .text	0000003a fat_path2dirname
+080138e4 l     F .text	0000006a fat_cmplfnchunk
+08013950 l     F .text	0000007c fat_cmplfname
+080139cc l     F .text	00000266 fat_findlfnentry
+08013c34 l     F .text	000000b4 fat_allocatesfnentry
+08013ce8 l     F .text	0000017e fat_allocatelfnentry
+08013e68 l     F .text	0000012c fat_getsfname
+08013f94 l     F .text	00000042 fat_getlfnchunk
+08013fd8 l     F .text	00000202 fat_getlfname
+080141dc l     F .text	00000042 fat_putsfname
+08014220 l     F .text	00000034 fat_initlfname
+08014254 l     F .text	00000040 fat_putlfnchunk
+08014294 l     F .text	00000348 fat_putlfname
+080145dc l     F .text	00000074 fat_putsfdirentry
 00000000 l    df *ABS*	00000000 fs_fat32util.c
-08013ff8 l     F .text	0000007e fat_checkfsinfo
-08014078 l     F .text	00000244 fat_checkbootrecord
-08026da0 l       .text	00000000 .LC0
+08014bd8 l     F .text	0000007e fat_checkfsinfo
+08014c58 l     F .text	00000244 fat_checkbootrecord
+080293d8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_mkfatfs.c
-080152bc l     F .text	000000b8 mkfatfs_getgeometry
+08015e9c l     F .text	000000b8 mkfatfs_getgeometry
 00000000 l    df *ABS*	00000000 fs_configfat.c
 20000104 l     O .data	00000081 g_bootcodeblob
-08015454 l     F .text	00000092 mkfatfs_nfatsect12
-080154e8 l     F .text	000000a8 mkfatfs_nfatsect16
-08015590 l     F .text	000000e4 mkfatfs_nfatsect32
-08015674 l     F .text	0000008c mkfatfs_clustersearchlimits
-08015700 l     F .text	0000008a mkfatfs_tryfat12
-0801578c l     F .text	0000008a mkfatfs_tryfat16
-08015818 l     F .text	00000094 mkfatfs_tryfat32
-080158ac l     F .text	0000003a mkfatfs_selectfat
-080158e8 l     F .text	000001b0 mkfatfs_clustersearch
+080160e4 l     F .text	00000092 mkfatfs_nfatsect12
+08016178 l     F .text	000000a8 mkfatfs_nfatsect16
+08016220 l     F .text	000000e4 mkfatfs_nfatsect32
+08016304 l     F .text	0000008c mkfatfs_clustersearchlimits
+08016390 l     F .text	0000008a mkfatfs_tryfat12
+0801641c l     F .text	0000008a mkfatfs_tryfat16
+080164a8 l     F .text	00000094 mkfatfs_tryfat32
+0801653c l     F .text	0000003a mkfatfs_selectfat
+08016578 l     F .text	000001b0 mkfatfs_clustersearch
 00000000 l    df *ABS*	00000000 fs_writefat.c
-08026db4 l       .text	00000000 .LC0
-08026dc0 l       .text	00000000 .LC1
-08026dcc l       .text	00000000 .LC2
-08026dd8 l       .text	00000000 .LC3
-08015b80 l     F .text	00000230 mkfatfs_initmbr
-08015db0 l     F .text	0000006e mkfatfs_initfsinfo
-08026de4 l       .text	00000000 .LC4
-08015e20 l     F .text	0000009c mkfatfs_initrootdir
-08015ebc l     F .text	000000ee mkfatfs_writembr
-08015fac l     F .text	00000100 mkfatfs_writefat
-080160ac l     F .text	0000007a mkfatfs_writerootdir
+080293ec l       .text	00000000 .LC0
+080293f8 l       .text	00000000 .LC1
+08029404 l       .text	00000000 .LC2
+08029410 l       .text	00000000 .LC3
+08016810 l     F .text	00000230 mkfatfs_initmbr
+08016a40 l     F .text	0000006e mkfatfs_initfsinfo
+0802941c l       .text	00000000 .LC4
+08016ab0 l     F .text	0000009c mkfatfs_initrootdir
+08016b4c l     F .text	000000ee mkfatfs_writembr
+08016c3c l     F .text	00000100 mkfatfs_writefat
+08016d3c l     F .text	0000007a mkfatfs_writerootdir
 00000000 l    df *ABS*	00000000 fs_foreachinode.c
-08026df0 l       .text	00000000 .LC0
-08016168 l     F .text	000000b8 foreach_inodelevel
+08029428 l       .text	00000000 .LC0
+08016df8 l     F .text	000000b8 foreach_inodelevel
 00000000 l    df *ABS*	00000000 fs_inodefind.c
 00000000 l    df *ABS*	00000000 fs_inoderemove.c
 00000000 l    df *ABS*	00000000 fs_inodereserve.c
-080163b0 l     F .text	00000036 inode_namelen
-080163e8 l     F .text	0000003c inode_namecpy
-08016424 l     F .text	00000038 inode_alloc
-0801645c l     F .text	0000005c inode_insert
+08017040 l     F .text	00000036 inode_namelen
+08017078 l     F .text	0000003c inode_namecpy
+080170b4 l     F .text	00000038 inode_alloc
+080170ec l     F .text	0000005c inode_insert
+0802942c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_findblockdriver.c
 00000000 l    df *ABS*	00000000 fs_openblockdriver.c
 00000000 l    df *ABS*	00000000 fs_closeblockdriver.c
 00000000 l    df *ABS*	00000000 bchlib_setup.c
+08029444 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 bchlib_teardown.c
+08029458 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 bchlib_read.c
 00000000 l    df *ABS*	00000000 bchlib_write.c
 00000000 l    df *ABS*	00000000 bchlib_cache.c
 00000000 l    df *ABS*	00000000 fifo.c
-08026df4 l     O .text	00000018 fifo_fops
+08029470 l     O .text	00000018 fifo_fops
 00000000 l    df *ABS*	00000000 pipe_common.c
-08026e0c l       .text	00000000 .LC0
-08016bf0 l     F .text	00000036 pipecommon_semtake
+08029488 l       .text	00000000 .LC0
+08017924 l     F .text	00000036 pipecommon_semtake
 00000000 l    df *ABS*	00000000 usbdev_trace.c
-20000908 l       .bss	00000000 g_trace
-20000988 l       .bss	00000000 g_head
-2000098a l       .bss	00000000 g_tail
-2000098c l       .bss	00000000 g_maskedidset
+200008c8 l       .bss	00000000 g_trace
+20000948 l       .bss	00000000 g_head
+2000094a l       .bss	00000000 g_tail
+2000094c l       .bss	00000000 g_maskedidset
 00000000 l    df *ABS*	00000000 netapp.c
-0801737c l     F .text	0000001a cc3000_lib_lock
-08017398 l     F .text	0000001a cc3000_lib_unlock
+0802949c l       .text	00000000 .LC0
+0801815c l     F .text	0000002e cc3000_lib_lock
+0801818c l     F .text	0000002e cc3000_lib_unlock
 00000000 l    df *ABS*	00000000 nvmem.c
-08017760 l     F .text	0000001a cc3000_lib_lock
-0801777c l     F .text	0000001a cc3000_lib_unlock
+080294b8 l       .text	00000000 .LC0
+08018568 l     F .text	0000002e cc3000_lib_lock
+08018598 l     F .text	0000002e cc3000_lib_unlock
 00000000 l    df *ABS*	00000000 socket.c
-08017a04 l     F .text	0000001a cc3000_lib_lock
-08017a20 l     F .text	0000001a cc3000_lib_unlock
-08026e20 l     O .text	00000014 bsd2ti_types
+080294d4 l       .text	00000000 .LC0
+08018834 l     F .text	0000002e cc3000_lib_lock
+08018864 l     F .text	0000002e cc3000_lib_unlock
+080294f0 l     O .text	00000014 bsd2ti_types
 00000000 l    df *ABS*	00000000 socket_imp.c
 00000000 l    df *ABS*	00000000 wlan.c
-080188d0 l     F .text	0000001a cc3000_lib_lock
-080188ec l     F .text	0000001a cc3000_lib_unlock
-08018908 l     F .text	00000054 SimpleLink_Init_Start
+08029504 l       .text	00000000 .LC0
+08019728 l     F .text	0000002e cc3000_lib_lock
+08019758 l     F .text	0000002e cc3000_lib_unlock
+08019788 l     F .text	00000054 SimpleLink_Init_Start
 00000000 l    df *ABS*	00000000 dev_null.c
-08026e34 l     O .text	00000018 devnull_fops
-080195c8 l     F .text	0000001a devnull_read
-080195e4 l     F .text	0000001a devnull_write
-08026e4c l       .text	00000000 .LC0
+08029520 l     O .text	00000018 devnull_fops
+0801a448 l     F .text	0000001a devnull_read
+0801a464 l     F .text	0000001a devnull_write
+08029538 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 ramdisk.c
-08026e58 l     O .text	00000018 g_bops
-08019620 l     F .text	00000060 rd_read
-08019680 l     F .text	00000072 rd_write
-080196f4 l     F .text	00000060 rd_geometry
-08019754 l     F .text	00000042 rd_ioctl
-08026e70 l       .text	00000000 .LC0
+08029544 l     O .text	00000018 g_bops
+0801a4a0 l     F .text	0000007e rd_read
+0801a520 l     F .text	00000090 rd_write
+0801a5b0 l     F .text	00000072 rd_geometry
+0801a624 l     F .text	0000005c rd_ioctl
+0802955c l       .text	00000000 .LC0
+08029568 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 loop.c
-08026e7c l     O .text	00000018 g_bops
-08019868 l     F .text	0000004a loop_open
-080198b4 l     F .text	0000004a loop_close
-08019900 l     F .text	000000a8 loop_read
-080199a8 l     F .text	00000086 loop_write
-08019a30 l     F .text	00000050 loop_geometry
-08026e94 l       .text	00000000 .LC0
-08019820 l     F .text	00000046 loop_semtake
+08029574 l     O .text	00000018 g_bops
+0801a774 l     F .text	00000066 loop_open
+0801a7dc l     F .text	00000066 loop_close
+0801a844 l     F .text	0000011a loop_read
+0801a960 l     F .text	000000ec loop_write
+0801aa4c l     F .text	00000062 loop_geometry
+0802958c l       .text	00000000 .LC0
+0801a72c l     F .text	00000046 loop_semtake
+08029594 l       .text	00000000 .LC1
+080295b0 l       .text	00000000 .LC2
+080295d4 l       .text	00000000 .LC3
+08029664 l     O .text	0000000a __FUNCTION__.5372
+080295ec l       .text	00000000 .LC4
+08029670 l     O .text	0000000b __FUNCTION__.5385
+08029604 l       .text	00000000 .LC5
+08029620 l       .text	00000000 .LC6
+08029648 l       .text	00000000 .LC7
+0802967c l     O .text	00000008 __FUNCTION__.5403
+08029684 l     O .text	0000000b __FUNCTION__.5412
 00000000 l    df *ABS*	00000000 cc3000_common.c
 00000000 l    df *ABS*	00000000 cc3000drv.c
 20000188 l     O .data	00000020 spiconf
-08026e9c l       .text	00000000 .LC0
-08026ea4 l       .text	00000000 .LC1
-08019db4 l     F .text	00000110 unsoliced_thread_func
-08026eac l       .text	00000000 .LC2
-08026ebc l       .text	00000000 .LC3
+08029690 l       .text	00000000 .LC0
+080296ac l       .text	00000000 .LC1
+080296b4 l       .text	00000000 .LC2
+0801af14 l     F .text	0000014c unsoliced_thread_func
+080296bc l       .text	00000000 .LC3
 00000000 l    df *ABS*	00000000 evnt_handler.c
-08026ed8 l       .text	00000000 .LC0
-0801abac l     F .text	00000090 hci_event_unsol_flowcontrol_handler
-0801ac80 l     F .text	00000036 update_socket_active_status
+080296cc l       .text	00000000 .LC0
+0801be38 l     F .text	00000090 hci_event_unsol_flowcontrol_handler
+0801bf0c l     F .text	00000036 update_socket_active_status
 00000000 l    df *ABS*	00000000 hci.c
 00000000 l    df *ABS*	00000000 security.c
 00000000 l    df *ABS*	00000000 libbuiltin_getname.c
 00000000 l    df *ABS*	00000000 libbuiltin_isavail.c
+00000000 l    df *ABS*	00000000 stm32_usbdev.c
 00000000 l    df *ABS*	00000000 stm32_wireless.c
 200001ac l     O .data	0000002c g_cc3000_info
-0801cbd8 l     F .text	00000022 wl_attach_irq
-0801cbfc l     F .text	00000044 wl_enable_irq
-0801cc80 l     F .text	00000012 wl_clear_irq
-0801cc40 l     F .text	0000001e wl_enable_power
-0801cc60 l     F .text	0000001e wl_select
-0801cc94 l     F .text	00000024 wl_read_irq
+0801dec8 l     F .text	00000022 wl_attach_irq
+0801deec l     F .text	00000060 wl_enable_irq
+0801df8c l     F .text	00000012 wl_clear_irq
+0801df4c l     F .text	0000001e wl_enable_power
+0801df6c l     F .text	0000001e wl_select
+0801dfa0 l     F .text	00000024 wl_read_irq
+080298f8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
 00000000 l    df *ABS*	00000000 bpabi.c
 00000000 l    df *ABS*	00000000 _dvmd_tls.o
@@ -1052,108 +1143,131 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 libgcc2.c
 00000000 l    df *ABS*	00000000 sched_getfiles.c
 00000000 l    df *ABS*	00000000 sched_addreadytorun.c
-08027104 l       .text	00000000 .LC0
+0802990c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_removereadytorun.c
+08029928 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_addprioritized.c
-08027120 l       .text	00000000 .LC0
+08029948 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_mergepending.c
-08027140 l       .text	00000000 .LC0
+08029968 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_addblocked.c
-0802715c l       .text	00000000 .LC0
+08029984 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_removeblocked.c
-08027178 l       .text	00000000 .LC0
+080299a0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_getstreams.c
+080299bc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_getparam.c
 00000000 l    df *ABS*	00000000 sched_foreach.c
 00000000 l    df *ABS*	00000000 sched_self.c
 00000000 l    df *ABS*	00000000 sched_processtimer.c
-0801d75c l     F .text	00000068 sched_process_timeslice
+0801ea8c l     F .text	00000068 sched_process_timeslice
 00000000 l    df *ABS*	00000000 task_exit.c
 00000000 l    df *ABS*	00000000 task_terminate.c
-08027194 l       .text	00000000 .LC0
+080299d8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 task_spawn.c
-0801d91c l     F .text	0000009e task_spawn_exec
-0801d9bc l     F .text	0000008c task_spawn_proxy
-080271ac l       .text	00000000 .LC0
+0801ec4c l     F .text	0000009e task_spawn_exec
+080299f0 l       .text	00000000 .LC0
+0801ecec l     F .text	000000ca task_spawn_proxy
+08029a04 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 wd_start.c
-0801db8c l     F .text	000000c2 wd_expiration
+08029a18 l       .text	00000000 .LC0
+0801eefc l     F .text	000000ce wd_expiration
 00000000 l    df *ABS*	00000000 sem_trywait.c
+08029a28 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_kill.c
 00000000 l    df *ABS*	00000000 sig_nanosleep.c
+08029a40 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 pthread_create.c
-080271c8 l     O .text	0000000a g_pthreadname
-0801e048 l     F .text	00000034 pthread_argsetup
-0801e07c l     F .text	00000038 pthread_addjoininfo
-0801e0b4 l     F .text	00000062 pthread_start
+08029a60 l     O .text	0000000a g_pthreadname
+0801f414 l     F .text	00000034 pthread_argsetup
+0801f448 l     F .text	00000038 pthread_addjoininfo
+08029a6c l       .text	00000000 .LC0
+0801f480 l     F .text	0000007c pthread_start
 00000000 l    df *ABS*	00000000 pthread_exit.c
 00000000 l    df *ABS*	00000000 pthread_join.c
+08029a88 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 pthread_detach.c
+08029aa0 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 pthread_mutexlock.c
 00000000 l    df *ABS*	00000000 pthread_mutexunlock.c
 00000000 l    df *ABS*	00000000 pthread_cancel.c
 00000000 l    df *ABS*	00000000 pthread_initialize.c
 00000000 l    df *ABS*	00000000 pthread_completejoin.c
-0801e6b0 l     F .text	00000086 pthread_notifywaiters
-0801e738 l     F .text	0000008a pthread_removejoininfo
+0801fabc l     F .text	00000086 pthread_notifywaiters
+0801fb44 l     F .text	0000008a pthread_removejoininfo
+08029abc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 pthread_findjoininfo.c
+08029adc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_receive.c
+08029afc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_rcvinternal.c
-080271d4 l       .text	00000000 .LC0
+08029b10 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_desclose.c
+08029b28 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_msgfree.c
-080271ec l       .text	00000000 .LC0
+08029b40 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_msgqfree.c
 00000000 l    df *ABS*	00000000 clock_initialize.c
-0801ec20 l     F .text	00000038 clock_basetime
-0801ec58 l     F .text	0000001e clock_inittime
+08020080 l     F .text	00000038 clock_basetime
+080200b8 l     F .text	0000001e clock_inittime
 00000000 l    df *ABS*	00000000 clock_gettime.c
+08029b54 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 clock_time2ticks.c
 00000000 l    df *ABS*	00000000 clock_ticks2time.c
 00000000 l    df *ABS*	00000000 clock_systimespec.c
 00000000 l    df *ABS*	00000000 env_getenv.c
 00000000 l    df *ABS*	00000000 env_setenv.c
-08027200 l       .text	00000000 .LC0
+08029b6c l       .text	00000000 .LC0
+08029b84 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 env_unsetenv.c
+08029b8c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 group_join.c
+08029ba4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_getscheduler.c
 00000000 l    df *ABS*	00000000 task_delete.c
 00000000 l    df *ABS*	00000000 task_spawnparms.c
-0801f1f0 l     F .text	0000001c spawn_close
-0801f20c l     F .text	00000038 spawn_dup2
-0801f244 l     F .text	00000070 spawn_open
-08027208 l       .text	00000000 .LC0
+080206d4 l     F .text	0000001c spawn_close
+080206f0 l     F .text	00000038 spawn_dup2
+08020728 l     F .text	00000070 spawn_open
+08029bb8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 task_getgroup.c
 00000000 l    df *ABS*	00000000 sig_timedwait.c
-08027220 l       .text	00000000 .LC0
-0801f430 l     F .text	0000004e sig_timeout
+08029bd0 l       .text	00000000 .LC0
+08020928 l     F .text	0000004e sig_timeout
 00000000 l    df *ABS*	00000000 mq_initialize.c
-20000994 l       .bss	00000000 g_msgalloc
-20000998 l       .bss	00000000 g_msgfreeirqalloc
-2000099c l       .bss	00000000 g_desalloc
-0801f678 l     F .text	0000005a mq_msgblockalloc
+20000954 l       .bss	00000000 g_msgalloc
+20000958 l       .bss	00000000 g_msgfreeirqalloc
+2000095c l       .bss	00000000 g_desalloc
+08020bd0 l     F .text	0000005a mq_msgblockalloc
 00000000 l    df *ABS*	00000000 env_findvar.c
-0801f7bc l     F .text	00000046 env_cmpname
+08020d14 l     F .text	00000046 env_cmpname
+08029be8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 env_removevar.c
+08029c00 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_setparam.c
 00000000 l    df *ABS*	00000000 sched_setpriority.c
-08027238 l       .text	00000000 .LC0
+08029c18 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sched_setscheduler.c
 00000000 l    df *ABS*	00000000 wd_create.c
+08029c34 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 boardctl.c
 00000000 l    df *ABS*	00000000 lib_printf.c
 00000000 l    df *ABS*	00000000 lib_sprintf.c
 00000000 l    df *ABS*	00000000 lib_asprintf.c
 00000000 l    df *ABS*	00000000 lib_snprintf.c
 00000000 l    df *ABS*	00000000 lib_avsprintf.c
+08029c48 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_memoutstream.c
-0801fde0 l     F .text	0000004e memoutstream_putc
+08029c60 l       .text	00000000 .LC0
+080213c0 l     F .text	0000005e memoutstream_putc
 00000000 l    df *ABS*	00000000 lib_fopen.c
-0801fe70 l     F .text	00000136 lib_mode2oflags
+08029c7c l       .text	00000000 .LC0
+08021460 l     F .text	0000014a lib_mode2oflags
 00000000 l    df *ABS*	00000000 lib_fclose.c
 00000000 l    df *ABS*	00000000 lib_fgetc.c
 00000000 l    df *ABS*	00000000 lib_fgets.c
 00000000 l    df *ABS*	00000000 lib_libfgets.c
-08020130 l     F .text	00000034 consume_eol
+08021734 l     F .text	00000034 consume_eol
 00000000 l    df *ABS*	00000000 lib_fwrite.c
 00000000 l    df *ABS*	00000000 lib_libfwrite.c
 00000000 l    df *ABS*	00000000 lib_fflush.c
@@ -1161,17 +1275,18 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 lib_fprintf.c
 00000000 l    df *ABS*	00000000 lib_vfprintf.c
 00000000 l    df *ABS*	00000000 lib_stdoutstream.c
-080203dc l     F .text	00000042 stdoutstream_putc
+08029c90 l       .text	00000000 .LC0
+080219f4 l     F .text	0000005e stdoutstream_putc
 00000000 l    df *ABS*	00000000 lib_strtol.c
 00000000 l    df *ABS*	00000000 lib_strtoul.c
 00000000 l    df *ABS*	00000000 lib_checkbase.c
 00000000 l    df *ABS*	00000000 lib_getopt.c
-200009a4 l       .bss	00000000 g_optptr
-200009a8 l       .bss	00000000 g_binitialized
+20000964 l       .bss	00000000 g_optptr
+20000968 l       .bss	00000000 g_binitialized
 00000000 l    df *ABS*	00000000 lib_chdir.c
-08027254 l       .text	00000000 .LC0
-08027258 l       .text	00000000 .LC1
-0802725c l       .text	00000000 .LC2
+08029cac l       .text	00000000 .LC0
+08029cb0 l       .text	00000000 .LC1
+08029cb4 l       .text	00000000 .LC2
 00000000 l    df *ABS*	00000000 lib_sleep.c
 00000000 l    df *ABS*	00000000 sched_getprioritymax.c
 00000000 l    df *ABS*	00000000 sched_getprioritymin.c
@@ -1191,25 +1306,32 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 sig_emptyset.c
 00000000 l    df *ABS*	00000000 lib_calendar2utc.c
 00000000 l    df *ABS*	00000000 lib_daysbeforemonth.c
-08027264 l     O .text	0000001a g_daysbeforemonth
+08029cbc l     O .text	0000001a g_daysbeforemonth
 00000000 l    df *ABS*	00000000 lib_gettimeofday.c
 00000000 l    df *ABS*	00000000 lib_isleapyear.c
 00000000 l    df *ABS*	00000000 lib_time.c
 00000000 l    df *ABS*	00000000 lib_mktime.c
 00000000 l    df *ABS*	00000000 lib_gmtimer.c
-0802109c l     F .text	00000104 clock_utc2calendar
+080226e4 l     F .text	00000104 clock_utc2calendar
 00000000 l    df *ABS*	00000000 lib_basename.c
-200009ac l       .bss	00000000 g_retchar
+2000096c l       .bss	00000000 g_retchar
 00000000 l    df *ABS*	00000000 lib_dirname.c
-200009b0 l       .bss	00000000 g_retchar
+20000970 l       .bss	00000000 g_retchar
 00000000 l    df *ABS*	00000000 lib_psfa_addopen.c
+08029cd8 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psfa_destroy.c
+08029cf4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psfa_init.c
 00000000 l    df *ABS*	00000000 lib_psa_init.c
+08029d10 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psa_setflags.c
+08029d28 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psa_setschedparam.c
+08029d44 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psa_setschedpolicy.c
+08029d64 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 lib_psa_setstacksize.c
+08029d84 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sq_addfirst.c
 00000000 l    df *ABS*	00000000 sq_addafter.c
 00000000 l    df *ABS*	00000000 dq_addlast.c
@@ -1219,839 +1341,859 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 umm_mallinfo.c
 00000000 l    df *ABS*	00000000 umm_realloc.c
 00000000 l    df *ABS*	00000000 mm_mallinfo.c
+08029da4 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_realloc.c
+08029dbc l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mm_shrinkchunk.c
+08029dd4 l       .text	00000000 .LC0
+00000000 l    df *ABS*	00000000 stm32_exti_gpio.c
+20000974 l       .bss	00000000 stm32_exti_callbacks
+08023420 l     F .text	00000044 stm32_exti0_isr
+08023464 l     F .text	00000044 stm32_exti1_isr
+080234a8 l     F .text	00000044 stm32_exti2_isr
+080234ec l     F .text	00000044 stm32_exti3_isr
+08023530 l     F .text	00000044 stm32_exti4_isr
+08023574 l     F .text	0000008e stm32_exti_multiisr
+08023604 l     F .text	00000020 stm32_exti95_isr
+08023624 l     F .text	00000020 stm32_exti1510_isr
 00000000 l    df *ABS*	00000000 stm32_spi.c
-08021c94 l     F .text	0000001c getreg16
-08021cb0 l     F .text	0000001c putreg16
-08027280 l     O .text	00000024 g_sp2iops
-08022050 l     F .text	0000005a spi_lock
-080220ac l     F .text	0000012a spi_setfrequency
-080221d8 l     F .text	00000096 spi_setmode
-08022270 l     F .text	00000116 spi_setbits
-08022388 l     F .text	0000003a spi_send
-080223c4 l     F .text	00000054 spi_exchange
+0802384c l     F .text	0000001c getreg16
+08023868 l     F .text	0000001c putreg16
+08029df0 l     O .text	00000024 g_sp2iops
+08023c08 l     F .text	0000005a spi_lock
+08023c64 l     F .text	0000012a spi_setfrequency
+08023d90 l     F .text	00000096 spi_setmode
+08023e28 l     F .text	00000116 spi_setbits
+08023f40 l     F .text	00000058 spi_send
+08023f98 l     F .text	00000072 spi_exchange
 200001e4 l     O .data	00000034 g_spi2dev
-08021ccc l     F .text	00000024 spi_getreg
-08021cf0 l     F .text	00000028 spi_putreg
-08021d18 l     F .text	0000002e spi_readword
-08021d48 l     F .text	00000032 spi_writeword
-08021d7c l     F .text	00000028 spi_16bitmode
-080272a4 l       .text	00000000 .LC0
-08021da4 l     F .text	00000046 spi_dmarxwait
-08021dec l     F .text	00000046 spi_dmatxwait
-08021e34 l     F .text	00000018 spi_dmarxwakeup
-08021e4c l     F .text	00000018 spi_dmatxwakeup
-08021e64 l     F .text	0000002a spi_dmarxcallback
-08021e90 l     F .text	0000002a spi_dmatxcallback
-08021ebc l     F .text	0000007a spi_dmarxsetup
-08021f38 l     F .text	0000007a spi_dmatxsetup
-08021fb4 l     F .text	0000002a spi_dmarxstart
-08021fe0 l     F .text	0000002a spi_dmatxstart
-0802200c l     F .text	00000044 spi_modifycr1
-20000218 l     O .data	00000002 rxdummy.6098
-080272b6 l     O .text	00000002 txdummy.6099
-08022418 l     F .text	000000b4 spi_portinitialize
+08023884 l     F .text	00000024 spi_getreg
+080238a8 l     F .text	00000028 spi_putreg
+080238d0 l     F .text	0000002e spi_readword
+08023900 l     F .text	00000032 spi_writeword
+08023934 l     F .text	00000028 spi_16bitmode
+08029e14 l       .text	00000000 .LC0
+0802395c l     F .text	00000046 spi_dmarxwait
+080239a4 l     F .text	00000046 spi_dmatxwait
+080239ec l     F .text	00000018 spi_dmarxwakeup
+08023a04 l     F .text	00000018 spi_dmatxwakeup
+08023a1c l     F .text	0000002a spi_dmarxcallback
+08023a48 l     F .text	0000002a spi_dmatxcallback
+08023a74 l     F .text	0000007a spi_dmarxsetup
+08023af0 l     F .text	0000007a spi_dmatxsetup
+08023b6c l     F .text	0000002a spi_dmarxstart
+08023b98 l     F .text	0000002a spi_dmatxstart
+08023bc4 l     F .text	00000044 spi_modifycr1
+20000218 l     O .data	00000002 rxdummy.6101
+08029e26 l     O .text	00000002 txdummy.6102
+0802400c l     F .text	000000d4 spi_portinitialize
 00000000 l    df *ABS*	00000000 up_reprioritizertr.c
-080272b8 l       .text	00000000 .LC0
+08029e28 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 stm32_dma.c
 2000021c l     O .data	000000c0 g_dma
-08022620 l     F .text	00000028 dmabase_getreg
-08022648 l     F .text	0000002a dmabase_putreg
-08022674 l     F .text	00000020 dmachan_getreg
-08022694 l     F .text	00000022 dmachan_putreg
-080272d8 l       .text	00000000 .LC0
-080226b8 l     F .text	0000003a stm32_dmatake
-080226f4 l     F .text	00000018 stm32_dmagive
-0802270c l     F .text	00000048 stm32_dmachandisable
-08022754 l     F .text	000000a6 stm32_dmainterrupt
+08024234 l     F .text	00000028 dmabase_getreg
+0802425c l     F .text	0000002a dmabase_putreg
+08024288 l     F .text	00000020 dmachan_getreg
+080242a8 l     F .text	00000022 dmachan_putreg
+08029e48 l       .text	00000000 .LC0
+080242cc l     F .text	0000003a stm32_dmatake
+08024308 l     F .text	00000018 stm32_dmagive
+08024320 l     F .text	00000048 stm32_dmachandisable
+08024368 l     F .text	000000a6 stm32_dmainterrupt
 00000000 l    df *ABS*	00000000 fs_ioctl.c
 00000000 l    df *ABS*	00000000 fs_lseek.c
+08029e60 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 fs_registerblockdriver.c
 00000000 l    df *ABS*	00000000 fs_unregisterblockdriver.c
 00000000 l    df *ABS*	00000000 sem_open.c
-080272f0 l       .text	00000000 .LC0
+08029e70 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sem_close.c
+08029e80 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_open.c
-08027300 l       .text	00000000 .LC0
+08029e98 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 cc3000.c
-08027310 l     O .text	00000018 cc3000_fops
-0802369c l     F .text	00000344 cc3000_open
-080239e0 l     F .text	00000162 cc3000_close
-08023b44 l     F .text	0000010c cc3000_read
-08023c50 l     F .text	0000015c cc3000_write
-08023dac l     F .text	00000154 cc3000_ioctl
+08029ea8 l     O .text	00000018 cc3000_fops
+08025384 l     F .text	00000390 cc3000_open
+08025714 l     F .text	00000196 cc3000_close
+080258ac l     F .text	00000140 cc3000_read
+080259ec l     F .text	000001ac cc3000_write
+08025b98 l     F .text	0000023e cc3000_ioctl
 200009b4 l       .bss	00000000 g_cc3000
-08022ef4 l     F .text	00000026 cc3000_devtake
-08022f1c l     F .text	0000001c cc3000_devgive
-08022f38 l     F .text	0000004c cc3000_configspi
-08022f84 l     F .text	0000002e cc3000_lock_and_select
-08022fb4 l     F .text	00000028 cc3000_deselect_and_unlock
-08022fdc l     F .text	0000004a cc3000_wait
-08023028 l     F .text	0000001e cc3000_wait_irq
-08023048 l     F .text	0000001e cc3000_wait_ready
-08023068 l     F .text	00000020 cc3000_notify
-08023088 l     F .text	00000400 select_thread_func
-08027328 l       .text	00000000 .LC0
-08027344 l       .text	00000000 .LC1
-08023488 l     F .text	000001dc cc3000_worker
-08023664 l     F .text	00000036 cc3000_interrupt
-08027354 l       .text	00000000 .LC2
-0802419c l     F .text	000000bc cc3000_add_socket
-08024258 l     F .text	0000011e cc3000_remove_socket
-08024378 l     F .text	0000008c cc3000_remote_closed_socket
-08024024 l     F .text	000000e6 cc3000_wait_data
-0802410c l     F .text	0000008e cc3000_accept_socket
-0802735c l       .text	00000000 .LC3
-08027364 l       .text	00000000 .LC4
+08029ec0 l       .text	00000000 .LC0
+08024b8c l     F .text	00000046 cc3000_devtake
+08024bd4 l     F .text	0000001c cc3000_devgive
+08024bf0 l     F .text	0000004c cc3000_configspi
+08024c3c l     F .text	0000002e cc3000_lock_and_select
+08024c6c l     F .text	00000028 cc3000_deselect_and_unlock
+08024c94 l     F .text	0000004a cc3000_wait
+08024ce0 l     F .text	0000001e cc3000_wait_irq
+08024d00 l     F .text	0000001e cc3000_wait_ready
+08024d20 l     F .text	00000020 cc3000_notify
+08024d40 l     F .text	00000400 select_thread_func
+08029edc l       .text	00000000 .LC1
+08025140 l     F .text	0000020c cc3000_worker
+0802534c l     F .text	00000036 cc3000_interrupt
+08029eec l       .text	00000000 .LC2
+0802609c l     F .text	000000bc cc3000_add_socket
+08026158 l     F .text	0000011e cc3000_remove_socket
+08026278 l     F .text	0000008c cc3000_remote_closed_socket
+08025f24 l     F .text	000000e6 cc3000_wait_data
+0802600c l     F .text	0000008e cc3000_accept_socket
+08029ef4 l       .text	00000000 .LC3
+08029efc l       .text	00000000 .LC4
+00000000 l    df *ABS*	00000000 stm32_spi.c
 00000000 l    df *ABS*	00000000 stm32_nsh.c
 00000000 l    df *ABS*	00000000 _aeabi_ldivmod.o
 00000000 l    df *ABS*	00000000 pthread_mutexinit.c
 00000000 l    df *ABS*	00000000 pthread_mutexdestroy.c
 00000000 l    df *ABS*	00000000 mq_send.c
 00000000 l    df *ABS*	00000000 mq_sndinternal.c
-08027374 l       .text	00000000 .LC0
+08029f0c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_descreate.c
-080248d0 l     F .text	00000036 mq_desalloc
+08026860 l     F .text	00000036 mq_desalloc
+08029f24 l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 mq_msgqalloc.c
+08029f3c l       .text	00000000 .LC0
 00000000 l    df *ABS*	00000000 sig_mqnotempty.c
 00000000 l    df *ABS*	00000000 sem_unlink.c
-0802738c l       .text	00000000 .LC0
+08029f54 l       .text	00000000 .LC0
+08029f64 l       .text	00000000 .LC1
 00000000 l    df *ABS*	00000000 
-08003b90 g     F .text	000000d6 sig_deliver
-08018a5c g     F .text	000000c4 wlan_start
-08018830 g     F .text	0000009e cc3000_mdnsadvertiser_impl
-0801eca8 g     F .text	000000c2 clock_gettime
-08002474 g     F .text	00000078 uart_connected
-080246c4 g     F .text	0000009a mq_waitsend
-08004cb8 g     F .text	0000002c lowsyslog
-08010584 g     F .text	0000007a file_write
-0801eafc g     F .text	0000005e mq_desclose
-08004d68 g     F .text	00000034 strcpy
-0801f374 g     F .text	0000008a spawn_proxyattrs
-0801cd8e g     F .text	00000028 .hidden __gnu_uldivmod_helper
-0801d5ec g     F .text	0000004a sched_removeblocked
-08020a50 g     F .text	000000aa lib_isbasedigit
-0801f074 g     F .text	00000082 unsetenv
-080224cc g     F .text	00000076 up_spiinitialize
-080192f8 g     F .text	00000052 wlan_smart_config_start
-08021b9c g     F .text	000000f8 mm_shrinkchunk
-08010770 g     F .text	00000052 register_driver
-0800b610 g     F .text	0000006e cmd_rm
-0801cb44 g     F .text	00000020 aes_write_key
-08003a28 g     F .text	00000130 sig_tcbdispatch
-08004bd4 g     F .text	0000001a lib_fflush
-0801ebec g     F .text	00000032 mq_msgqfree
-0800c304 g     F .text	0000010e cmd_kill
-0801cdbc g     F .text	0000029c .hidden __divdi3
-080229c8 g     F .text	00000086 ioctl
-0800e8f0 g     F .text	00000036 PrintIPBytes
-0801a238 g     F .text	0000058a hci_event_handler
-080026f0 g     F .text	00000018 stm32_spi2status
-0800b0b8 g     F .text	00000072 cmd_mkdir
-0801430c g     F .text	0000002c fat_putuint16
-08016b54 g     F .text	00000052 bchlib_readsector
-08020d08 g     F .text	000000b4 strtok_r
-0800c844 g     F .text	0000005c cmd_set
-08014c08 g     F .text	0000010e fat_extendchain
-08017c34 g     F .text	00000032 cc3000_select
-080009b8 g     F .text	0000005e stm32_gpiowrite
-08020f98 g     F .text	00000066 clock_isleapyear
-0801fc74 g     F .text	00000032 printf
-08005dc0 g     F .text	00000088 mm_addfreechunk
-08003fc0 g     F .text	00000052 sched_lock
-08006b44 g     F .text	0000000a up_fullcontextrestore
-08006720 g     F .text	0000003c up_initialize
-08022544 g     F .text	000000dc up_reprioritize_rtr
-0801ac3c g     F .text	00000044 get_socket_active_status
-080184d0 g     F .text	00000094 cc3000_getsockopt_impl
-08024414 g     F .text	00000010 usbmsc_archinitialize
-08001b98 g     F .text	0000003c up_mdelay
-0801e884 g     F .text	0000003c pthread_findjoininfo
-080227fc  w    F .text	0000005e up_dmainitialize
-080187d0 g     F .text	00000030 cc3000_send_impl
-08010fe8 g     F .text	0000002e foreach_mountpoint
-080146f8 g     F .text	00000076 fat_hwread
-0800654c g     F .text	0000000c up_idle
-0801e118 g     F .text	000001e8 pthread_create
-08004740 g     F .text	0000003c group_leave
-08020ea0 g     F .text	0000001c sigemptyset
-08003e34 g     F .text	0000002e group_setuptaskfiles
-080182a4 g     F .text	00000170 cc3000_select_impl
-0800ced0 g     F .text	00000072 nsh_builtin
-080046c4 g     F .text	00000040 mq_recover
-08009104 g     F .text	00000076 usbdev_register
-0801e60c  w    F .text	0000000c pthread_initialize
-080028c4 g     F .text	0000000e stm32_usbinitialize
-0800a394 g     F .text	000000ae nsh_command
-08020dbc g     F .text	00000032 pthread_attr_init
-08017c9c g     F .text	00000032 cc3000_getsockopt
-08024634 g     F .text	0000008e mq_msgalloc
+08003e90 g     F .text	000000d6 sig_deliver
+080198dc g     F .text	000000c4 wlan_start
+08019688 g     F .text	0000009e cc3000_mdnsadvertiser_impl
+08020108 g     F .text	000000d6 clock_gettime
+08002784 g     F .text	00000078 uart_connected
+08026654 g     F .text	0000009a mq_waitsend
+08005220 g     F .text	0000002c lowsyslog
+08010c9c g     F .text	0000007a file_write
+0801ff44 g     F .text	00000078 mq_desclose
+080052d0 g     F .text	00000034 strcpy
+0802086c g     F .text	0000008a spawn_proxyattrs
+0801e09a g     F .text	00000028 .hidden __gnu_uldivmod_helper
+0801e90c g     F .text	0000004a sched_removeblocked
+08022084 g     F .text	000000aa lib_isbasedigit
+080204f8 g     F .text	0000009c unsetenv
+080240e0 g     F .text	00000076 up_spiinitialize
+0801a178 g     F .text	00000052 wlan_smart_config_start
+08023310 g     F .text	0000010e mm_shrinkchunk
+08010ec0 g     F .text	00000052 register_driver
+0800bbe0 g     F .text	0000006e cmd_rm
+0801ddd0 g     F .text	00000020 aes_write_key
+08003d0c g     F .text	0000014c sig_tcbdispatch
+080050a0 g     F .text	0000001a lib_fflush
+0802004c g     F .text	00000032 mq_msgqfree
+0800c8d4 g     F .text	0000010e cmd_kill
+0801e0c8 g     F .text	0000029c .hidden __divdi3
+08024624 g     F .text	00000086 ioctl
+0800eef8 g     F .text	00000036 PrintIPBytes
+0801b4c4 g     F .text	0000058a hci_event_handler
+0802637c g     F .text	00000018 stm32_spi2status
+0800b670 g     F .text	00000072 cmd_mkdir
+08014eec g     F .text	0000002c fat_putuint16
+08017888 g     F .text	00000052 bchlib_readsector
+0802233c g     F .text	000000b4 strtok_r
+0800ce14 g     F .text	0000005c cmd_set
+080157e8 g     F .text	0000010e fat_extendchain
+08018a8c g     F .text	00000032 cc3000_select
+080009e0 g     F .text	0000005e stm32_gpiowrite
+080225e0 g     F .text	00000066 clock_isleapyear
+0802121c g     F .text	00000032 printf
+08006458 g     F .text	00000088 mm_addfreechunk
+08004390 g     F .text	00000052 sched_lock
+08006df4 g     F .text	0000000a up_fullcontextrestore
+080069d0 g     F .text	0000003c up_initialize
+08024158 g     F .text	000000dc up_reprioritize_rtr
+0801bec8 g     F .text	00000044 get_socket_active_status
+08019328 g     F .text	00000094 cc3000_getsockopt_impl
+080263a4 g     F .text	00000010 usbmsc_archinitialize
+08001cb0 g     F .text	0000003c up_mdelay
+0801fca4 g     F .text	0000004c pthread_findjoininfo
+08024410  w    F .text	0000005e up_dmainitialize
+08019628 g     F .text	00000030 cc3000_send_impl
+080117ec g     F .text	0000002e foreach_mountpoint
+080152d8 g     F .text	00000076 fat_hwread
+080067fc g     F .text	0000000c up_idle
+0801f4fc g     F .text	000001e8 pthread_create
+08004b9c g     F .text	00000052 group_leave
+080224d4 g     F .text	0000001c sigemptyset
+080041d8 g     F .text	0000005c group_setuptaskfiles
+080190fc g     F .text	00000170 cc3000_select_impl
+0800d4a0 g     F .text	00000072 nsh_builtin
+08004ae0 g     F .text	00000080 mq_recover
+0801de64 g     F .text	0000000e stm32_usbinitialize
+08009560 g     F .text	000000cc usbdev_register
+0801fa18  w    F .text	0000000c pthread_initialize
+0800a94c g     F .text	000000ae nsh_command
+080223f0 g     F .text	00000032 pthread_attr_init
+08018af4 g     F .text	00000032 cc3000_getsockopt
+080265c4 g     F .text	0000008e mq_msgalloc
 20000ea0 g     O .bss	00000008 g_msgfree
-0800ea60 g     F .text	0000003c c3b_main
-0800cb14 g     F .text	00000094 cmd_mw
-08017ee8 g     F .text	00000080 cc3000_socket_impl
-0801ccb8 g     F .text	0000005a wireless_archinitialize
-0800513c g     F .text	00000062 lib_stream_initialize
-0802289c g     F .text	00000084 stm32_dmasetup
-0800c414 g     F .text	00000068 cmd_sleep
-08017be0 g     F .text	00000026 cc3000_listen
+0800f068 g     F .text	0000003c c3b_main
+0800d0e4 g     F .text	00000094 cmd_mw
+08018d40 g     F .text	00000080 cc3000_socket_impl
+0801dfc4 g     F .text	0000005a wireless_archinitialize
+080056a4 g     F .text	00000076 lib_stream_initialize
+080244e0 g     F .text	00000084 stm32_dmasetup
+0800c9e4 g     F .text	00000068 cmd_sleep
+08018a38 g     F .text	00000026 cc3000_listen
 20000a48 g     O .bss	00000008 g_waitingformqnotempty
-0801e300 g     F .text	00000054 pthread_exit
-0801ec84  w    F .text	00000022 clock_timer
-0801fd14 g     F .text	0000005c snprintf
+0801f6e4 g     F .text	00000054 pthread_exit
+080200e4  w    F .text	00000022 clock_timer
+080212bc g     F .text	0000005c snprintf
 20000c20 g     O .bss	00000008 g_sigfreeaction
-08013e58 g     F .text	0000003a fat_dircreate
+08014a38 g     F .text	0000003a fat_dircreate
 08000000 g     F .text	00000130 _vectors
-080273a4 g       *ABS*	00000000 __exidx_end
-08009240 g     F .text	00000024 nsh_consolemain
-08021880 g     F .text	0000031a mm_realloc
-08004f5c g     F .text	0000003e sq_addlast
-0801d660 g     F .text	00000080 sched_getparam
-08000990 g     F .text	00000028 stm32_unconfiggpio
-08003f54 g     F .text	0000006a sched_releasetcb
+08029f84 g       *ABS*	00000000 __exidx_end
+0800970c g     F .text	00000038 nsh_consolemain
+08022fc4 g     F .text	0000034a mm_realloc
+080054c4 g     F .text	0000003e sq_addlast
+0801e990 g     F .text	00000080 sched_getparam
+080009b8 g     F .text	00000028 stm32_unconfiggpio
+08004324 g     F .text	0000006a sched_releasetcb
 20000d00 g     O .bss	00000004 lastAsyncEvent
-08019b94 g     F .text	00000068 loteardown
-0802172c g     F .text	0000004a add_file_action
-08013a70 g     F .text	0000012e fat_finddirentry
-08020b58 g     F .text	00000056 lib_skipspace
-0800500c g     F .text	0000003e sq_remfirst
-08024760 g     F .text	0000016e mq_dosend
-0801b358 g     F .text	00000034 galois_mul2
-0801820c g     F .text	00000098 cc3000_connect_impl
-080165fc g     F .text	00000062 open_blockdriver
-08019f88 g     F .text	0000007c cc3000_close
-0801eeb8 g     F .text	0000008a getenv
-08009f94 g     F .text	000000cc nsh_parse
-080249d0 g     F .text	0000004c sig_mqnotempty
-08010c1c g     F .text	00000038 mq_close
-08002f8c g     F .text	0000002c kernel_thread
-0800d86c g     F .text	00000142 readline_common
-0802739c g       *ABS*	00000000 _etext
+0801ac38 g     F .text	000000a8 loteardown
+08022e28 g     F .text	0000004a add_file_action
+08014650 g     F .text	0000012e fat_finddirentry
+0802218c g     F .text	00000056 lib_skipspace
+08005574 g     F .text	0000003e sq_remfirst
+080266f0 g     F .text	0000016e mq_dosend
+0801c5e4 g     F .text	00000034 galois_mul2
+08019064 g     F .text	00000098 cc3000_connect_impl
+080172bc g     F .text	00000070 open_blockdriver
+0801b174 g     F .text	0000007c cc3000_close
+08020328 g     F .text	0000008a getenv
+0800a54c g     F .text	000000cc nsh_parse
+08026990 g     F .text	0000004c sig_mqnotempty
+08011384 g     F .text	0000006c mq_close
+080031f4 g     F .text	0000002c kernel_thread
+0800de5c g     F .text	0000015c readline_common
+08029f7c g       *ABS*	00000000 _etext
 200002f0 g       *ABS*	00000000 _sbss
-0801d6e0 g     F .text	00000064 sched_foreach
-0800e6c0 g     F .text	0000022e ListAccessPoints
-08021450 g     F .text	0000001c posix_spawn_file_actions_init
-08022884 g     F .text	00000018 stm32_dmafree
-0800ace0 g     F .text	00000212 cmd_losetup
-08003d94 g     F .text	0000003a group_setupstreams
-08024fbc g     O .text	00000017 g_nshsyntax
-0801aef4 g     F .text	0000013a hci_patch_send
-0800a9f8 g     F .text	0000006c cmd_cat
-08004bf0 g     F .text	0000005c usleep
-08014fd0 g     F .text	00000070 fat_ffcacheread
-080028d4 g     F .text	0000003a stm32_usbpullup
-08016220 g     F .text	0000005c foreach_inode
-0801d3b8 g     F .text	000000dc sched_addprioritized
-0800c4e4 g     F .text	0000004c cmd_free
-08003390 g     F .text	0000002e getpid
-0802511c g     O .text	00000019 g_fmtinternalerror
-08018b20 g     F .text	00000026 wlan_get_buffer
-08026ef8 g     O .text	00000100 sbox
-080200fc g     F .text	00000032 fgets
-080271c0 g     O .text	00000008 g_default_pthread_attr
-08021300 g     F .text	000000ac dirname
-0801bdf0 g     F .text	00000cda aes_decr
-080050e8 g     F .text	00000054 dq_rem
-08016128 g     F .text	0000003e mkfatfs_writefatfs
-08014f78 g     F .text	00000056 fat_ffcacheflush
-08025054 g     O .text	0000001c g_fmtcmdnotfound
-08024fa0 g     O .text	00000012 g_nshgreeting
-08014dcc g     F .text	000000a6 fat_dirtruncate
-0801069c g     F .text	000000d4 fs_fdopen
+0801ea10 g     F .text	00000064 sched_foreach
+0800ecc8 g     F .text	0000022e ListAccessPoints
+08022ad4 g     F .text	0000001c posix_spawn_file_actions_init
+080244b0 g     F .text	0000002e stm32_dmafree
+0800b298 g     F .text	00000212 cmd_losetup
+080040f8 g     F .text	00000056 group_setupstreams
+080274b8 g     O .text	00000017 g_nshsyntax
+0801c180 g     F .text	0000013a hci_patch_send
+0800afb0 g     F .text	0000006c cmd_cat
+080050bc g     F .text	0000005c usleep
+08015bb0 g     F .text	00000070 fat_ffcacheread
+0801de74 g     F .text	0000003a stm32_usbpullup
+08016eb0 g     F .text	0000005c foreach_inode
+0801e6d8 g     F .text	000000dc sched_addprioritized
+0800cab4 g     F .text	0000004c cmd_free
+08003624 g     F .text	0000002e getpid
+08027618 g     O .text	00000019 g_fmtinternalerror
+080199a0 g     F .text	00000026 wlan_get_buffer
+080296ec g     O .text	00000100 sbox
+08021700 g     F .text	00000032 fgets
+08029a58 g     O .text	00000008 g_default_pthread_attr
+08022948 g     F .text	000000ac dirname
+0801d07c g     F .text	00000cda aes_decr
+08005650 g     F .text	00000054 dq_rem
+08016db8 g     F .text	0000003e mkfatfs_writefatfs
+08015b58 g     F .text	00000056 fat_ffcacheflush
+08027550 g     O .text	0000001c g_fmtcmdnotfound
+0802749c g     O .text	00000012 g_nshgreeting
+080159ac g     F .text	000000a6 fat_dirtruncate
+08010dd0 g     F .text	000000f0 fs_fdopen
 20000e84 g     O .bss	0000001c g_spawn_parms
-0800aa64 g     F .text	0000027a cmd_cp
-0800f62c g     F .text	00000100 telnetd_driver
-08004e24 g     F .text	0000003e memcpy
-0801e57c g     F .text	00000090 pthread_cancel
-08016ec8 g     F .text	00000136 pipecommon_read
-0801a070 g     F .text	00000030 cc3000_add_socket
-080217d0 g     F .text	000000ae mm_mallinfo
-08005fa0 g     F .text	00000114 mm_malloc
+0800b01c g     F .text	0000027a cmd_cp
+0800fc70 g     F .text	00000100 telnetd_driver
+0800538c g     F .text	0000003e memcpy
+0801f988 g     F .text	00000090 pthread_cancel
+08017c64 g     F .text	0000014c pipecommon_read
+0801b29c g     F .text	0000004e cc3000_add_socket
+08022ecc g     F .text	000000f6 mm_mallinfo
+08006664 g     F .text	0000012a mm_malloc
 20000a50 g     O .bss	00000008 g_waitingforsemaphore
-08022b28 g     F .text	0000005c register_blockdriver
-08018d70 g     F .text	0000033e wlan_add_profile
-08002890 g     F .text	00000032 board_button_irq
-0801e8c0 g     F .text	00000072 mq_receive
-08018a1c g     F .text	00000040 SpiReceiveHandler
-080096ac g     F .text	00000050 readline
-0800283c g     F .text	00000028 board_led_off
-08017de0 g     F .text	0000002e cc3000_gethostbyname
-08025018 g     O .text	0000001b g_fmtarginvalid
-080040ec g     F .text	0000004e task_exithook
-08013ba0 g     F .text	00000114 fat_allocatedirentry
-0801cd38 g     F .text	00000000 .hidden __aeabi_uldivmod
-08000aa8 g     F .text	000000da stm32_lowsetup
-0800fe18 g     F .text	00000062 dup2
+08024798 g     F .text	0000005c register_blockdriver
+08019bf0 g     F .text	0000033e wlan_add_profile
+0801fcf0 g     F .text	0000008a mq_receive
+0801989c g     F .text	00000040 SpiReceiveHandler
+08009c14 g     F .text	0000006a readline
+08002ab0 g     F .text	00000028 board_led_off
+08018c38 g     F .text	0000002e cc3000_gethostbyname
+08027514 g     O .text	0000001b g_fmtarginvalid
+080044bc g     F .text	0000004e task_exithook
+08014780 g     F .text	00000114 fat_allocatedirentry
+0801e044 g     F .text	00000000 .hidden __aeabi_uldivmod
+08000ad0 g     F .text	000000da stm32_lowsetup
+0801051c g     F .text	00000062 dup2
 20000d04 g     O .bss	00000004 ulCC3000DHCP_configured
-0800342c g     F .text	00000038 sem_destroy
-0801f124 g     F .text	00000028 group_join
-0800ee90 g     F .text	0000001c SendDriverPatch
+080036c0 g     F .text	00000038 sem_destroy
+080205e4 g     F .text	0000004a group_join
+0800f498 g     F .text	0000001c SendDriverPatch
 20000d38 g     O .bss	00000043 profileArray
-08014338 g     F .text	00000032 fat_putuint32
+08014f18 g     F .text	00000032 fat_putuint32
 20000d7c g     O .bss	0000003c tSLInformation
-0801de3c g     F .text	00000028 wd_timer
-08009494 g     F .text	00000092 nsh_newconsole
-080060b4 g     F .text	0000002e mm_zalloc
-08021604 g     F .text	000000f0 lib_fread
-08022b84 g     F .text	00000022 unregister_blockdriver
+0801f1d0 g     F .text	00000028 wd_timer
+080099a0 g     F .text	00000092 nsh_newconsole
+08006790 g     F .text	0000002e mm_zalloc
+08022d00 g     F .text	000000f0 lib_fread
+080247f4 g     F .text	00000022 unregister_blockdriver
 20000a58 g     O .bss	00000008 g_readytorun
-08005b1c g     F .text	00000020 malloc
-0800413c g     F .text	00000020 task_recover
-08019214 g     F .text	000000a2 wlan_set_event_mask
-0800f7c8  w    F .text	0000000c files_initialize
-0802739c g       *ABS*	00000000 _einit
-080209a0 g     F .text	00000060 sleep
-08017bb4 g     F .text	0000002a cc3000_bind
+0800617c g     F .text	00000020 malloc
+0800450c g     F .text	00000020 task_recover
+0801a094 g     F .text	000000a2 wlan_set_event_mask
+0800fe0c  w    F .text	0000000c files_initialize
+08029f7c g       *ABS*	00000000 _einit
+08021fd4 g     F .text	00000060 sleep
+08018a0c g     F .text	0000002a cc3000_bind
 20000eb8 g     O .bss	00000004 optarg
-0801fab0 g     F .text	000000d2 sched_setscheduler
-08016ca8 g     F .text	0000012e pipecommon_open
-08013ddc g     F .text	00000038 fat_dirnamewrite
-08003278 g     F .text	0000003c task_schedsetup
+0802103c g     F .text	000000d2 sched_setscheduler
+080179dc g     F .text	00000178 pipecommon_open
+080149bc g     F .text	00000038 fat_dirnamewrite
+080034f4 g     F .text	0000003c task_schedsetup
 200001a8 g     O .data	00000004 socket_active_status
-080173b4 g     F .text	00000018 netapp_config_mac_adrress
-08024500 g     F .text	000000b6 mq_send
-08003464 g     F .text	000000ca sem_wait
-08017648 g     F .text	00000042 netapp_ping_stop
-08016974 g     F .text	0000019a bchlib_write
-0800d1f8 g     F .text	00000070 cmd_umount
-08006558 g     F .text	000000d0 up_block_task
-0800dbf0 g     F .text	00000036 builtin_for_index
-080204b8 g     F .text	00000074 strtoul
-08002c48 g     F .text	00000064 irq_attach
-0801e66c g     F .text	00000044 pthread_givesemaphore
-0800c47c g     F .text	00000068 cmd_usleep
-08003530 g     F .text	000000aa sem_post
-0801f14c g     F .text	0000005c sched_getscheduler
-0801e84c g     F .text	00000038 pthread_destroyjoin
-08004f9c g     F .text	0000006e sq_rem
-08015a98 g     F .text	000000e6 mkfatfs_configfatfs
-0801d2a0 g     F .text	00000032 sched_getfiles
-0801caf8 g     F .text	0000002c aes_decrypt
+080181bc g     F .text	00000018 netapp_config_mac_adrress
+08026490 g     F .text	000000b6 mq_send
+080036f8 g     F .text	000000e2 sem_wait
+08018450 g     F .text	00000042 netapp_ping_stop
+080176a8 g     F .text	0000019a bchlib_write
+0800d7e8 g     F .text	00000070 cmd_umount
+08006808 g     F .text	000000d0 up_block_task
+0800e1f8 g     F .text	00000036 builtin_for_index
+08021aec g     F .text	00000074 strtoul
+08002e50 g     F .text	00000064 irq_attach
+0801fa78 g     F .text	00000044 pthread_givesemaphore
+0800ca4c g     F .text	00000068 cmd_usleep
+080037dc g     F .text	000000aa sem_post
+08020630 g     F .text	0000005c sched_getscheduler
+0801fc6c g     F .text	00000038 pthread_destroyjoin
+08005504 g     F .text	0000006e sq_rem
+08016728 g     F .text	000000e6 mkfatfs_configfatfs
+0801e5ac g     F .text	00000032 sched_getfiles
+0801dd84 g     F .text	0000002c aes_decrypt
 20000000 g       *ABS*	00000000 _sdata
-08004484 g     F .text	0000005a sig_pendingset
-0801e618 g     F .text	00000052 pthread_takesemaphore
-08001220 g     F .text	00000054 up_earlyserialinit
+0800488c g     F .text	0000006e sig_pendingset
+0801fa24 g     F .text	00000052 pthread_takesemaphore
+08001248 g     F .text	00000054 up_earlyserialinit
 20000c28 g     O .bss	00000008 g_sigpendingaction
 08000360 g     F .text	00000000 exception_common
-0801ee00 g     F .text	00000054 clock_ticks2time
-0801027c g     F .text	00000096 rmdir
-08018564 g     F .text	00000086 simple_link_recv
-0800cd98 g     F .text	00000136 cmd_hexdump
-080041f8 g     F .text	00000058 sem_waitirq
-0800e148 g     F .text	00000026 ShowBufferSize
-08010b68 g     F .text	000000b2 readdir
-08004014 g     F .text	000000a8 sched_unlock
-08017b08 g     F .text	00000028 cc3000_closesocket
-08003d5c  w    F .text	00000038 irq_initialize
-08005ab4 g     F .text	00000020 umm_initialize
-0800be50 g     F .text	000002aa cmd_dd
-0800b30c g     F .text	00000072 cmd_mkfifo
-0801f804 g     F .text	0000005a env_findvar
-0800e928 g     F .text	00000136 ShowInformation
-08022990 g     F .text	00000018 stm32_dmastop
-080202e0 g     F .text	0000004a fflush
-080107c4 g     F .text	00000022 unregister_driver
+08020270 g     F .text	00000054 clock_ticks2time
+08010994 g     F .text	00000096 rmdir
+080193bc g     F .text	00000086 simple_link_recv
+0800d368 g     F .text	00000136 cmd_hexdump
+080045e0 g     F .text	00000076 sem_waitirq
+0800e750 g     F .text	00000026 ShowBufferSize
+080112d0 g     F .text	000000b2 readdir
+080043e4 g     F .text	000000a8 sched_unlock
+08018960 g     F .text	00000028 cc3000_closesocket
+080040c0  w    F .text	00000038 irq_initialize
+08006114 g     F .text	00000020 umm_initialize
+0800c420 g     F .text	000002aa cmd_dd
+0800b8c4 g     F .text	00000072 cmd_mkfifo
+08020d5c g     F .text	00000074 env_findvar
+0800ef30 g     F .text	00000136 ShowInformation
+080245ec g     F .text	00000018 stm32_dmastop
+080218e4 g     F .text	0000004a fflush
+08010f14 g     F .text	00000022 unregister_driver
 20000e78 g     O .bss	00000004 g_system_timer
-08024a1c g     F .text	000000b2 sem_unlink
-08021550 g     F .text	00000030 sq_addfirst
-08018b5c g     F .text	0000015e wlan_connect
-08002d74 g     F .text	00000022 group_initialize
-080032b4 g     F .text	00000028 pthread_schedsetup
-08002678  w    F .text	00000026 stm32_spiinitialize
+080269dc g     F .text	000000ce sem_unlink
+08022c4c g     F .text	00000030 sq_addfirst
+080199dc g     F .text	0000015e wlan_connect
+08002fb0 g     F .text	0000003c group_initialize
+08003530 g     F .text	00000028 pthread_schedsetup
+08026304  w    F .text	00000026 stm32_spiinitialize
 20000d08 g     O .bss	00000004 ulSmartConfigFinished
-080167a0 g     F .text	00000056 bchlib_teardown
-08006870 g     F .text	00000124 up_schedule_sigaction
-0802739c g       *ABS*	00000000 __exidx_start
-0801e934 g     F .text	0000006c mq_verifyreceive
-08001328 g     F .text	00000048 up_putc
-0800fd0c g     F .text	0000003c inode_nextname
-08022af4 g     F .text	00000034 lseek
-0800675c g     F .text	0000003c up_initial_state
-08017fcc g     F .text	00000090 cc3000_accept_impl
-08004ea0 g     F .text	0000003c sigaddset
-08017b30 g     F .text	0000002a cc3000_do_accept
-080250ac g     O .text	0000001b g_fmtdeepnesting
-0801805c g     F .text	00000098 cc3000_bind_impl
-0800ec94 g     F .text	0000004a sysinfo_main
-08005b5c g     F .text	0000009a mm_addregion
-0800c60c g     F .text	00000016 nsh_getcwd
+080174c0 g     F .text	0000006a bchlib_teardown
+08006b20 g     F .text	00000124 up_schedule_sigaction
+08029f7c g       *ABS*	00000000 __exidx_start
+0801fd7c g     F .text	0000006c mq_verifyreceive
+08001350 g     F .text	00000048 up_putc
+08010410 g     F .text	0000003c inode_nextname
+08024764 g     F .text	00000034 lseek
+08006a0c g     F .text	0000003c up_initial_state
+08018e24 g     F .text	00000090 cc3000_accept_impl
+08005408 g     F .text	0000003c sigaddset
+08018988 g     F .text	0000002a cc3000_do_accept
+080275a8 g     O .text	0000001b g_fmtdeepnesting
+08018eb4 g     F .text	00000098 cc3000_bind_impl
+0800f29c g     F .text	0000004a sysinfo_main
+080061bc g     F .text	000000b0 mm_addregion
+0800cbdc g     F .text	00000016 nsh_getcwd
 20000d0c g     O .bss	00000001 ucStopSmartConfig
-080171a0 g     F .text	0000004a usbtrace_enable
-0801e460 g     F .text	00000070 pthread_detach
-0801d058 g     F .text	00000248 .hidden __udivdi3
-080144d4 g     F .text	000001a6 fat_mount
-08004ab8 g     F .text	0000002c env_release
-08019cb8 g     F .text	0000004a STREAM_TO_UINT32_f
-080211a0 g     F .text	000000c4 gmtime_r
-08017000 g     F .text	00000142 pipecommon_write
-080192b8 g     F .text	0000003e wlan_ioctl_statusget
-08006798 g     F .text	00000022 up_interrupt_context
+08017f80 g     F .text	0000004a usbtrace_enable
+0801f858 g     F .text	00000084 pthread_detach
+0801e364 g     F .text	00000248 .hidden __udivdi3
+08001cec g     F .text	00000064 up_memfault
+080150b4 g     F .text	000001a6 fat_mount
+08004f70 g     F .text	00000040 env_release
+0801ad9c g     F .text	0000004a STREAM_TO_UINT32_f
+080227e8 g     F .text	000000c4 gmtime_r
+08017db0 g     F .text	00000172 pipecommon_write
+0801a138 g     F .text	0000003e wlan_ioctl_statusget
+08006a48 g     F .text	00000022 up_interrupt_context
 20000ea8 g     O .bss	00000008 g_msgfreeirq
-08019d5c g     F .text	0000002c cc3000_read
-0800c624 g     F .text	00000072 nsh_getfullpath
-08015088 g     F .text	000000b2 fat_updatefsinfo
-0801f760 g     F .text	0000005c mq_desblockalloc
-0802044c g     F .text	0000006a strtol
-0802508c g     O .text	0000001d g_fmttoomanyargs
+0801ae84 g     F .text	00000048 cc3000_read
+0800cbf4 g     F .text	00000072 nsh_getfullpath
+08015c68 g     F .text	000000b2 fat_updatefsinfo
+08020cb8 g     F .text	0000005c mq_desblockalloc
+08021a80 g     F .text	0000006a strtol
+08027588 g     O .text	0000001d g_fmttoomanyargs
 20000c48 g     O .bss	00000008 g_wdfreelist
-0802146c g     F .text	0000005a posix_spawnattr_init
-08005d0c g     F .text	00000066 mm_takesemaphore
+080060a8 g     F .text	0000002c lib_rawoutstream
+08022af0 g     F .text	0000006e posix_spawnattr_init
+08006380 g     F .text	00000066 mm_takesemaphore
 20000c30 g     O .bss	00000008 g_sigpendingirqaction
-08004300  w    F .text	000000f2 sig_initialize
-080060e4 g     F .text	0000003c up_allocate_heap
+08004708  w    F .text	000000f2 sig_initialize
+080067c0 g     F .text	0000003c up_allocate_heap
 20000ebc g       *ABS*	00000000 _ebss
-0801017c g     F .text	00000100 rename
-08024ad4 g     O .text	00000010 g_gpiobase
-080229a8 g     F .text	0000001e stm32_dmaresidual
-08020cbc g     F .text	0000004a strrchr
-08021264 g     F .text	0000009a basename
-0801d494 g     F .text	000000e2 sched_mergepending
-080250ec g     O .text	00000018 g_fmtcmdfailed
-0801df58 g     F .text	000000ee nanosleep
+08010894 g     F .text	00000100 rename
+08026ab0 g     O .text	00000010 g_gpiobase
+08024604 g     F .text	0000001e stm32_dmaresidual
+080222f0 g     F .text	0000004a strrchr
+080228ac g     F .text	0000009a basename
+0801e7b4 g     F .text	000000e2 sched_mergepending
+080275e8 g     O .text	00000018 g_fmtcmdfailed
+0801f304 g     F .text	00000110 nanosleep
 20000a60 g     O .bss	00000008 g_waitingformqnotfull
-080023b4 g     F .text	0000006e uart_register
-0800fa0c g     F .text	00000058 files_release
-08002cf8 g     F .text	00000020 irq_unexpected_isr
-08004528 g     F .text	00000086 sig_allocatependingsigaction
-08003684 g     F .text	00000078 sig_unmaskpendingsignal
-08013e14 g     F .text	00000044 fat_dirwrite
-08005cb4 g     F .text	00000056 mm_trysemaphore
+080026ac g     F .text	00000086 uart_register
+080100b8 g     F .text	0000006e files_release
+08002f00 g     F .text	00000038 irq_unexpected_isr
+08004944 g     F .text	00000086 sig_allocatependingsigaction
+08003930 g     F .text	00000078 sig_unmaskpendingsignal
+080149f4 g     F .text	00000044 fat_dirwrite
+08006328 g     F .text	00000056 mm_trysemaphore
 20000d10 g     O .bss	00000004 ulCC3000DHCP
-080185ec g     F .text	00000032 cc3000_recv_impl
-08010600 g     F .text	0000004a write
-080027f0 g     F .text	00000026 board_led_initialize
-0802285c g     F .text	00000028 stm32_dmachannel
-080167f8 g     F .text	0000017a bchlib_read
-080178c0 g     F .text	00000020 nvmem_get_mac_address
-08016dd8 g     F .text	000000f0 pipecommon_close
+08019444 g     F .text	00000032 cc3000_recv_impl
+08010d18 g     F .text	0000004a write
+08002a64 g     F .text	00000026 board_led_initialize
+08024470 g     F .text	0000003e stm32_dmachannel
+0801752c g     F .text	0000017a bchlib_read
+080186f0 g     F .text	00000020 nvmem_get_mac_address
+08017b54 g     F .text	0000010e pipecommon_close
 200002dc g     O .data	00000005 spi_readCommand
-0800ec14 g     F .text	0000007e shell_main
-080143a8 g     F .text	00000018 fat_semgive
-08020370 g     F .text	0000002c fprintf
-0800c998 g     F .text	000000bc cmd_mb
-080007d0 g     F .text	0000000a stm32_gpioinit
-0801dee0 g     F .text	00000076 kill
-200008f9 g     O .bss	00000001 asyncNotificationWaiting
-0801d370 g     F .text	00000046 sched_removereadytorun
-080147e8 g     F .text	00000040 fat_cluster2sector
-08014b98 g     F .text	00000070 fat_removechain
-0801da48 g     F .text	00000142 task_spawn
-08010e38 g     F .text	000000fa umount2
-08016ba8 g     F .text	00000046 mkfifo
-08015374 g     F .text	000000e0 mkfatfs
-0801ab3c g     F .text	0000006e set_socket_active_status
-08024908 g     F .text	00000056 mq_descreate
-08017798 g     F .text	0000007c nvmem_read
-0800fb3c g     F .text	0000008a inode_semtake
-080051bc g     F .text	00000038 stream_semtake
-080208f0 g     F .text	000000ae chdir
-080003b4 g     F .text	00000076 __start
+0800f21c g     F .text	0000007e shell_main
+08014f88 g     F .text	00000018 fat_semgive
+08021988 g     F .text	0000002c fprintf
+0800cf68 g     F .text	000000bc cmd_mb
+080007f8 g     F .text	0000000a stm32_gpioinit
+0801f28c g     F .text	00000076 kill
+200008b9 g     O .bss	00000001 asyncNotificationWaiting
+0801e67c g     F .text	0000005a sched_removereadytorun
+080153c8 g     F .text	00000040 fat_cluster2sector
+08015778 g     F .text	00000070 fat_removechain
+0801edb8 g     F .text	00000142 task_spawn
+08011618 g     F .text	000000fa umount2
+080178dc g     F .text	00000046 mkfifo
+08015f54 g     F .text	0000018e mkfatfs
+0801bdc8 g     F .text	0000006e set_socket_active_status
+08026898 g     F .text	0000006a mq_descreate
+080185c8 g     F .text	0000007c nvmem_read
+08010200 g     F .text	000000a6 inode_semtake
+0800574c g     F .text	00000038 stream_semtake
+08021f24 g     F .text	000000ae chdir
+080003b4 g     F .text	000000a0 __start
 20000dc8 g     O .bss	000000b0 aexpandedKey
-08015040 g     F .text	00000048 fat_ffcacheinvalidate
-0801768c g     F .text	00000038 netapp_ipconfig
-0801ad3c g     F .text	0000008c SimpleLinkWaitData
-0801760c g     F .text	0000003c netapp_ping_report
-08019c4c g     F .text	00000036 UINT16_TO_STREAM_f
+08015c20 g     F .text	00000048 fat_ffcacheinvalidate
+08018494 g     F .text	00000038 netapp_ipconfig
+0801bfc8 g     F .text	0000008c SimpleLinkWaitData
+08018414 g     F .text	0000003c netapp_ping_report
+0801ad30 g     F .text	00000036 UINT16_TO_STREAM_f
 20000a68 g     O .bss	00000008 g_inactivetasks
-08003304 g     F .text	00000032 task_activate
-08001680 g     F .text	0000006c up_hardfault
-08020ebc g     F .text	00000058 clock_calendar2utc
-08006b4e g     F .text	0000000c up_switchcontext
-0800d9b0 g     F .text	00000154 exec_builtin
-08024404 g     F .text	00000010 board_app_initialize
-08005d74 g     F .text	0000004c mm_givesemaphore
-0800415c g     F .text	0000004a wd_recover
-0800fe7c g     F .text	00000046 fs_getfilep
-0801758c g     F .text	0000007e netapp_ping_send
+08003580 g     F .text	00000032 task_activate
+08001d50 g     F .text	0000008c up_hardfault
+080224f0 g     F .text	00000058 clock_calendar2utc
+08006dfe g     F .text	0000000c up_switchcontext
+0800dfb8 g     F .text	00000154 exec_builtin
+08026394 g     F .text	00000010 board_app_initialize
+080063e8 g     F .text	00000070 mm_givesemaphore
+0800452c g     F .text	0000004a wd_recover
+08010580 g     F .text	00000046 fs_getfilep
+08018394 g     F .text	0000007e netapp_ping_send
 200001dc g     O .data	00000004 optind
-08002910 g     F .text	00000016 stm32_usbsuspend
-080214ec g     F .text	00000022 posix_spawnattr_setschedparam
-08024fb4 g     O .text	00000006 g_nshprompt
-080142e4 g     F .text	00000028 fat_getuint32
+0801deb0 g     F .text	00000016 stm32_usbsuspend
+08022ba0 g     F .text	00000040 posix_spawnattr_setschedparam
+080274b0 g     O .text	00000006 g_nshprompt
+08014ec4 g     F .text	00000028 fat_getuint32
 20000eb0 g     O .bss	00000008 g_desfree
-080171ec g     F .text	00000100 usbtrace
-08019150 g     F .text	000000c4 wlan_ioctl_set_scan_params
-08017814 g     F .text	0000008a nvmem_write
-0801d864 g     F .text	000000b8 task_terminate
-080045b0 g     F .text	00000080 sig_releasependingsigaction
-080100b8 g     F .text	00000076 file_read
-08004e64 g     F .text	0000003c sem_init
-0801cb8c g     F .text	0000004c builtin_isavail
-080013c0 g     F .text	0000005e up_doirq
-08004630 g     F .text	0000006a sig_cleanup
-08021038 g     F .text	00000062 mktime
-08022d08 g     F .text	0000007a sem_close
-08006840 g     F .text	00000030 up_release_stack
-0800ff5c g     F .text	00000046 inode_checkflags
-08024960 g     F .text	00000070 mq_msgqalloc
-08002598 g     F .text	000000ba uart_recvchars
-08010130 g     F .text	0000004a read
-0801fe30 g     F .text	00000040 lib_memoutstream
-08001b50 g     F .text	00000048 up_assert
-08002864 g     F .text	0000000e board_button_initialize
-0800244c g     F .text	00000028 uart_datasent
-0801a004 g     F .text	00000030 cc3000_wait_data
-08013d78 g     F .text	00000064 fat_dirname2path
-080037fc g     F .text	00000038 sig_lowest
-08020c6c g     F .text	00000050 strncmp
+08017fcc g     F .text	00000100 usbtrace
+08019fd0 g     F .text	000000c4 wlan_ioctl_set_scan_params
+08018644 g     F .text	0000008a nvmem_write
+0801eb94 g     F .text	000000b8 task_terminate
+080049cc g     F .text	00000080 sig_releasependingsigaction
+080107bc g     F .text	0000008a file_read
+080053cc g     F .text	0000003c sem_init
+0801de18 g     F .text	0000004c builtin_isavail
+080013e8 g     F .text	0000005e up_doirq
+08004a4c g     F .text	0000006a sig_cleanup
+08022680 g     F .text	00000062 mktime
+08024978 g     F .text	000000a4 sem_close
+08006af0 g     F .text	00000030 up_release_stack
+08010660 g     F .text	00000046 inode_checkflags
+08026904 g     F .text	0000008c mq_msgqalloc
+080028a8 g     F .text	000000ba uart_recvchars
+08010848 g     F .text	0000004a read
+08021420 g     F .text	00000040 lib_memoutstream
+08001c68 g     F .text	00000048 up_assert
+0800275c g     F .text	00000028 uart_datasent
+0801b1f0 g     F .text	0000004e cc3000_wait_data
+08014958 g     F .text	00000064 fat_dirname2path
+08003abc g     F .text	00000038 sig_lowest
+080222a0 g     F .text	00000050 strncmp
 20000d30 g     O .bss	00000008 g_cc3000_mut
-08005bf8 g     F .text	00000094 mm_initialize
-08017d78 g     F .text	00000030 cc3000_send
-20000904 g     O .bss	00000004 root_inode
-080164b8 g     F .text	000000c0 inode_reserve
-08006a2c g     F .text	00000062 up_stack_frame
-080250c8 g     O .text	00000024 g_fmtcontext
-08004dcc g     F .text	00000058 strncpy
-080104ec g     F .text	00000096 unlink
-0801ef44 g     F .text	00000130 setenv
-080162d8 g     F .text	00000084 inode_unlink
-0801f2f0 g     F .text	00000082 spawn_execattrs
-0800fd48 g     F .text	0000002a inode_addref
-0800db04 g     F .text	000000ea nsh_script
-08020a00 g     F .text	00000028 sched_get_priority_max
-080033ec g     F .text	00000040 get_errno_ptr
-0801f860 g     F .text	00000088 env_removevar
-080217ac g     F .text	00000024 realloc
-080172ec g     F .text	0000008e usbtrace_enumerate
-0801436c g     F .text	0000003c fat_semtake
+0800626c g     F .text	00000094 mm_initialize
+08018bd0 g     F .text	00000030 cc3000_send
+200008c4 g     O .bss	00000004 root_inode
+08017148 g     F .text	000000da inode_reserve
+08006cdc g     F .text	00000062 up_stack_frame
+080275c4 g     O .text	00000024 g_fmtcontext
+08005334 g     F .text	00000058 strncpy
+08010c04 g     F .text	00000096 unlink
+080203b4 g     F .text	00000144 setenv
+08016f68 g     F .text	00000084 inode_unlink
+080207d4 g     F .text	00000096 spawn_execattrs
+0801044c g     F .text	0000002a inode_addref
+0800e10c g     F .text	000000ea nsh_script
+08022034 g     F .text	00000028 sched_get_priority_max
+08003680 g     F .text	00000040 get_errno_ptr
+08020dd0 g     F .text	000000a2 env_removevar
+08022ea8 g     F .text	00000024 realloc
+080180cc g     F .text	0000008e usbtrace_enumerate
+08014f4c g     F .text	0000003c fat_semtake
 20000d20 g     O .bss	00000010 g_telnetdcommon
 20000db8 g     O .bss	00000010 akey
-0800f828 g     F .text	000000f2 file_dup2
-08016c78 g     F .text	00000030 pipecommon_freedev
-08003b58 g     F .text	00000036 sig_dispatch
-0800266c g     F .text	0000000c board_initialize
-08016c28 g     F .text	00000050 pipecommon_allocdev
-080174a8 g     F .text	000000e2 netapp_timeout_values
-0801ec78  w    F .text	0000000a clock_initialize
-08005c8c g     F .text	00000028 mm_seminitialize
-0800f72c g     F .text	0000000a fs_initialize
+0800fe94 g     F .text	00000106 file_dup2
+080179ac g     F .text	00000030 pipecommon_freedev
+08003e58 g     F .text	00000036 sig_dispatch
+08002970 g     F .text	0000000c board_initialize
+0801795c g     F .text	00000050 pipecommon_allocdev
+080182b0 g     F .text	000000e2 netapp_timeout_values
+080200d8  w    F .text	0000000a clock_initialize
+08006300 g     F .text	00000028 mm_seminitialize
+0800fd70 g     F .text	0000000a fs_initialize
 20000a70 g     O .bss	00000008 g_waitingforsignal
-0801d638 g     F .text	00000028 sched_getstreams
-08020afc g     F .text	0000005c memcmp
-08020a28 g     F .text	00000028 sched_get_priority_min
-08002f60 g     F .text	0000002c task_create
-08014998 g     F .text	000001fe fat_putcluster
-0800fbc8 g     F .text	00000058 inode_semgive
-0801ffa8 g     F .text	00000032 fdopen
-08003c68 g     F .text	00000078 mq_waitirq
-080091ec g     F .text	00000042 nsh_main
-0800f7d4 g     F .text	0000001a files_initlist
-0801fb84 g     F .text	000000a6 wd_create
-0801cdb8  w    F .text	00000002 .hidden __aeabi_ldiv0
-0800f9b0 g     F .text	0000005a files_close
+0801e958 g     F .text	00000038 sched_getstreams
+08022130 g     F .text	0000005c memcmp
+0802205c g     F .text	00000028 sched_get_priority_min
+080031c8 g     F .text	0000002c task_create
+08015578 g     F .text	000001fe fat_putcluster
+080102a8 g     F .text	0000007c inode_semgive
+080215ac g     F .text	00000032 fdopen
+08003f68 g     F .text	000000bc mq_waitirq
+080096b8 g     F .text	00000042 nsh_main
+0800fe18 g     F .text	0000002e files_initlist
+08021110 g     F .text	000000c2 wd_create
+0801e0c4  w    F .text	00000002 .hidden __aeabi_ldiv0
+08010048 g     F .text	00000070 files_close
 00000000  w      *UND*	00000000 timer_initialize
 20000c5c g     O .bss	000000a4 g_mmheap
-08002874 g     F .text	0000001c board_buttons
-0801de64 g     F .text	0000007a sem_trywait
-0800908c g     F .text	00000076 up_usbuninitialize
-08004934 g     F .text	000000f4 sigaction
-0801eb5c g     F .text	00000090 mq_msgfree
-080044e0 g     F .text	00000046 sig_findaction
-08002d18 g     F .text	0000005c group_allocate
-08017a3c g     F .text	000000ca cc3000_socket
-080202a4 g     F .text	0000003a lib_fwrite
-080015d4 g     F .text	0000004c up_disable_irq
-08021530 g     F .text	0000001e task_spawnattr_setstacksize
-08020c30 g     F .text	0000003c strdup
-0801a0a0 g     F .text	00000030 cc3000_remove_socket
-0801934c g     F .text	0000003e wlan_smart_config_stop
-080166a8 g     F .text	000000f8 bchlib_setup
+0801f1f8 g     F .text	00000092 sem_trywait
+080094e8 g     F .text	00000076 up_usbuninitialize
+08004dd8 g     F .text	000000f4 sigaction
+0801ffbc g     F .text	00000090 mq_msgfree
+080048fc g     F .text	00000046 sig_findaction
+08002f38 g     F .text	00000078 group_allocate
+08018894 g     F .text	000000ca cc3000_socket
+080218a8 g     F .text	0000003a lib_fwrite
+080017d0 g     F .text	0000004c up_disable_irq
+08022c1c g     F .text	0000002e task_spawnattr_setstacksize
+08022264 g     F .text	0000003c strdup
+0801b2ec g     F .text	0000004e cc3000_remove_socket
+0801a1cc g     F .text	0000003e wlan_smart_config_stop
+08017388 g     F .text	00000138 bchlib_setup
 20000c38 g     O .bss	00000008 g_sigpendingirqsignal
-08005e88 g     F .text	00000118 mm_free
-0800d7dc g     F .text	00000028 cmd_test
+08006520 g     F .text	00000144 mm_free
+0800ddcc g     F .text	00000028 cmd_test
 00000000  w      *UND*	00000000 timer_deleteall
-080176c4 g     F .text	00000042 netapp_arp_flush
-0800477c g     F .text	000000d6 wd_cancel
-08020f50 g     F .text	00000046 gettimeofday
-0800b380 g     F .text	000001f6 cmd_mkrd
-08020f14 g     F .text	0000003c clock_daysbeforemonth
-08017f68 g     F .text	00000062 cc3000_closesocket_impl
-0801ffdc g     F .text	00000056 fopen
-0801815c g     F .text	000000b0 cc3000_gethostbyname_impl
-08016b10 g     F .text	00000044 bchlib_flushsector
-080205c4 g     F .text	0000032c getopt
-08004d30 g     F .text	00000036 memset
-08017958 g     F .text	0000004e nvmem_read_sp_version
-0801f0f8 g     F .text	0000002a group_bind
-08013e94 g     F .text	00000162 fat_remove
-08017144 g     F .text	0000005a pipecommon_ioctl
-0801467c g     F .text	0000007a fat_checkmount
-0800fc20 g     F .text	000000bc inode_search
-0800eec8 g     F .text	00000058 CC3000_Init
-08017708 g     F .text	00000056 netapp_set_debug_level
-0801adc8 g     F .text	00000050 hci_command_send
+080184cc g     F .text	00000042 netapp_arp_flush
+08004bf0 g     F .text	000000d6 wd_cancel
+08022584 g     F .text	0000005c gettimeofday
+0800b938 g     F .text	0000020e cmd_mkrd
+08022548 g     F .text	0000003c clock_daysbeforemonth
+08018dc0 g     F .text	00000062 cc3000_closesocket_impl
+080215e0 g     F .text	00000056 fopen
+08018fb4 g     F .text	000000b0 cc3000_gethostbyname_impl
+08017844 g     F .text	00000044 bchlib_flushsector
+08021bf8 g     F .text	0000032c getopt
+08005298 g     F .text	00000036 memset
+08018788 g     F .text	0000004e nvmem_read_sp_version
+08020594 g     F .text	00000050 group_bind
+08014a74 g     F .text	00000162 fat_remove
+08017f24 g     F .text	0000005a pipecommon_ioctl
+0801525c g     F .text	0000007a fat_checkmount
+08010324 g     F .text	000000bc inode_search
+0800f4d0 g     F .text	00000058 CC3000_Init
+08018510 g     F .text	00000056 netapp_set_debug_level
+0801c054 g     F .text	00000050 hci_command_send
 20000d14 g     O .bss	00000004 ulCC3000Connected
-080213ac g     F .text	0000006c posix_spawn_file_actions_addopen
-08018620 g     F .text	00000032 cc3000_recvfrom_impl
-0800cfdc g     F .text	0000021c cmd_mount
+080229f4 g     F .text	00000092 posix_spawn_file_actions_addopen
+08019478 g     F .text	00000032 cc3000_recvfrom_impl
+0800d5cc g     F .text	0000021c cmd_mount
 20000d18 g     O .bss	00000004 OkToDoShutDown
-0800151c g     F .text	000000b6 up_irqinitialize
-08020034 g     F .text	00000098 fclose
-080179a8 g     F .text	0000005c nvmem_create_entry
-08024d38 g     O .text	00000048 g_tasklisttable
-0800c814 g     F .text	0000002e cmd_pwd
-08021000 g     F .text	00000038 time
-08010960 g     F .text	00000120 opendir
-080043f4 g     F .text	00000054 sig_allocateactionblock
-08020420 g     F .text	0000002c lib_stdoutstream
-0801f480 g     F .text	000001f8 sigtimedwait
-0801a034 g     F .text	0000003c cc3000_accept_socket
-08001274 g     F .text	000000b2 up_serialinit
-08022920 g     F .text	00000070 stm32_dmastart
-0801a0d0 g     F .text	00000030 cc3000_remote_closed_socket
-08006344 g     F .text	00000208 stm32_gpiosetevent
-08002e48 g     F .text	0000000a sched_garbagecollection
+080016b8 g     F .text	00000118 up_irqinitialize
+08021638 g     F .text	00000098 fclose
+080187d8 g     F .text	0000005c nvmem_create_entry
+08026f40 g     O .text	00000048 g_tasklisttable
+0800cde4 g     F .text	0000002e cmd_pwd
+08022648 g     F .text	00000038 time
+080110c8 g     F .text	00000120 opendir
+080047fc g     F .text	00000054 sig_allocateactionblock
+08021a54 g     F .text	0000002c lib_stdoutstream
+08020978 g     F .text	00000258 sigtimedwait
+08005188 g     F .text	0000002c syslog
+0801b240 g     F .text	0000005a cc3000_accept_socket
+0800129c g     F .text	000000b2 up_serialinit
+08024564 g     F .text	00000086 stm32_dmastart
+0801b33c g     F .text	0000004e cc3000_remote_closed_socket
+08023644 g     F .text	00000208 stm32_gpiosetevent
+080030b0 g     F .text	0000000a sched_garbagecollection
 20000a78 g     O .bss	00000060 g_pidhash
-0801cb24 g     F .text	00000020 aes_read_key
-0801d578 g     F .text	00000074 sched_addblocked
-08002cac g     F .text	0000004c irq_dispatch
-0800dee0 g     F .text	000001b2 execute
-08002424 g     F .text	00000028 uart_datareceived
-08010d00 g     F .text	00000138 mount
-08017b5c g     F .text	00000058 cc3000_accept
-0800079c g     F .text	00000012 stm32_clockconfig
-0801895c g     F .text	000000be wlan_init
-08020bb0 g     F .text	0000003a strcmp
-08003e64 g     F .text	00000056 sched_ufree
-0801d744 g     F .text	00000018 sched_self
-0800e170 g     F .text	00000302 StartSmartConfig
-0801e52c g     F .text	00000050 pthread_mutex_unlock
-0801f400 g     F .text	0000002c task_getgroup
+0801ddb0 g     F .text	00000020 aes_read_key
+0801e898 g     F .text	00000074 sched_addblocked
+08002eb4 g     F .text	0000004c irq_dispatch
+0800e4e8 g     F .text	000001b2 execute
+08002734 g     F .text	00000028 uart_datareceived
+080114b0 g     F .text	00000166 mount
+080189b4 g     F .text	00000058 cc3000_accept
+080007c4 g     F .text	00000012 stm32_clockconfig
+080197dc g     F .text	000000be wlan_init
+080221e4 g     F .text	0000003a strcmp
+08004234 g     F .text	00000056 sched_ufree
+0801ea74 g     F .text	00000018 sched_self
+0800e778 g     F .text	00000302 StartSmartConfig
+0801f938 g     F .text	00000050 pthread_mutex_unlock
+080208f8 g     F .text	0000002c task_getgroup
 20000a44 g     O .bss	00000004 current_regs
-0801f2b4 g     F .text	0000003c spawn_semtake
-08017cd0 g     F .text	00000050 cc3000_recv
+08020798 g     F .text	0000003c spawn_semtake
+08018b28 g     F .text	00000050 cc3000_recv
 200000d8 g     O .data	00000003 simpleConfigPrefix
-08000a18 g     F .text	0000005a stm32_gpioread
-0800fcdc g     F .text	0000002e inode_free
-08018654 g     F .text	0000017c simple_link_send
+08000a40 g     F .text	0000005a stm32_gpioread
+080103e0 g     F .text	0000002e inode_free
+080194ac g     F .text	0000017c simple_link_send
 20000e7c g     O .bss	00000008 g_basetime
-08005708 g     F .text	000002dc lib_vsprintf
-08002c38 g     F .text	0000000e os_bringup
-08023f00 g     F .text	00000122 cc3000_register
-0800fd74 g     F .text	0000005e inode_release
-080041a8 g     F .text	0000004e sem_recover
-0800eb94 g     F .text	00000072 shell_session
-08017e44 g     F .text	000000a2 HostFlowControlConsumeBuff
-080200cc g     F .text	0000002e fgetc
-0801dc50 g     F .text	000001ea wd_start
-0801fca8 g     F .text	00000040 sprintf
-0801fce8 g     F .text	0000002c asprintf
+08005c98 g     F .text	000002dc lib_vsprintf
+08002e40 g     F .text	0000000e os_bringup
+08025dd8 g     F .text	0000014a cc3000_register
+08010478 g     F .text	0000005e inode_release
+08004578 g     F .text	00000068 sem_recover
+0800f19c g     F .text	00000072 shell_session
+08018c9c g     F .text	000000a2 HostFlowControlConsumeBuff
+080216d0 g     F .text	0000002e fgetc
+0801efcc g     F .text	00000204 wd_start
+08021250 g     F .text	00000040 sprintf
+08021290 g     F .text	0000002c asprintf
 200001d8 g     O .data	00000002 g_spawn_parmsem
-0802739c g       *ABS*	00000000 _sinit
-0801e7c4 g     F .text	00000086 pthread_completejoin
-0801ed70 g     F .text	00000090 clock_time2ticks
-080180f4 g     F .text	00000068 cc3000_listen_impl
-0801d7e4 g     F .text	00000080 task_exit
-08020bec g     F .text	00000042 strcspn
-08022ba8 g     F .text	00000160 sem_open
+08029f7c g       *ABS*	00000000 _sinit
+0801fbd0 g     F .text	0000009a pthread_completejoin
+080201e0 g     F .text	00000090 clock_time2ticks
+08018f4c g     F .text	00000068 cc3000_listen_impl
+0801eb14 g     F .text	00000080 task_exit
+08022220 g     F .text	00000042 strcspn
+08024818 g     F .text	00000160 sem_open
 20000ad8 g     O .bss	00000008 g_pendingtasks
-0800504c g     F .text	00000052 sq_remafter
-080178a0 g     F .text	00000020 nvmem_set_mac_address
-0801ae18 g     F .text	00000072 hci_data_send
-0801f6d4  w    F .text	0000008a mq_initialize
-080245b8 g     F .text	0000007a mq_verifysend
-080007dc g     F .text	000001b4 stm32_configgpio
-0801ea38 g     F .text	000000c2 mq_doreceive
-080050a0 g     F .text	00000046 dq_addfirst
-0801f1a8 g     F .text	00000048 task_delete
-08002654 g     F .text	00000016 stm32_boardinitialize
-080215bc g     F .text	00000046 dq_addlast
-08004ce4 g     F .text	0000004a setlogmask
-0800ca54 g     F .text	000000be cmd_mh
-08018800 g     F .text	00000030 cc3000_sendto_impl
-08014e74 g     F .text	000000ae fat_fscacheflush
-0801fc2c g     F .text	00000046 boardctl
-0800b578 g     F .text	00000098 cmd_mv
-08018cbc g     F .text	00000048 wlan_disconnect
-0801f8e8 g     F .text	00000090 sched_setparam
-08004f1c g     F .text	0000003e sigismember
-08009230 g     F .text	00000010 nsh_initialize
+080055b4 g     F .text	00000052 sq_remafter
+080186d0 g     F .text	00000020 nvmem_set_mac_address
+0801c0a4 g     F .text	00000072 hci_data_send
+08020c2c  w    F .text	0000008a mq_initialize
+08026548 g     F .text	0000007a mq_verifysend
+08000804 g     F .text	000001b4 stm32_configgpio
+0801fe80 g     F .text	000000c2 mq_doreceive
+08005608 g     F .text	00000046 dq_addfirst
+0802068c g     F .text	00000048 task_delete
+08002964 g     F .text	0000000c stm32_boardinitialize
+08022cb8 g     F .text	00000046 dq_addlast
+0800524c g     F .text	0000004a setlogmask
+0800d024 g     F .text	000000be cmd_mh
+08019658 g     F .text	00000030 cc3000_sendto_impl
+08015a54 g     F .text	000000ae fat_fscacheflush
+080211d4 g     F .text	00000046 boardctl
+0800bb48 g     F .text	00000098 cmd_mv
+08019b3c g     F .text	00000048 wlan_disconnect
+08020e74 g     F .text	00000090 sched_setparam
+08005484 g     F .text	0000003e sigismember
+080096fc g     F .text	00000010 nsh_initialize
 200000dc g     O .data	00000007 device_name
-08025070 g     O .text	00000019 g_fmtnosuch
-08018b48 g     F .text	00000012 wlan_stop
-08014f24 g     F .text	00000052 fat_fscacheread
-0801a7c4 g     F .text	0000031e hci_unsol_event_handler
+0802756c g     O .text	00000019 g_fmtnosuch
+080199c8 g     F .text	00000012 wlan_stop
+08015b04 g     F .text	00000052 fat_fscacheread
+0801ba50 g     F .text	0000031e hci_unsol_event_handler
 20000c50 g     O .bss	00000002 g_wdnfree
-0801635c g     F .text	00000052 inode_remove
+08016fec g     F .text	00000052 inode_remove
 20000c40 g     O .bss	00000008 g_sigpendingsignal
-080216f4 g     F .text	00000036 fputc
-0800166c g     F .text	00000012 up_ack_irq
-08004c78 g     F .text	0000003e lowvsyslog
-080026a0 g     F .text	0000004e stm32_spi2select
-08021778 g     F .text	00000032 mallinfo
-0801acb8 g     F .text	00000082 SimpleLinkWaitEvent
-08002928 g     F .text	000002bc os_start
-08019798 g     F .text	00000086 ramdisk_register
-080270f8 g     O .text	0000000b Rcon
-08019d88 g     F .text	0000002c cc3000_wait
+08022df0 g     F .text	00000036 fputc
+08001868 g     F .text	00000012 up_ack_irq
+080051e0 g     F .text	0000003e lowvsyslog
+0802632c g     F .text	0000004e stm32_spi2select
+08022e74 g     F .text	00000032 mallinfo
+0801bf44 g     F .text	00000082 SimpleLinkWaitEvent
+08002ad8 g     F .text	00000314 os_start
+0801a680 g     F .text	000000aa ramdisk_register
+080298ec g     O .text	0000000b Rcon
+0801aecc g     F .text	00000048 cc3000_wait
 200001e0 g     O .data	00000004 optopt
-080273a4 g       *ABS*	00000000 _eronly
+08029f84 g       *ABS*	00000000 _eronly
 200002f0 g       .bss	0000009c g_intstackalloc
-08006628 g     F .text	0000003e up_copyfullstate
-08019c84 g     F .text	00000032 STREAM_TO_UINT16_f
-08024fd4 g     O .text	00000027 g_fmtargrequired
-08025da0 g     O .text	00000004 g_builtin_count
-08019ec4 g     F .text	000000c4 cc3000_open
-08014d18 g     F .text	000000b4 fat_nextdirentry
-08003ebc g     F .text	00000056 sched_gettcb
-080051a0 g     F .text	0000001c lib_stream_release
-08016660 g     F .text	00000046 close_blockdriver
-0800377c g     F .text	00000080 sig_releasependingsignal
-0801ee54 g     F .text	00000064 clock_systimespec
-08025d60 g     O .text	00000040 g_builtins
-080032dc g     F .text	00000026 task_argsetup
-08010410 g     F .text	000000dc stat
-0802052c g     F .text	00000096 lib_checkbase
-080214c8 g     F .text	00000022 posix_spawnattr_setflags
-0800c6b4 g     F .text	0000010c cmd_cd
+080068d8 g     F .text	0000003e up_copyfullstate
+0801ad68 g     F .text	00000032 STREAM_TO_UINT16_f
+080274d0 g     O .text	00000027 g_fmtargrequired
+0802830c g     O .text	00000004 g_builtin_count
+0801b060 g     F .text	00000114 cc3000_open
+080158f8 g     F .text	000000b4 fat_nextdirentry
+0800428c g     F .text	00000056 sched_gettcb
+0800571c g     F .text	00000030 lib_stream_release
+0801732c g     F .text	0000005c close_blockdriver
+08003a3c g     F .text	00000080 sig_releasependingsignal
+080202c4 g     F .text	00000064 clock_systimespec
+080282cc g     O .text	00000040 g_builtins
+08003558 g     F .text	00000026 task_argsetup
+08010b28 g     F .text	000000dc stat
+08021b60 g     F .text	00000096 lib_checkbase
+08022b60 g     F .text	0000003e posix_spawnattr_setflags
+0800cc84 g     F .text	0000010c cmd_cd
 20000ae0 g     O .bss	00000002 g_lastpid
-08024ffc g     O .text	00000019 g_fmtnomatching
-08005a50 g     F .text	00000024 lib_nulloutstream
-0801b38c g     F .text	00000a64 aes_encr
-0800c698 g     F .text	0000001a nsh_freefullpath
-08014468 g     F .text	0000006a fat_fattime2systime
-08020260 g     F .text	00000042 fwrite
-0800cd0c g     F .text	0000008c cmd_xd
-0800aef4 g     F .text	000001c4 cmd_ls
-080178e0 g     F .text	00000076 nvmem_write_patch
+080274f8 g     O .text	00000019 g_fmtnomatching
+08006004 g     F .text	00000024 lib_nulloutstream
+0801c618 g     F .text	00000a64 aes_encr
+0800cc68 g     F .text	0000001a nsh_freefullpath
+08015048 g     F .text	0000006a fat_fattime2systime
+08021864 g     F .text	00000042 fwrite
+0800d2dc g     F .text	0000008c cmd_xd
+0800b4ac g     F .text	000001c4 cmd_ls
+08018710 g     F .text	00000076 nvmem_write_patch
 200002e4 g       *ABS*	00000000 _edata
-08020164 g     F .text	000000fc lib_fgets
-080036fc g     F .text	00000080 sig_removependingsignal
-0800e57c g     F .text	00000142 ManualAddProfile
-08021418 g     F .text	00000036 posix_spawn_file_actions_destroy
-08004a90 g     F .text	00000026 mq_release
-080244b0 g     F .text	0000004e pthread_mutex_destroy
-08014770 g     F .text	00000076 fat_hwwrite
-08005b3c g     F .text	00000020 zalloc
-08017d20 g     F .text	00000058 cc3000_recvfrom
-0801d7c4 g     F .text	0000001e sched_process_timer
-08005aec g     F .text	00000012 umm_givesemaphore
-0800dd18 g     F .text	0000012e AsyncEventPrint
-0800917c g     F .text	00000070 usbdev_unregister
-08019104 g     F .text	0000004a wlan_ioctl_get_scan_results
-080051f4 g     F .text	00000016 stream_semgive
-0800c2d0 g     F .text	00000034 cmd_ps
-0801e4d0 g     F .text	0000005a pthread_mutex_lock
-08004a28 g     F .text	0000001c sig_releaseaction
-0800b71c g     F .text	00000292 cmd_cmp
-08002d98 g     F .text	00000060 group_setupidlefiles
-08017da8 g     F .text	00000038 cc3000_sendto
-08020e64 g     F .text	0000003a sem_getvalue
-0801e9a0 g     F .text	00000098 mq_waitreceive
-08003338 g     F .text	00000056 task_start
-0801b030 g     F .text	00000326 expandKey
-080173cc g     F .text	000000dc netapp_dhcp
-080143c0 g     F .text	000000a6 fat_systime2fattime
-08018414 g     F .text	000000ba cc3000_setsockopt_impl
-08009020 g     F .text	0000006a up_usbinitialize
+08021768 g     F .text	000000fc lib_fgets
+080039a8 g     F .text	00000094 sig_removependingsignal
+0800eb84 g     F .text	00000142 ManualAddProfile
+08022a88 g     F .text	0000004a posix_spawn_file_actions_destroy
+08004f48 g     F .text	00000026 mq_release
+08026440 g     F .text	0000004e pthread_mutex_destroy
+08015350 g     F .text	00000076 fat_hwwrite
+0800619c g     F .text	00000020 zalloc
+08018b78 g     F .text	00000058 cc3000_recvfrom
+0801eaf4 g     F .text	0000001e sched_process_timer
+0800614c g     F .text	00000012 umm_givesemaphore
+0800e320 g     F .text	0000012e AsyncEventPrint
+0800962c g     F .text	0000008a usbdev_unregister
+08019f84 g     F .text	0000004a wlan_ioctl_get_scan_results
+08005784 g     F .text	00000016 stream_semgive
+0800c8a0 g     F .text	00000034 cmd_ps
+0801f8dc g     F .text	0000005a pthread_mutex_lock
+08004ecc g     F .text	0000001c sig_releaseaction
+0800bcec g     F .text	00000292 cmd_cmp
+08002fec g     F .text	00000074 group_setupidlefiles
+08018c00 g     F .text	00000038 cc3000_sendto
+08022498 g     F .text	0000003a sem_getvalue
+0801fde8 g     F .text	00000098 mq_waitreceive
+080035b4 g     F .text	00000070 task_start
+0801c2bc g     F .text	00000326 expandKey
+080181d4 g     F .text	000000dc netapp_dhcp
+08014fa0 g     F .text	000000a6 fat_systime2fattime
+0801926c g     F .text	000000ba cc3000_setsockopt_impl
+0800947c g     F .text	0000006a up_usbinitialize
 20000c54 g     O .bss	00000008 g_wdactivelist
-0800eeac g     F .text	0000001c SendBootloaderPatch
-0800cba8 g     F .text	00000164 nsh_dumpbuffer
-080190b0 g     F .text	00000052 wlan_ioctl_del_profile
-0801a100 g     F .text	00000138 hci_unsol_handle_patch_request
-080033c0 g     F .text	0000002a exit
-0800d804 g     F .text	00000066 cmd_lbracket
-0800f91c g     F .text	00000094 files_allocate
-08019d04 g     F .text	00000016 cc3000_resume
-08018d04 g     F .text	0000006a wlan_ioctl_set_connection_policy
-08024ad0 g     O .text	00000004 g_idle_topstack
-0800c7c0 g     F .text	00000054 cmd_echo
-08009528 g     F .text	000000c0 nsh_session
-08006994 g     F .text	00000098 up_sigdeliver
-08004edc g     F .text	0000003e sigdelset
-0800f080 g     F .text	000000e0 telnetd_start
-0800f7f0 g     F .text	00000038 files_releaselist
-08019bfc g     F .text	0000004e UINT32_TO_STREAM_f
-0800e474 g     F .text	00000106 ManualConnect
-08014828 g     F .text	00000170 fat_getcluster
-08022a50 g     F .text	000000a4 file_seek
-080067bc g     F .text	00000084 up_release_pending
-08016578 g     F .text	00000084 find_blockdriver
-08006b5c g     F .text	00000018 up_timerisr
-0801cdb8  w    F .text	00000002 .hidden __aeabi_idiv0
-0800b12c g     F .text	000001e0 cmd_mkfatfs
-0801d2d4 g     F .text	0000009c sched_addreadytorun
-08010c54 g     F .text	0000006c mq_inode_release
-08025104 g     O .text	00000018 g_fmtcmdoutofmemory
-08020df0 g     F .text	0000003c pthread_attr_setschedpolicy
-0801938c g     F .text	00000088 wlan_smart_config_set_prefix
-080016ec g     F .text	00000078 up_svcall
-08003ce0 g     F .text	0000007a env_dup
-08004b60 g     F .text	00000074 lib_flushall
-0800ee74 g     F .text	0000001c SendFirmwarePatch
-08000a74 g     F .text	00000034 up_lowputc
-080066f4 g     F .text	0000002a _exit
-0800e094 g     F .text	000000b2 Initialize
-0802445c g     F .text	00000054 pthread_mutex_init
+0800f4b4 g     F .text	0000001c SendBootloaderPatch
+0800d178 g     F .text	00000164 nsh_dumpbuffer
+08019f30 g     F .text	00000052 wlan_ioctl_del_profile
+0801b38c g     F .text	00000138 hci_unsol_handle_patch_request
+08003654 g     F .text	0000002a exit
+0800ddf4 g     F .text	00000066 cmd_lbracket
+0800ff9c g     F .text	000000aa files_allocate
+0801ade8 g     F .text	00000040 cc3000_resume
+08019b84 g     F .text	0000006a wlan_ioctl_set_connection_policy
+08026aac g     O .text	00000004 g_idle_topstack
+0800cd90 g     F .text	00000054 cmd_echo
+08009a34 g     F .text	000000d4 nsh_session
+08006c44 g     F .text	00000098 up_sigdeliver
+08005444 g     F .text	0000003e sigdelset
+0800f688 g     F .text	00000104 telnetd_start
+0800fe48 g     F .text	0000004c files_releaselist
+0801ace0 g     F .text	0000004e UINT32_TO_STREAM_f
+0800ea7c g     F .text	00000106 ManualConnect
+08015408 g     F .text	00000170 fat_getcluster
+080246ac g     F .text	000000b8 file_seek
+08006a6c g     F .text	00000084 up_release_pending
+08017224 g     F .text	00000098 find_blockdriver
+08006e0c g     F .text	00000018 up_timerisr
+0801e0c4  w    F .text	00000002 .hidden __aeabi_idiv0
+0800b6e4 g     F .text	000001e0 cmd_mkfatfs
+0801e5e0 g     F .text	0000009c sched_addreadytorun
+080113f0 g     F .text	00000080 mq_inode_release
+08027600 g     O .text	00000018 g_fmtcmdoutofmemory
+08005148 g     F .text	0000003e vsyslog
+08022424 g     F .text	0000003c pthread_attr_setschedpolicy
+0801a20c g     F .text	00000088 wlan_smart_config_set_prefix
+08001ddc g     F .text	000000f0 up_svcall
+08004024 g     F .text	0000009c env_dup
+0800502c g     F .text	00000074 lib_flushall
+0800f47c g     F .text	0000001c SendFirmwarePatch
+08000a9c g     F .text	00000034 up_lowputc
+080069a4 g     F .text	0000002a _exit
+0800e69c g     F .text	000000b2 Initialize
+080263ec g     F .text	00000054 pthread_mutex_init
 08000000 g       *ABS*	00000000 _stext
-08005ad4 g     F .text	00000016 umm_trysemaphore
-08005a0c g     F .text	00000024 lib_lowoutstream
-08004d9c g     F .text	0000002e strlen
-08004448 g     F .text	0000003a sigpending
-0800ffa4 g     F .text	00000112 open
-08017e10 g     F .text	00000032 cc3000_mdnsadvertiser
-08015258 g     F .text	00000064 fat_currentsector
-08017c68 g     F .text	00000032 cc3000_setsockopt
-08025034 g     O .text	0000001d g_fmtargrange
-08019414 g     F .text	000001b4 wlan_smart_config_process
-0801cd64 g     F .text	0000002a .hidden __gnu_ldivmod_helper
-08001620 g     F .text	0000004a up_enable_irq
+08006134 g     F .text	00000016 umm_trysemaphore
+08005fb0 g     F .text	00000024 lib_lowoutstream
+08005304 g     F .text	0000002e strlen
+08004850 g     F .text	0000003a sigpending
+080106a8 g     F .text	00000112 open
+08018c68 g     F .text	00000032 cc3000_mdnsadvertiser
+08015e38 g     F .text	00000064 fat_currentsector
+08018ac0 g     F .text	00000032 cc3000_setsockopt
+08027530 g     O .text	0000001d g_fmtargrange
+0801a294 g     F .text	000001b4 wlan_smart_config_process
+0801e070 g     F .text	0000002a .hidden __gnu_ldivmod_helper
+0800181c g     F .text	0000004a up_enable_irq
 20000d1c g     O .bss	00000004 dhcpIPAddress
-08005a74 g     F .text	00000040 strchr
-08006b74 g     F .text	00000066 up_timer_initialize
-0801627c g     F .text	0000005a inode_find
-0802032c g     F .text	00000042 fputs
-08020e2c g     F .text	00000038 pthread_attr_setschedparam
+080060d4 g     F .text	00000040 strchr
+08006e24 g     F .text	00000066 up_timer_initialize
+08016f0c g     F .text	0000005a inode_find
+08021930 g     F .text	00000058 fputs
+08022460 g     F .text	00000038 pthread_attr_setschedparam
 20000aec g     O .bss	00000134 g_irqvector
 20000ae4 g     O .bss	00000008 g_delayed_kufree
-0800ece0 g     F .text	00000192 CC3000_AsyncCallback
-08021510 g     F .text	00000020 posix_spawnattr_setschedpolicy
-080107e8 g     F .text	000000b8 closedir
-08017c08 g     F .text	0000002a cc3000_connect
-08019600 g     F .text	00000020 devnull_register
-0800de48 g     F .text	00000096 helpme
-0801f978 g     F .text	00000138 sched_setpriority
-080142bc g     F .text	00000028 fat_getuint16
-0801513c g     F .text	0000011c fat_nfreeclusters
-08026ff8 g     O .text	00000100 rsbox
-0801cb64 g     F .text	00000026 builtin_getname
-08019d1c g     F .text	00000040 cc3000_write
-0801e354 g     F .text	0000010c pthread_join
-0801cd14 g     F .text	00000024 cc3000_wlan_init
+0800f2e8 g     F .text	00000192 CC3000_AsyncCallback
+08022be0 g     F .text	0000003c posix_spawnattr_setschedpolicy
+08010f38 g     F .text	000000b8 closedir
+08018a60 g     F .text	0000002a cc3000_connect
+0801a480 g     F .text	00000020 devnull_register
+0800e450 g     F .text	00000096 helpme
+08020f04 g     F .text	00000138 sched_setpriority
+08014e9c g     F .text	00000028 fat_getuint16
+08015d1c g     F .text	0000011c fat_nfreeclusters
+080297ec g     O .text	00000100 rsbox
+0801ddf0 g     F .text	00000026 builtin_getname
+0801ae28 g     F .text	0000005c cc3000_write
+0801f738 g     F .text	00000120 pthread_join
+0801e020 g     F .text	00000024 cc3000_wlan_init
 2000038c g       .bss	00000000 g_intstackbase
-08024424 g     F .text	00000000 .hidden __aeabi_ldivmod
-08022d84 g     F .text	00000170 mq_open
-0800c258 g     F .text	00000078 cmd_exec
-0800c8a0 g     F .text	00000052 cmd_unset
-080024ec g     F .text	000000aa uart_xmitchars
-08006668 g     F .text	0000008a up_create_stack
-0800fec4 g     F .text	00000098 mkdir
-08004a44 g     F .text	0000004a pthread_release
-20000990 g     O .bss	00000002 g_spawn_execsem
-0801aae4 g     F .text	00000058 hci_unsolicited_event_handler
-0800469c g     F .text	00000028 sig_release
+080263b4 g     F .text	00000000 .hidden __aeabi_ldivmod
+08024a1c g     F .text	00000170 mq_open
+0800c828 g     F .text	00000078 cmd_exec
+0800ce70 g     F .text	00000052 cmd_unset
+080027fc g     F .text	000000aa uart_xmitchars
+08006918 g     F .text	0000008a up_create_stack
+080105c8 g     F .text	00000098 mkdir
+08004ee8 g     F .text	0000005e pthread_release
+20000950 g     O .bss	00000002 g_spawn_execsem
+0801bd70 g     F .text	00000058 hci_unsolicited_event_handler
+08004ab8 g     F .text	00000028 sig_release
 200000a0 g     O .data	00000001 g_syslog_mask
-0800fdd4 g     F .text	00000044 close
-08013cb4 g     F .text	000000c2 fat_freedirentry
-08019a80 g     F .text	00000114 losetup
-08025138 g     O .text	00000020 g_fmtsignalrecvd
-08001370 g     F .text	0000004e modifyreg32
-08026d50 g     O .text	00000050 fat_operations
-0800b6f0 g     F .text	0000002a cmd_sh
-0802039c g     F .text	0000003e vfprintf
-0801ae8c g     F .text	00000066 hci_data_command_send
-0800b680 g     F .text	0000006e cmd_rmdir
-08002818 g     F .text	00000024 board_led_on
-08004ae4  w    F .text	0000007a wd_initialize
-08004854 g     F .text	00000092 wd_delete
-08005b00 g     F .text	0000001c free
-08021580 g     F .text	0000003c sq_addafter
-080035dc g     F .text	000000a6 sigprocmask
-0801fd70 g     F .text	00000070 avsprintf
-0801cacc g     F .text	0000002c aes_encrypt
-08005e48 g     F .text	00000040 mm_size2ndx
-08006a90 g     F .text	000000b2 up_unblock_task
-0800fafc g     F .text	00000040 inode_initialize
+080104d8 g     F .text	00000044 close
+08014894 g     F .text	000000c2 fat_freedirentry
+0801aab0 g     F .text	00000186 losetup
+08027634 g     O .text	00000020 g_fmtsignalrecvd
+08001398 g     F .text	0000004e modifyreg32
+08029360 g     O .text	00000050 fat_operations
+0800bcc0 g     F .text	0000002a cmd_sh
+080219b4 g     F .text	0000003e vfprintf
+0801c118 g     F .text	00000066 hci_data_command_send
+0800bc50 g     F .text	0000006e cmd_rmdir
+08002a8c g     F .text	00000024 board_led_on
+08004fb0  w    F .text	0000007a wd_initialize
+08004cc8 g     F .text	000000c2 wd_delete
+08006160 g     F .text	0000001c free
+08022c7c g     F .text	0000003c sq_addafter
+08003888 g     F .text	000000a6 sigprocmask
+08021318 g     F .text	000000a6 avsprintf
+0801dd58 g     F .text	0000002c aes_encrypt
+080064e0 g     F .text	00000040 mm_size2ndx
+08006d40 g     F .text	000000b2 up_unblock_task
+080101c0 g     F .text	00000040 inode_initialize
 
 
