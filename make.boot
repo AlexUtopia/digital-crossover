@@ -13,3 +13,9 @@ ifneq (,$(findstring stm32vldiscovery,$(CONFIG_BOARD)))
 boot_firmware:
 	sudo st-flash write v1 $(EXE_DIR)/nuttx.bin 0x8000000
 endif
+
+# Particle # Spark Core board
+ifneq (,$(findstring spark,$(CONFIG_BOARD)))
+boot_firmware:
+	sudo st-flash write v1 $(EXE_DIR)/nuttx.bin 0x8000000
+endif

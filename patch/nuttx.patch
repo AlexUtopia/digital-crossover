@@ -12,7 +12,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/Kconfig src/nuttx/configs/Kconf
  	select ARCH_HAVE_IRQBUTTONS
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/configs/spark/nsh/defconfig
 --- tmp/nuttx/configs/spark/nsh/defconfig	2015-06-10 21:03:49.133512463 +0300
-+++ src/nuttx/configs/spark/nsh/defconfig	2015-06-15 22:08:15.406921167 +0300
++++ src/nuttx/configs/spark/nsh/defconfig	2015-06-20 12:34:54.883585042 +0300
 @@ -16,7 +16,7 @@ CONFIG_HOST_LINUX=y
  #
  # Build Configuration
@@ -22,7 +22,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_BUILD_FLAT=y
  # CONFIG_BUILD_2PASS is not set
  
-@@ -41,15 +41,44 @@ CONFIG_RAW_BINARY=y
+@@ -41,15 +41,42 @@ CONFIG_RAW_BINARY=y
  #
  # Debug Options
  #
@@ -40,7 +40,6 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 +# CONFIG_DEBUG_GRAPHICS is not set
 +# CONFIG_DEBUG_LIB is not set
 +# CONFIG_DEBUG_MM is not set
-+# CONFIG_DEBUG_NET is not set
 +# CONFIG_DEBUG_SCHED is not set
 +
 +#
@@ -57,7 +56,6 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 +# CONFIG_DEBUG_ANALOG is not set
 +# CONFIG_DEBUG_GPIO is not set
 +# CONFIG_DEBUG_SPI is not set
-+# CONFIG_DEBUG_USB is not set
  CONFIG_ARCH_HAVE_STACKCHECK=y
  # CONFIG_STACK_COLORATION is not set
 -# CONFIG_DEBUG_SYMBOLS is not set
@@ -71,7 +69,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # System Type
-@@ -79,6 +108,7 @@ CONFIG_ARCH="arm"
+@@ -79,6 +106,7 @@ CONFIG_ARCH="arm"
  # CONFIG_ARCH_CHIP_KL is not set
  # CONFIG_ARCH_CHIP_LM is not set
  # CONFIG_ARCH_CHIP_TIVA is not set
@@ -79,7 +77,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CHIP_LPC17XX is not set
  # CONFIG_ARCH_CHIP_LPC214X is not set
  # CONFIG_ARCH_CHIP_LPC2378 is not set
-@@ -87,7 +117,9 @@ CONFIG_ARCH="arm"
+@@ -87,7 +115,9 @@ CONFIG_ARCH="arm"
  # CONFIG_ARCH_CHIP_NUC1XX is not set
  # CONFIG_ARCH_CHIP_SAMA5 is not set
  # CONFIG_ARCH_CHIP_SAMD is not set
@@ -89,7 +87,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_ARCH_CHIP_STM32=y
  # CONFIG_ARCH_CHIP_STR71X is not set
  # CONFIG_ARCH_ARM7TDMI is not set
-@@ -96,6 +128,7 @@ CONFIG_ARCH_CHIP_STM32=y
+@@ -96,6 +126,7 @@ CONFIG_ARCH_CHIP_STM32=y
  # CONFIG_ARCH_CORTEXM0 is not set
  CONFIG_ARCH_CORTEXM3=y
  # CONFIG_ARCH_CORTEXM4 is not set
@@ -97,7 +95,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CORTEXA5 is not set
  # CONFIG_ARCH_CORTEXA8 is not set
  CONFIG_ARCH_FAMILY="armv7-m"
-@@ -103,18 +136,27 @@ CONFIG_ARCH_CHIP="stm32"
+@@ -103,18 +134,27 @@ CONFIG_ARCH_CHIP="stm32"
  # CONFIG_ARMV7M_USEBASEPRI is not set
  CONFIG_ARCH_HAVE_CMNVECTOR=y
  # CONFIG_ARMV7M_CMNVECTOR is not set
@@ -125,7 +123,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # STM32 Configuration Options
-@@ -138,6 +180,7 @@ CONFIG_ARMV7M_TOOLCHAIN_CODESOURCERYL=y
+@@ -138,6 +178,7 @@ CONFIG_ARMV7M_TOOLCHAIN_CODESOURCERYL=y
  # CONFIG_ARCH_CHIP_STM32L152V8 is not set
  # CONFIG_ARCH_CHIP_STM32L152VB is not set
  # CONFIG_ARCH_CHIP_STM32L162ZD is not set
@@ -133,7 +131,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CHIP_STM32F100C8 is not set
  # CONFIG_ARCH_CHIP_STM32F100CB is not set
  # CONFIG_ARCH_CHIP_STM32F100R8 is not set
-@@ -155,10 +198,10 @@ CONFIG_ARMV7M_TOOLCHAIN_CODESOURCERYL=y
+@@ -155,10 +196,10 @@ CONFIG_ARMV7M_TOOLCHAIN_CODESOURCERYL=y
  # CONFIG_ARCH_CHIP_STM32F103TB is not set
  # CONFIG_ARCH_CHIP_STM32F103C4 is not set
  # CONFIG_ARCH_CHIP_STM32F103C8 is not set
@@ -146,7 +144,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CHIP_STM32F103RD is not set
  # CONFIG_ARCH_CHIP_STM32F103RE is not set
  # CONFIG_ARCH_CHIP_STM32F103RG is not set
-@@ -169,8 +212,11 @@ CONFIG_ARCH_CHIP_STM32F103CB=y
+@@ -169,8 +210,11 @@ CONFIG_ARCH_CHIP_STM32F103CB=y
  # CONFIG_ARCH_CHIP_STM32F103ZE is not set
  # CONFIG_ARCH_CHIP_STM32F105VB is not set
  # CONFIG_ARCH_CHIP_STM32F107VC is not set
@@ -158,7 +156,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CHIP_STM32F302CB is not set
  # CONFIG_ARCH_CHIP_STM32F302CC is not set
  # CONFIG_ARCH_CHIP_STM32F302RB is not set
-@@ -183,6 +229,24 @@ CONFIG_ARCH_CHIP_STM32F103CB=y
+@@ -183,6 +227,24 @@ CONFIG_ARCH_CHIP_STM32F103CB=y
  # CONFIG_ARCH_CHIP_STM32F303RC is not set
  # CONFIG_ARCH_CHIP_STM32F303VB is not set
  # CONFIG_ARCH_CHIP_STM32F303VC is not set
@@ -183,7 +181,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_CHIP_STM32F401RE is not set
  # CONFIG_ARCH_CHIP_STM32F411RE is not set
  # CONFIG_ARCH_CHIP_STM32F405RG is not set
-@@ -209,12 +273,14 @@ CONFIG_STM32_STM32F10XX=y
+@@ -209,12 +271,14 @@ CONFIG_STM32_STM32F10XX=y
  # CONFIG_STM32_CONNECTIVITYLINE is not set
  CONFIG_STM32_PERFORMANCELINE=y
  # CONFIG_STM32_USBACCESSLINE is not set
@@ -200,7 +198,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_STM32_STM32F40XX is not set
  # CONFIG_STM32_STM32F401 is not set
  # CONFIG_STM32_STM32F411 is not set
-@@ -230,7 +296,7 @@ CONFIG_STM32_MEDIUMDENSITY=y
+@@ -230,7 +294,7 @@ CONFIG_STM32_MEDIUMDENSITY=y
  # CONFIG_STM32_HAVE_CCM is not set
  CONFIG_STM32_HAVE_USBDEV=y
  # CONFIG_STM32_HAVE_OTGFS is not set
@@ -209,7 +207,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_STM32_HAVE_USART3=y
  CONFIG_STM32_HAVE_UART4=y
  CONFIG_STM32_HAVE_UART5=y
-@@ -273,6 +339,7 @@ CONFIG_STM32_DMA1=y
+@@ -273,6 +337,7 @@ CONFIG_STM32_DMA1=y
  # CONFIG_STM32_DMA2 is not set
  # CONFIG_STM32_DAC1 is not set
  # CONFIG_STM32_DAC2 is not set
@@ -217,15 +215,18 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_STM32_I2C1 is not set
  # CONFIG_STM32_I2C2 is not set
  # CONFIG_STM32_PWR is not set
-@@ -290,18 +357,22 @@ CONFIG_STM32_SPI2=y
+@@ -289,19 +354,22 @@ CONFIG_STM32_SPI2=y
+ # CONFIG_STM32_TIM7 is not set
  # CONFIG_STM32_TIM8 is not set
  # CONFIG_STM32_USART1 is not set
- CONFIG_STM32_USART2=y
+-CONFIG_STM32_USART2=y
 -# CONFIG_STM32_USART3 is not set
++# CONFIG_STM32_USART2 is not set
 +CONFIG_STM32_USART3=y
  # CONFIG_STM32_UART4 is not set
  # CONFIG_STM32_UART5 is not set
- CONFIG_STM32_USB=y
+-CONFIG_STM32_USB=y
++# CONFIG_STM32_USB is not set
  # CONFIG_STM32_IWDG is not set
  # CONFIG_STM32_WWDG is not set
  CONFIG_STM32_SPI=y
@@ -234,23 +235,25 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  #
  # Alternate Pin Mapping
  #
- # CONFIG_STM32_USART2_REMAP is not set
+-# CONFIG_STM32_USART2_REMAP is not set
 +CONFIG_STM32_USART3_NO_REMAP=y
 +# CONFIG_STM32_USART3_FULL_REMAP is not set
 +# CONFIG_STM32_USART3_PARTIAL_REMAP is not set
  # CONFIG_STM32_JTAG_DISABLE is not set
  CONFIG_STM32_JTAG_FULL_ENABLE=y
  # CONFIG_STM32_JTAG_NOJNTRST_ENABLE is not set
-@@ -317,6 +388,8 @@ CONFIG_STM32_USART=y
+@@ -315,8 +383,8 @@ CONFIG_STM32_USART=y
  #
- # CONFIG_USART2_RS485 is not set
- # CONFIG_USART2_RXDMA is not set
+ # U[S]ART Configuration
+ #
+-# CONFIG_USART2_RS485 is not set
+-# CONFIG_USART2_RXDMA is not set
 +# CONFIG_USART3_RS485 is not set
 +# CONFIG_USART3_RXDMA is not set
  # CONFIG_SERIAL_DISABLE_REORDERING is not set
  # CONFIG_STM32_FLOWCONTROL_BROKEN is not set
  # CONFIG_STM32_USART_SINGLEWIRE is not set
-@@ -326,6 +399,7 @@ CONFIG_STM32_USART=y
+@@ -326,6 +394,7 @@ CONFIG_STM32_USART=y
  #
  # CONFIG_STM32_SPI_INTERRUPTS is not set
  CONFIG_STM32_SPI_DMA=y
@@ -258,7 +261,24 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_STM32_HAVE_RTC_SUBSECONDS is not set
  
  #
-@@ -397,13 +471,12 @@ CONFIG_BOOT_RUNFROMFLASH=y
+@@ -363,7 +432,6 @@ CONFIG_ARCH_HAVE_MPU=y
+ # CONFIG_ARCH_USE_MPU is not set
+ # CONFIG_ARCH_IRQPRIO is not set
+ CONFIG_ARCH_STACKDUMP=y
+-# CONFIG_ARCH_USBDUMP is not set
+ # CONFIG_ENDIAN_BIG is not set
+ # CONFIG_ARCH_IDLE_CUSTOM is not set
+ # CONFIG_ARCH_HAVE_RAMFUNCS is not set
+@@ -380,7 +448,7 @@ CONFIG_BOARD_LOOPSPERMSEC=5483
+ # Interrupt options
+ #
+ CONFIG_ARCH_HAVE_INTERRUPTSTACK=y
+-CONFIG_ARCH_INTERRUPTSTACK=156
++CONFIG_ARCH_INTERRUPTSTACK=512
+ CONFIG_ARCH_HAVE_HIPRI_INTERRUPT=y
+ # CONFIG_ARCH_HIPRI_INTERRUPT is not set
+ 
+@@ -397,13 +465,12 @@ CONFIG_BOOT_RUNFROMFLASH=y
  # Boot Memory Configuration
  #
  CONFIG_RAM_START=0x20000000
@@ -273,10 +293,27 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_ARCH_BOARD_SPARK=y
  # CONFIG_ARCH_BOARD_CUSTOM is not set
  CONFIG_ARCH_BOARD="spark"
-@@ -426,6 +499,12 @@ CONFIG_SPARK_FLASH=y
- CONFIG_SPARK_FLASH_SPI=2
- CONFIG_SPARK_FLASH_MINOR=0
- # CONFIG_SPARK_FLASH_PART is not set
+@@ -412,20 +479,22 @@ CONFIG_ARCH_BOARD="spark"
+ # Common Board Options
+ #
+ CONFIG_ARCH_HAVE_LEDS=y
+-CONFIG_ARCH_LEDS=y
++# CONFIG_ARCH_LEDS is not set
+ CONFIG_ARCH_HAVE_BUTTONS=y
+-CONFIG_ARCH_BUTTONS=y
++# CONFIG_ARCH_BUTTONS is not set
+ CONFIG_ARCH_HAVE_IRQBUTTONS=y
+-CONFIG_ARCH_IRQBUTTONS=y
+ CONFIG_NSH_MMCSDMINOR=0
+ 
+ #
+ # Board-Specific Options
+ #
+-CONFIG_SPARK_FLASH=y
+-CONFIG_SPARK_FLASH_SPI=2
+-CONFIG_SPARK_FLASH_MINOR=0
+-# CONFIG_SPARK_FLASH_PART is not set
++# CONFIG_SPARK_FLASH is not set
 +CONFIG_LIB_BOARDCTL=y
 +# CONFIG_BOARDCTL_TSCTEST is not set
 +# CONFIG_BOARDCTL_ADCTEST is not set
@@ -286,7 +323,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # RTOS Features
-@@ -517,10 +596,10 @@ CONFIG_MQ_MAXMSGSIZE=8
+@@ -517,10 +586,10 @@ CONFIG_MQ_MAXMSGSIZE=8
  #
  # Stack and heap information
  #
@@ -301,9 +338,12 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_LIB_SYSCALL is not set
  
  #
-@@ -546,8 +625,13 @@ CONFIG_SPI=y
+@@ -544,16 +613,19 @@ CONFIG_ARCH_HAVE_I2CRESET=y
+ # CONFIG_I2C is not set
+ CONFIG_SPI=y
  # CONFIG_SPI_OWNBUS is not set
- CONFIG_SPI_EXCHANGE=y
+-CONFIG_SPI_EXCHANGE=y
++# CONFIG_SPI_EXCHANGE is not set
  # CONFIG_SPI_CMDDATA is not set
 +# CONFIG_SPI_CALLBACK is not set
  # CONFIG_SPI_BITBANG is not set
@@ -315,19 +355,73 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_TIMER is not set
  # CONFIG_RTC is not set
  # CONFIG_WATCHDOG is not set
-@@ -616,7 +700,7 @@ CONFIG_SERIAL_REMOVABLE=y
+-CONFIG_ANALOG=y
+-# CONFIG_ADC is not set
+-# CONFIG_DAC is not set
++# CONFIG_ANALOG is not set
+ # CONFIG_AUDIO_DEVICES is not set
+ # CONFIG_VIDEO_DEVICES is not set
+ # CONFIG_BCH is not set
+@@ -565,9 +637,9 @@ CONFIG_MTD=y
+ #
+ # MTD Configuration
+ #
+-CONFIG_MTD_PARTITION=y
++# CONFIG_MTD_PARTITION is not set
+ # CONFIG_MTD_SECT512 is not set
+-CONFIG_MTD_BYTE_WRITE=y
++# CONFIG_MTD_BYTE_WRITE is not set
+ # CONFIG_MTD_CONFIG is not set
+ 
+ #
+@@ -581,16 +653,15 @@ CONFIG_MTD_BYTE_WRITE=y
+ # CONFIG_MTD_M25P is not set
+ # CONFIG_MTD_SMART is not set
+ # CONFIG_MTD_RAMTRON is not set
+-CONFIG_MTD_SST25=y
+-CONFIG_SST25_SPIMODE=0
+-CONFIG_SST25_SPIFREQUENCY=80000000
+-# CONFIG_SST25_READONLY is not set
+-CONFIG_SST25_SECTOR512=y
+-# CONFIG_SST25_SLOWWRITE is not set
+-# CONFIG_SST25_SLOWREAD is not set
++# CONFIG_MTD_SST25 is not set
+ # CONFIG_MTD_SST25XX is not set
+ # CONFIG_MTD_SST39FV is not set
+-# CONFIG_MTD_W25 is not set
++CONFIG_MTD_W25=y
++CONFIG_W25_SPIMODE=0
++CONFIG_W25_SPIFREQUENCY=20000000
++# CONFIG_W25_READONLY is not set
++# CONFIG_W25_SECTOR512 is not set
++# CONFIG_W25_SLOWREAD is not set
+ # CONFIG_EEPROM is not set
+ # CONFIG_PIPES is not set
+ # CONFIG_PM is not set
+@@ -599,7 +670,6 @@ CONFIG_SST25_SECTOR512=y
+ # CONFIG_SERCOMM_CONSOLE is not set
+ CONFIG_SERIAL=y
+ # CONFIG_DEV_LOWCONSOLE is not set
+-CONFIG_SERIAL_REMOVABLE=y
+ # CONFIG_16550_UART is not set
+ # CONFIG_ARCH_HAVE_UART is not set
+ # CONFIG_ARCH_HAVE_UART0 is not set
+@@ -615,8 +685,8 @@ CONFIG_SERIAL_REMOVABLE=y
+ # CONFIG_ARCH_HAVE_SCI1 is not set
  # CONFIG_ARCH_HAVE_USART0 is not set
  # CONFIG_ARCH_HAVE_USART1 is not set
- CONFIG_ARCH_HAVE_USART2=y
+-CONFIG_ARCH_HAVE_USART2=y
 -# CONFIG_ARCH_HAVE_USART3 is not set
++# CONFIG_ARCH_HAVE_USART2 is not set
 +CONFIG_ARCH_HAVE_USART3=y
  # CONFIG_ARCH_HAVE_USART4 is not set
  # CONFIG_ARCH_HAVE_USART5 is not set
  # CONFIG_ARCH_HAVE_USART6 is not set
-@@ -628,13 +712,15 @@ CONFIG_ARCH_HAVE_USART2=y
+@@ -627,115 +697,31 @@ CONFIG_ARCH_HAVE_USART2=y
+ #
  # USART Configuration
  #
- CONFIG_USART2_ISUART=y
+-CONFIG_USART2_ISUART=y
 +CONFIG_USART3_ISUART=y
  CONFIG_MCU_SERIAL=y
  CONFIG_STANDARD_SERIAL=y
@@ -337,19 +431,95 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_ARCH_HAVE_SERIAL_TERMIOS=y
 -# CONFIG_SERIAL_TERMIOS is not set
 -CONFIG_USART2_SERIAL_CONSOLE=y
-+# CONFIG_USART2_SERIAL_CONSOLE is not set
 +CONFIG_USART3_SERIAL_CONSOLE=y
  # CONFIG_OTHER_SERIAL_CONSOLE is not set
  # CONFIG_NO_SERIAL_CONSOLE is not set
  
-@@ -649,6 +735,18 @@ CONFIG_USART2_PARITY=0
- CONFIG_USART2_2STOP=0
- # CONFIG_USART2_IFLOWCONTROL is not set
- # CONFIG_USART2_OFLOWCONTROL is not set
-+
-+#
+ #
+-# USART2 Configuration
 +# USART3 Configuration
-+#
+ #
+-CONFIG_USART2_RXBUFSIZE=32
+-CONFIG_USART2_TXBUFSIZE=32
+-CONFIG_USART2_BAUD=115200
+-CONFIG_USART2_BITS=8
+-CONFIG_USART2_PARITY=0
+-CONFIG_USART2_2STOP=0
+-# CONFIG_USART2_IFLOWCONTROL is not set
+-# CONFIG_USART2_OFLOWCONTROL is not set
+-CONFIG_USBDEV=y
+-
+-#
+-# USB Device Controller Driver Options
+-#
+-# CONFIG_USBDEV_ISOCHRONOUS is not set
+-# CONFIG_USBDEV_DUALSPEED is not set
+-CONFIG_USBDEV_SELFPOWERED=y
+-# CONFIG_USBDEV_BUSPOWERED is not set
+-CONFIG_USBDEV_MAXPOWER=100
+-# CONFIG_USBDEV_DMA is not set
+-# CONFIG_ARCH_USBDEV_STALLQUEUE is not set
+-CONFIG_USBDEV_TRACE=y
+-CONFIG_USBDEV_TRACE_NRECORDS=32
+-# CONFIG_USBDEV_TRACE_STRINGS is not set
+-
+-#
+-# USB Device Class Driver Options
+-#
+-CONFIG_USBDEV_COMPOSITE=y
+-CONFIG_COMPOSITE_IAD=y
+-CONFIG_COMPOSITE_EP0MAXPACKET=64
+-CONFIG_COMPOSITE_VENDORID=0x03eb
+-CONFIG_COMPOSITE_VENDORSTR="NuttX"
+-CONFIG_COMPOSITE_PRODUCTID=0x0000
+-CONFIG_COMPOSITE_PRODUCTSTR="Composite device"
+-CONFIG_COMPOSITE_SERIALSTR="001"
+-CONFIG_COMPOSITE_CONFIGSTR="NuttX COMPOSITE config"
+-CONFIG_COMPOSITE_VERSIONNO=0x1010
+-# CONFIG_PL2303 is not set
+-CONFIG_CDCACM=y
+-# CONFIG_CDCACM_CONSOLE is not set
+-CONFIG_CDCACM_COMPOSITE=y
+-CONFIG_CDCACM_IFNOBASE=0
+-CONFIG_CDCACM_STRBASE=0
+-CONFIG_CDCACM_EP0MAXPACKET=64
+-CONFIG_CDCACM_EPINTIN=1
+-CONFIG_CDCACM_EPINTIN_FSSIZE=64
+-CONFIG_CDCACM_EPINTIN_HSSIZE=64
+-CONFIG_CDCACM_EPBULKOUT=3
+-CONFIG_CDCACM_EPBULKOUT_FSSIZE=64
+-CONFIG_CDCACM_EPBULKOUT_HSSIZE=512
+-CONFIG_CDCACM_EPBULKIN=2
+-CONFIG_CDCACM_EPBULKIN_FSSIZE=64
+-CONFIG_CDCACM_EPBULKIN_HSSIZE=512
+-CONFIG_CDCACM_NWRREQS=4
+-CONFIG_CDCACM_NRDREQS=4
+-CONFIG_CDCACM_BULKIN_REQLEN=100
+-CONFIG_CDCACM_RXBUFSIZE=100
+-CONFIG_CDCACM_TXBUFSIZE=80
+-CONFIG_CDCACM_VENDORID=0x0525
+-CONFIG_CDCACM_PRODUCTID=0xa4a7
+-CONFIG_CDCACM_VENDORSTR="NuttX"
+-CONFIG_CDCACM_PRODUCTSTR="CDC/ACM Serial"
+-CONFIG_USBMSC=y
+-CONFIG_USBMSC_COMPOSITE=y
+-CONFIG_USBMSC_IFNOBASE=2
+-CONFIG_USBMSC_STRBASE=2
+-CONFIG_USBMSC_EP0MAXPACKET=64
+-CONFIG_USBMSC_EPBULKOUT=2
+-CONFIG_USBMSC_EPBULKIN=3
+-CONFIG_USBMSC_NWRREQS=4
+-CONFIG_USBMSC_NRDREQS=4
+-CONFIG_USBMSC_BULKINREQLEN=256
+-CONFIG_USBMSC_BULKOUTREQLEN=256
+-CONFIG_USBMSC_VENDORID=0x584e
+-CONFIG_USBMSC_VENDORSTR="NuttX"
+-CONFIG_USBMSC_PRODUCTID=0x5342
+-CONFIG_USBMSC_PRODUCTSTR="Mass Storage"
+-CONFIG_USBMSC_VERSIONNO=0x399
+-# CONFIG_USBMSC_REMOVABLE is not set
+-CONFIG_USBMSC_SCSI_PRIO=128
+-CONFIG_USBMSC_SCSI_STACKSIZE=464
 +CONFIG_USART3_RXBUFSIZE=256
 +CONFIG_USART3_TXBUFSIZE=256
 +CONFIG_USART3_BAUD=115200
@@ -358,10 +528,35 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 +CONFIG_USART3_2STOP=0
 +# CONFIG_USART3_IFLOWCONTROL is not set
 +# CONFIG_USART3_OFLOWCONTROL is not set
- CONFIG_USBDEV=y
++# CONFIG_USBDEV is not set
+ # CONFIG_USBHOST is not set
+-CONFIG_WIRELESS=y
+-# CONFIG_WL_CC1101 is not set
+-CONFIG_WL_CC3000=y
+-# CONFIG_CC3000_MULTIPLE is not set
+-CONFIG_CC3000_SPIDEV=2
+-CONFIG_CC3000_DEVMINOR=0
+-CONFIG_CC3000_SPI_MODE=1
+-CONFIG_CC3000_SPI_FREQUENCY=16000000
+-CONFIG_CC3000_WORKER_STACKSIZE=240
+-CONFIG_CC3000_SELECT_STACKSIZE=368
+-CONFIG_CC3000_UNSOLICED_STACKSIZE=264
+-# CONFIG_CC3000_PROBES is not set
+-# CONFIG_WL_NRF24L01 is not set
++# CONFIG_WIRELESS is not set
  
  #
-@@ -786,6 +884,7 @@ CONFIG_FS_FATTIME=y
+ # System Logging Device Options
+@@ -750,7 +736,7 @@ CONFIG_CC3000_UNSOLICED_STACKSIZE=264
+ #
+ # Networking Support
+ #
+-CONFIG_ARCH_HAVE_NET=y
++# CONFIG_ARCH_HAVE_NET is not set
+ # CONFIG_ARCH_HAVE_PHY is not set
+ # CONFIG_NET is not set
+ 
+@@ -786,6 +772,7 @@ CONFIG_FS_FATTIME=y
  # CONFIG_FS_SMARTFS is not set
  # CONFIG_FS_BINFS is not set
  # CONFIG_FS_PROCFS is not set
@@ -369,7 +564,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # System Logging
-@@ -852,6 +951,7 @@ CONFIG_LIBC_TMPDIR="/tmp"
+@@ -852,6 +839,7 @@ CONFIG_LIBC_TMPDIR="/tmp"
  CONFIG_LIBC_MAX_TMPFILE=32
  CONFIG_ARCH_LOWPUTC=y
  # CONFIG_LIBC_LOCALTIME is not set
@@ -377,7 +572,24 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_LIB_SENDFILE_BUFSIZE=0
  # CONFIG_ARCH_ROMGETC is not set
  # CONFIG_ARCH_OPTIMIZED_FUNCTIONS is not set
-@@ -907,17 +1007,16 @@ CONFIG_EXAMPLES_NSH=y
+@@ -882,9 +870,6 @@ CONFIG_BUILTIN_PROXY_STACKSIZE=1024
+ #
+ # CONFIG_EXAMPLES_BUTTONS is not set
+ # CONFIG_EXAMPLES_CAN is not set
+-CONFIG_EXAMPLES_CC3000BASIC=y
+-# CONFIG_EXAMPLES_CC3000_MEM_CHECK is not set
+-# CONFIG_EXAMPLES_CC3000_STACK_CHECK is not set
+ # CONFIG_EXAMPLES_CONFIGDATA is not set
+ # CONFIG_EXAMPLES_CPUHOG is not set
+ # CONFIG_EXAMPLES_DHCPD is not set
+@@ -900,24 +885,22 @@ CONFIG_EXAMPLES_CC3000BASIC=y
+ # CONFIG_EXAMPLES_MM is not set
+ # CONFIG_EXAMPLES_MODBUS is not set
+ # CONFIG_EXAMPLES_MOUNT is not set
+-# CONFIG_EXAMPLES_MTDPART is not set
+ # CONFIG_EXAMPLES_NRF24L01TERM is not set
+ CONFIG_EXAMPLES_NSH=y
+ # CONFIG_EXAMPLES_NULL is not set
  # CONFIG_EXAMPLES_NX is not set
  # CONFIG_EXAMPLES_NXTERM is not set
  # CONFIG_EXAMPLES_NXFFS is not set
@@ -396,7 +608,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_EXAMPLES_SENDMAIL is not set
  # CONFIG_EXAMPLES_SERIALBLASTER is not set
  # CONFIG_EXAMPLES_SERIALRX is not set
-@@ -927,7 +1026,6 @@ CONFIG_EXAMPLES_NSH=y
+@@ -927,7 +910,6 @@ CONFIG_EXAMPLES_NSH=y
  # CONFIG_EXAMPLES_SMART is not set
  # CONFIG_EXAMPLES_TCPECHO is not set
  # CONFIG_EXAMPLES_TELNETD is not set
@@ -404,7 +616,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_EXAMPLES_TIFF is not set
  # CONFIG_EXAMPLES_TOUCHSCREEN is not set
  # CONFIG_EXAMPLES_WEBSERVER is not set
-@@ -960,10 +1058,6 @@ CONFIG_EXAMPLES_NSH=y
+@@ -960,10 +942,6 @@ CONFIG_EXAMPLES_NSH=y
  # CONFIG_NETUTILS_FTPC is not set
  # CONFIG_NETUTILS_JSON is not set
  # CONFIG_NETUTILS_SMTP is not set
@@ -415,7 +627,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # FreeModBus
-@@ -997,6 +1091,7 @@ CONFIG_NSH_BUILTIN_APPS=y
+@@ -997,6 +975,7 @@ CONFIG_NSH_BUILTIN_APPS=y
  # CONFIG_NSH_DISABLE_CD is not set
  # CONFIG_NSH_DISABLE_CP is not set
  # CONFIG_NSH_DISABLE_CMP is not set
@@ -423,7 +635,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_NSH_DISABLE_DD is not set
  CONFIG_NSH_DISABLE_DF=y
  # CONFIG_NSH_DISABLE_DELROUTE is not set
-@@ -1018,6 +1113,7 @@ CONFIG_NSH_DISABLE_DF=y
+@@ -1018,6 +997,7 @@ CONFIG_NSH_DISABLE_DF=y
  # CONFIG_NSH_DISABLE_MKRD is not set
  # CONFIG_NSH_DISABLE_MH is not set
  # CONFIG_NSH_DISABLE_MOUNT is not set
@@ -431,15 +643,23 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_NSH_DISABLE_MW is not set
  # CONFIG_NSH_DISABLE_PS is not set
  # CONFIG_NSH_DISABLE_PUT is not set
-@@ -1060,7 +1156,6 @@ CONFIG_NSH_CONSOLE=y
+@@ -1052,15 +1032,8 @@ CONFIG_NSH_DISABLE_LOOPS=y
+ # Console Configuration
  #
- # CONFIG_NSH_USBDEV_TRACE is not set
+ CONFIG_NSH_CONSOLE=y
+-# CONFIG_NSH_USBCONSOLE is not set
+ # CONFIG_NSH_ALTCONDEV is not set
+-
+-#
+-# USB Device Trace Support
+-#
+-# CONFIG_NSH_USBDEV_TRACE is not set
  CONFIG_NSH_ARCHINIT=y
 -CONFIG_LIB_BOARDCTL=y
  
  #
  # NxWidgets/NxWM
-@@ -1074,129 +1169,25 @@ CONFIG_LIB_BOARDCTL=y
+@@ -1074,129 +1047,21 @@ CONFIG_LIB_BOARDCTL=y
  #
  # System Libraries and NSH Add-Ons
  #
@@ -548,22 +768,22 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 -#
 -# USB CDC/ACM Device Commands
 -#
- # CONFIG_SYSTEM_CDCACM is not set
+-# CONFIG_SYSTEM_CDCACM is not set
 -
 -#
 -# USB Composite Device Commands
 -#
- # CONFIG_SYSTEM_COMPOSITE is not set
+-# CONFIG_SYSTEM_COMPOSITE is not set
 -
 -#
 -# USB Mass Storage Device Commands
 -#
- # CONFIG_SYSTEM_USBMSC is not set
+-# CONFIG_SYSTEM_USBMSC is not set
 -
 -#
 -# USB Monitor
 -#
- # CONFIG_SYSTEM_USBMONITOR is not set
+-# CONFIG_SYSTEM_USBMONITOR is not set
 -
 -#
 -# Zmodem Commands
@@ -583,29 +803,23 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/scripts/ld.script src/nut
  }
  
  OUTPUT_ARCH(arm)
-diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/stm32_boot.c src/nuttx/configs/spark/src/stm32_boot.c
---- tmp/nuttx/configs/spark/src/stm32_boot.c	2015-06-10 21:03:49.133512463 +0300
-+++ src/nuttx/configs/spark/src/stm32_boot.c	2015-06-15 21:50:44.742945191 +0300
-@@ -72,6 +72,7 @@
+diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/spark.h src/nuttx/configs/spark/src/spark.h
+--- tmp/nuttx/configs/spark/src/spark.h	2015-06-10 21:03:49.133512463 +0300
++++ src/nuttx/configs/spark/src/spark.h	2015-06-20 12:57:46.479619988 +0300
+@@ -202,7 +202,9 @@
+  *  PB[09] TIM4_CH4                                          46       MEM_CS                 DISC
+ */
  
- void stm32_boardinitialize(void)
- {
-+#if 0
-   /* Configure on-board LEDs if LED support has been selected. */
+-#define GPIO_MEM_CS   (GPIO_PORTB | GPIO_PIN9 |  GPIO_OUTPUT_SET   | GPIO_OUTPUT | GPIO_CNF_OUTPP | GPIO_MODE_50MHz)
++#define GPIO_MEM_CS   (GPIO_PORTB | GPIO_PIN12 |  GPIO_OUTPUT_SET   | GPIO_OUTPUT | GPIO_CNF_OUTPP | GPIO_MODE_50MHz)
++#define GPIO_MEM_WP   (GPIO_PORTC | GPIO_PIN8  |  GPIO_OUTPUT_SET   | GPIO_OUTPUT | GPIO_CNF_OUTPP | GPIO_MODE_50MHz)
++#define GPIO_MEM_HOLD (GPIO_PORTC | GPIO_PIN9  |  GPIO_OUTPUT_SET   | GPIO_OUTPUT | GPIO_CNF_OUTPP | GPIO_MODE_50MHz)
  
- #ifdef CONFIG_ARCH_LEDS
-@@ -100,7 +101,7 @@ void stm32_boardinitialize(void)
-   stm32_usbinitialize();
- #endif
- 
--
-+#endif
- }
- 
- /****************************************************************************
+ /* CCS3000 **************************************************************************/
+ /*
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/stm32_nsh.c src/nuttx/configs/spark/src/stm32_nsh.c
 --- tmp/nuttx/configs/spark/src/stm32_nsh.c	2015-06-12 14:17:28.250391796 +0300
-+++ src/nuttx/configs/spark/src/stm32_nsh.c	2015-06-12 14:19:33.582386389 +0300
++++ src/nuttx/configs/spark/src/stm32_nsh.c	2015-06-20 12:43:23.931598012 +0300
 @@ -134,6 +134,7 @@
  
  int board_app_initialize(void)
@@ -614,15 +828,63 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/stm32_nsh.c src/nuttx
  #ifdef HAVE_SST25
    FAR struct spi_dev_s *spi;
    FAR struct mtd_dev_s *mtd;
-@@ -281,7 +282,7 @@ int board_app_initialize(void)
-       syslog(LOG_ERR, "ERROR: Failed to start USB monitor: %d\n", ret);
+@@ -282,6 +283,32 @@ int board_app_initialize(void)
      }
  #endif
--
-+#endif
+ 
++#else /* #if 0 */
++
++  FAR struct spi_dev_s *spi;
++  FAR struct mtd_dev_s *mtd;
++  int ret;
++
++  spi = up_spiinitialize(2);
++  if (spi == NULL)
++    {
++      return -1;
++    }
++
++  mtd = w25_initialize(spi);
++  if (!mtd)
++    {
++      return -1;
++    }
++
++  ret = ftl_initialize(0, mtd);
++  if (ret < 0)
++    {
++      return -1;
++    }
++
++#endif /* #else */
++
    return OK;
  }
  
+diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/stm32_spi.c src/nuttx/configs/spark/src/stm32_spi.c
+--- tmp/nuttx/configs/spark/src/stm32_spi.c	2015-06-10 21:03:49.133512463 +0300
++++ src/nuttx/configs/spark/src/stm32_spi.c	2015-06-20 12:56:04.163617382 +0300
+@@ -109,8 +109,10 @@ void weak_function stm32_spiinitialize(v
+   stm32_configgpio(GPIO_WIFI_INT);
+ #endif
+ 
+-#ifdef CONFIG_MTD_SST25
++#ifdef CONFIG_MTD_W25
+   stm32_configgpio(GPIO_MEM_CS);    /* FLASH chip select */
++  stm32_configgpio(GPIO_MEM_WP);    /* FLASH write protect */
++  stm32_configgpio(GPIO_MEM_HOLD);  /* FLASH hold */
+ #endif
+ 
+ #endif
+@@ -158,7 +160,7 @@ void stm32_spi2select(FAR struct spi_dev
+ {
+   spidbg("devid: %d CS: %s\n", (int)devid, selected ? "assert" : "de-assert");
+ 
+-#if defined(CONFIG_MTD_SST25)
++#if defined(CONFIG_MTD_W25)
+ 
+   if (devid == SPIDEV_FLASH)
+     {
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/.version src/nuttx/.version
 --- tmp/nuttx/.version	1970-01-01 03:00:00.000000000 +0300
 +++ src/nuttx/.version	2015-06-12 13:47:05.030470444 +0300
