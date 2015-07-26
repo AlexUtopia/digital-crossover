@@ -1,0 +1,23 @@
+diff -Nurp -x '*~' -x '*.orig' tmp/apps/nshlib/nsh_console.c src/apps/nshlib/nsh_console.c
+--- tmp/apps/nshlib/nsh_console.c	2015-06-10 21:03:48.449512458 +0300
++++ src/apps/nshlib/nsh_console.c	2015-07-25 20:45:24.379818957 +0300
+@@ -466,6 +466,7 @@ FAR struct console_stdio_s *nsh_newconso
+       pstate->cn_confd           = open(CONFIG_NSH_CONDEV, O_RDWR);
+       if (pstate->cn_confd < 0)
+         {
++    	  lowsyslog(0, "open fail %d\n", errno);
+           free(pstate);
+           return NULL;
+         }
+diff -Nurp -x '*~' -x '*.orig' tmp/apps/nshlib/nsh_usbconsole.c src/apps/nshlib/nsh_usbconsole.c
+--- tmp/apps/nshlib/nsh_usbconsole.c	2015-06-10 21:03:48.453512458 +0300
++++ src/apps/nshlib/nsh_usbconsole.c	2015-07-26 21:05:05.098631504 +0300
+@@ -302,6 +302,8 @@ int nsh_consolemain(int argc, char *argv
+ #if defined(CONFIG_PL2303) || defined(CONFIG_CDCACM)
+ #ifdef CONFIG_CDCACM
+   ret = cdcacm_initialize(CONFIG_NSH_USBDEV_MINOR, NULL);
++  //conn_main(0, NULL); // FIXME
++  //ret = OK;
+ #else
+   ret = usbdev_serialinitialize(CONFIG_NSH_USBDEV_MINOR);
+ #endif
