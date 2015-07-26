@@ -12,7 +12,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/Kconfig src/nuttx/configs/Kconf
  	select ARCH_HAVE_IRQBUTTONS
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/configs/spark/nsh/defconfig
 --- tmp/nuttx/configs/spark/nsh/defconfig	2015-06-10 21:03:49.133512463 +0300
-+++ src/nuttx/configs/spark/nsh/defconfig	2015-07-26 21:06:04.604368146 +0300
++++ src/nuttx/configs/spark/nsh/defconfig	2015-07-26 22:23:54.427364376 +0300
 @@ -16,7 +16,7 @@ CONFIG_HOST_LINUX=y
  #
  # Build Configuration
@@ -444,7 +444,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_USBDEV=y
  
  #
-@@ -661,81 +733,52 @@ CONFIG_USBDEV_SELFPOWERED=y
+@@ -661,9 +733,7 @@ CONFIG_USBDEV_SELFPOWERED=y
  CONFIG_USBDEV_MAXPOWER=100
  # CONFIG_USBDEV_DMA is not set
  # CONFIG_ARCH_USBDEV_STALLQUEUE is not set
@@ -455,24 +455,21 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # USB Device Class Driver Options
- #
--CONFIG_USBDEV_COMPOSITE=y
--CONFIG_COMPOSITE_IAD=y
--CONFIG_COMPOSITE_EP0MAXPACKET=64
--CONFIG_COMPOSITE_VENDORID=0x03eb
--CONFIG_COMPOSITE_VENDORSTR="NuttX"
+@@ -673,7 +743,7 @@ CONFIG_COMPOSITE_IAD=y
+ CONFIG_COMPOSITE_EP0MAXPACKET=64
+ CONFIG_COMPOSITE_VENDORID=0x03eb
+ CONFIG_COMPOSITE_VENDORSTR="NuttX"
 -CONFIG_COMPOSITE_PRODUCTID=0x0000
--CONFIG_COMPOSITE_PRODUCTSTR="Composite device"
--CONFIG_COMPOSITE_SERIALSTR="001"
--CONFIG_COMPOSITE_CONFIGSTR="NuttX COMPOSITE config"
--CONFIG_COMPOSITE_VERSIONNO=0x1010
-+# CONFIG_USBDEV_COMPOSITE is not set
- # CONFIG_PL2303 is not set
- CONFIG_CDCACM=y
++CONFIG_COMPOSITE_PRODUCTID=0x2022
+ CONFIG_COMPOSITE_PRODUCTSTR="Composite device"
+ CONFIG_COMPOSITE_SERIALSTR="001"
+ CONFIG_COMPOSITE_CONFIGSTR="NuttX COMPOSITE config"
+@@ -683,22 +753,22 @@ CONFIG_CDCACM=y
  # CONFIG_CDCACM_CONSOLE is not set
--CONFIG_CDCACM_COMPOSITE=y
--CONFIG_CDCACM_IFNOBASE=0
+ CONFIG_CDCACM_COMPOSITE=y
+ CONFIG_CDCACM_IFNOBASE=0
 -CONFIG_CDCACM_STRBASE=0
++CONFIG_CDCACM_STRBASE=4
  CONFIG_CDCACM_EP0MAXPACKET=64
  CONFIG_CDCACM_EPINTIN=1
  CONFIG_CDCACM_EPINTIN_FSSIZE=64
@@ -498,11 +495,12 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_CDCACM_VENDORID=0x0525
  CONFIG_CDCACM_PRODUCTID=0xa4a7
  CONFIG_CDCACM_VENDORSTR="NuttX"
- CONFIG_CDCACM_PRODUCTSTR="CDC/ACM Serial"
+@@ -706,36 +776,24 @@ CONFIG_CDCACM_PRODUCTSTR="CDC/ACM Serial
  CONFIG_USBMSC=y
--CONFIG_USBMSC_COMPOSITE=y
--CONFIG_USBMSC_IFNOBASE=2
+ CONFIG_USBMSC_COMPOSITE=y
+ CONFIG_USBMSC_IFNOBASE=2
 -CONFIG_USBMSC_STRBASE=2
++CONFIG_USBMSC_STRBASE=4
  CONFIG_USBMSC_EP0MAXPACKET=64
 -CONFIG_USBMSC_EPBULKOUT=2
 -CONFIG_USBMSC_EPBULKIN=3
@@ -547,7 +545,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # System Logging Device Options
-@@ -750,7 +793,7 @@ CONFIG_CC3000_UNSOLICED_STACKSIZE=264
+@@ -750,7 +808,7 @@ CONFIG_CC3000_UNSOLICED_STACKSIZE=264
  #
  # Networking Support
  #
@@ -556,7 +554,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_ARCH_HAVE_PHY is not set
  # CONFIG_NET is not set
  
-@@ -786,6 +829,7 @@ CONFIG_FS_FATTIME=y
+@@ -786,6 +844,7 @@ CONFIG_FS_FATTIME=y
  # CONFIG_FS_SMARTFS is not set
  # CONFIG_FS_BINFS is not set
  # CONFIG_FS_PROCFS is not set
@@ -564,7 +562,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # System Logging
-@@ -852,6 +896,7 @@ CONFIG_LIBC_TMPDIR="/tmp"
+@@ -852,6 +911,7 @@ CONFIG_LIBC_TMPDIR="/tmp"
  CONFIG_LIBC_MAX_TMPFILE=32
  CONFIG_ARCH_LOWPUTC=y
  # CONFIG_LIBC_LOCALTIME is not set
@@ -572,7 +570,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  CONFIG_LIB_SENDFILE_BUFSIZE=0
  # CONFIG_ARCH_ROMGETC is not set
  # CONFIG_ARCH_OPTIMIZED_FUNCTIONS is not set
-@@ -882,9 +927,6 @@ CONFIG_BUILTIN_PROXY_STACKSIZE=1024
+@@ -882,9 +942,6 @@ CONFIG_BUILTIN_PROXY_STACKSIZE=1024
  #
  # CONFIG_EXAMPLES_BUTTONS is not set
  # CONFIG_EXAMPLES_CAN is not set
@@ -582,7 +580,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_EXAMPLES_CONFIGDATA is not set
  # CONFIG_EXAMPLES_CPUHOG is not set
  # CONFIG_EXAMPLES_DHCPD is not set
-@@ -900,24 +942,22 @@ CONFIG_EXAMPLES_CC3000BASIC=y
+@@ -900,24 +957,22 @@ CONFIG_EXAMPLES_CC3000BASIC=y
  # CONFIG_EXAMPLES_MM is not set
  # CONFIG_EXAMPLES_MODBUS is not set
  # CONFIG_EXAMPLES_MOUNT is not set
@@ -608,7 +606,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_EXAMPLES_SENDMAIL is not set
  # CONFIG_EXAMPLES_SERIALBLASTER is not set
  # CONFIG_EXAMPLES_SERIALRX is not set
-@@ -927,7 +967,6 @@ CONFIG_EXAMPLES_NSH=y
+@@ -927,7 +982,6 @@ CONFIG_EXAMPLES_NSH=y
  # CONFIG_EXAMPLES_SMART is not set
  # CONFIG_EXAMPLES_TCPECHO is not set
  # CONFIG_EXAMPLES_TELNETD is not set
@@ -616,7 +614,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_EXAMPLES_TIFF is not set
  # CONFIG_EXAMPLES_TOUCHSCREEN is not set
  # CONFIG_EXAMPLES_WEBSERVER is not set
-@@ -960,10 +999,6 @@ CONFIG_EXAMPLES_NSH=y
+@@ -960,10 +1014,6 @@ CONFIG_EXAMPLES_NSH=y
  # CONFIG_NETUTILS_FTPC is not set
  # CONFIG_NETUTILS_JSON is not set
  # CONFIG_NETUTILS_SMTP is not set
@@ -627,7 +625,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # FreeModBus
-@@ -997,6 +1032,7 @@ CONFIG_NSH_BUILTIN_APPS=y
+@@ -997,6 +1047,7 @@ CONFIG_NSH_BUILTIN_APPS=y
  # CONFIG_NSH_DISABLE_CD is not set
  # CONFIG_NSH_DISABLE_CP is not set
  # CONFIG_NSH_DISABLE_CMP is not set
@@ -635,7 +633,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_NSH_DISABLE_DD is not set
  CONFIG_NSH_DISABLE_DF=y
  # CONFIG_NSH_DISABLE_DELROUTE is not set
-@@ -1018,6 +1054,7 @@ CONFIG_NSH_DISABLE_DF=y
+@@ -1018,6 +1069,7 @@ CONFIG_NSH_DISABLE_DF=y
  # CONFIG_NSH_DISABLE_MKRD is not set
  # CONFIG_NSH_DISABLE_MH is not set
  # CONFIG_NSH_DISABLE_MOUNT is not set
@@ -643,7 +641,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  # CONFIG_NSH_DISABLE_MW is not set
  # CONFIG_NSH_DISABLE_PS is not set
  # CONFIG_NSH_DISABLE_PUT is not set
-@@ -1052,15 +1089,15 @@ CONFIG_NSH_DISABLE_LOOPS=y
+@@ -1052,15 +1104,15 @@ CONFIG_NSH_DISABLE_LOOPS=y
  # Console Configuration
  #
  CONFIG_NSH_CONSOLE=y
@@ -662,7 +660,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # NxWidgets/NxWM
-@@ -1074,129 +1111,22 @@ CONFIG_LIB_BOARDCTL=y
+@@ -1074,129 +1126,34 @@ CONFIG_LIB_BOARDCTL=y
  #
  # System Libraries and NSH Add-Ons
  #
@@ -670,11 +668,12 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 -#
 -# Custom Free Memory Command
 -#
- # CONFIG_SYSTEM_FREE is not set
+-# CONFIG_SYSTEM_FREE is not set
 -
 -#
 -# EMACS-like Command Line Editor
 -#
++CONFIG_SYSTEM_FREE=y
  # CONFIG_SYSTEM_CLE is not set
 -
 -#
@@ -782,6 +781,18 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 -#
 -# USB Mass Storage Device Commands
 -#
++CONFIG_SYSTEM_COMPOSITE=y
++CONFIG_SYSTEM_COMPOSITE_NLUNS=1
++CONFIG_SYSTEM_COMPOSITE_DEVMINOR1=0
++CONFIG_SYSTEM_COMPOSITE_DEVPATH1="/dev/mtdblock0"
++CONFIG_SYSTEM_COMPOSITE_DEVMINOR2=1
++CONFIG_SYSTEM_COMPOSITE_DEVPATH2="/dev/mmcsd1"
++CONFIG_SYSTEM_COMPOSITE_DEVMINOR3=2
++CONFIG_SYSTEM_COMPOSITE_DEVPATH3="/dev/mmcsd2"
++CONFIG_SYSTEM_COMPOSITE_TTYUSB=0
++CONFIG_SYSTEM_COMPOSITE_SERDEV="/dev/ttyACM0"
++CONFIG_SYSTEM_COMPOSITE_BUFSIZE=256
++# CONFIG_SYSTEM_COMPOSITE_DEBUGMM is not set
  # CONFIG_SYSTEM_USBMSC is not set
 -
 -#
