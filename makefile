@@ -65,8 +65,11 @@ toolchain: download configure
 $(TMP_DIR)/$(NUTTX_DIR)/ReleaseNotes:
 	rm -rf $(TMP_DIR)/
 	mkdir $(TMP_DIR)/
-	git clone git://git.code.sf.net/p/nuttx/git $(TMP_DIR)/
-	cd $(TMP_DIR)/; git checkout nuttx-$(CONFIG_NUTTX_VERSION)
+	git clone https://bitbucket.org/patacongo/nuttx.git $(TMP_DIR)/$(NUTTX_DIR)
+	cd $(TMP_DIR)/$(NUTTX_DIR); git checkout nuttx-$(CONFIG_NUTTX_VERSION)
+	git clone https://bitbucket.org/nuttx/apps.git $(TMP_DIR)/$(APPS_DIR)
+	cd $(TMP_DIR)/$(APPS_DIR); git checkout nuttx-$(CONFIG_NUTTX_VERSION)
+	git clone https://bitbucket.org/nuttx/buildroot.git $(TMP_DIR)/$(BUILDROOT_DIR)
 
 
 download: $(TMP_DIR)/$(NUTTX_DIR)/ReleaseNotes
