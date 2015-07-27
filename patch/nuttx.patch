@@ -12,7 +12,7 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/Kconfig src/nuttx/configs/Kconf
  	select ARCH_HAVE_IRQBUTTONS
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/configs/spark/nsh/defconfig
 --- tmp/nuttx/configs/spark/nsh/defconfig	2015-06-10 21:03:49.133512463 +0300
-+++ src/nuttx/configs/spark/nsh/defconfig	2015-07-26 22:23:54.427364376 +0300
++++ src/nuttx/configs/spark/nsh/defconfig	2015-07-27 21:24:02.936165536 +0300
 @@ -16,7 +16,7 @@ CONFIG_HOST_LINUX=y
  #
  # Build Configuration
@@ -455,16 +455,22 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
  
  #
  # USB Device Class Driver Options
-@@ -673,7 +743,7 @@ CONFIG_COMPOSITE_IAD=y
+@@ -672,70 +742,58 @@ CONFIG_USBDEV_COMPOSITE=y
+ CONFIG_COMPOSITE_IAD=y
  CONFIG_COMPOSITE_EP0MAXPACKET=64
  CONFIG_COMPOSITE_VENDORID=0x03eb
- CONFIG_COMPOSITE_VENDORSTR="NuttX"
+-CONFIG_COMPOSITE_VENDORSTR="NuttX"
 -CONFIG_COMPOSITE_PRODUCTID=0x0000
++CONFIG_COMPOSITE_VENDORSTR="UtopiaTeam"
 +CONFIG_COMPOSITE_PRODUCTID=0x2022
  CONFIG_COMPOSITE_PRODUCTSTR="Composite device"
  CONFIG_COMPOSITE_SERIALSTR="001"
- CONFIG_COMPOSITE_CONFIGSTR="NuttX COMPOSITE config"
-@@ -683,22 +753,22 @@ CONFIG_CDCACM=y
+-CONFIG_COMPOSITE_CONFIGSTR="NuttX COMPOSITE config"
+-CONFIG_COMPOSITE_VERSIONNO=0x1010
++CONFIG_COMPOSITE_CONFIGSTR="UtopiaTeam COMPOSITE config"
++CONFIG_COMPOSITE_VERSIONNO=0x0000
+ # CONFIG_PL2303 is not set
+ CONFIG_CDCACM=y
  # CONFIG_CDCACM_CONSOLE is not set
  CONFIG_CDCACM_COMPOSITE=y
  CONFIG_CDCACM_IFNOBASE=0
@@ -494,8 +500,9 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/nsh/defconfig src/nuttx/c
 +CONFIG_CDCACM_TXBUFSIZE=256
  CONFIG_CDCACM_VENDORID=0x0525
  CONFIG_CDCACM_PRODUCTID=0xa4a7
- CONFIG_CDCACM_VENDORSTR="NuttX"
-@@ -706,36 +776,24 @@ CONFIG_CDCACM_PRODUCTSTR="CDC/ACM Serial
+-CONFIG_CDCACM_VENDORSTR="NuttX"
++CONFIG_CDCACM_VENDORSTR="UtopiaTeam"
+ CONFIG_CDCACM_PRODUCTSTR="CDC/ACM Serial"
  CONFIG_USBMSC=y
  CONFIG_USBMSC_COMPOSITE=y
  CONFIG_USBMSC_IFNOBASE=2
@@ -930,41 +937,6 @@ diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/configs/spark/src/stm32_usbdev.c src/nu
    return OK;
  }
  
-diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/drivers/usbdev/cdcacm.c src/nuttx/drivers/usbdev/cdcacm.c
---- tmp/nuttx/drivers/usbdev/cdcacm.c	2015-06-10 21:03:49.241512464 +0300
-+++ src/nuttx/drivers/usbdev/cdcacm.c	2015-07-26 12:30:38.151518955 +0300
-@@ -2388,7 +2388,7 @@ errout_with_class:
-  *
-  ****************************************************************************/
- 
--#ifndef CONFIG_CDCACM_COMPOSITE
-+//#ifndef CONFIG_CDCACM_COMPOSITE
- int cdcacm_initialize(int minor, FAR void **handle)
- {
-   FAR struct usbdevclass_driver_s *drvr = NULL;
-@@ -2397,11 +2397,13 @@ int cdcacm_initialize(int minor, FAR voi
-   /* Get an instance of the serial driver class object */
- 
-   ret = cdcacm_classobject(minor, &drvr);
-+  lowsyslog(0, "cdcacm_classobject ret=%d\n", ret);
-   if (ret == OK)
-     {
-       /* Register the USB serial class driver */
- 
-       ret = usbdev_register(drvr);
-+      lowsyslog(0, "usbdev_register ret=%d\n", ret);
-       if (ret < 0)
-         {
-           usbtrace(TRACE_CLSERROR(USBSER_TRACEERR_DEVREGISTER), (uint16_t)-ret);
-@@ -2419,7 +2421,7 @@ int cdcacm_initialize(int minor, FAR voi
- 
-   return ret;
- }
--#endif
-+//#endif
- 
- /****************************************************************************
-  * Name: cdcacm_uninitialize
 diff -Nurp -x '*~' -x '*.orig' tmp/nuttx/.version src/nuttx/.version
 --- tmp/nuttx/.version	1970-01-01 03:00:00.000000000 +0300
 +++ src/nuttx/.version	2015-07-01 22:13:52.010529848 +0300
